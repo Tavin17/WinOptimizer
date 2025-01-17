@@ -852,6 +852,7 @@ if /i "%continuar%"=="N" goto pw1
 :pw
 PowerShell -command "Get-AppxPackage Microsoft.XboxGamingOverlay | Remove-AppxPackage" >nul 2>&1
 echo XboxGameBar desinstalada.
+goto pw1
 
 :: ----------------------------------------------------------------------------------------------
 
