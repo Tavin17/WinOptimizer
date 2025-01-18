@@ -45,7 +45,7 @@ Este projeto pessoal tem como objetivo melhorar o desempenho do computador duran
   - Versão 1.0+
 - **Windows 11:**
   - Versão 1.0, 1,5, 1.8.
-  - Compatibilidade parcial em: v2.0+
+  - Parcialmente compatível nas versões 2.0+
 
 ## <p align="center">**🖥️ Como instalar?**</p>
 

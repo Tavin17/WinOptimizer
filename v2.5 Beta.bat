@@ -11,7 +11,7 @@ color F
 echo ================================================================
 echo.
 
-echo Feito por Gustavin (v2.0) 
+echo Feito por Gustavin (v2.5 Beta)
 
 echo.
 echo ================================================================
@@ -30,9 +30,9 @@ echo Serão feitas alterações, adições e aplicações em:
 
 echo.
 
-echo 1. Regedit. (106 arquivos serão alterados/criados)
+echo 1. Regedit. (139 arquivos serão alterados/criados)
 echo 2. Serviços. (Desativação de 87 serviços desnecessários)
-echo 3. CMD. (Aplicação de 15 comandos)
+echo 3. CMD. (Aplicação de 18 comandos)
 echo 4. Limpeza de arquivos temporários e cache.
 
 echo.
@@ -178,6 +178,7 @@ echo 1 Alteração feita HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\Ap
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "GPU_SCHEDULER_MODE" /t REG_SZ /d 47 /f>nul 2>&1
 echo 1 Alteração feita em HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment.
+echo.
 
 reg add "HKLM\SYSTEM\ControlSet001\Services\Ndu" /v "Start" /t REG_DWORD /d 4 /f >nul 2>&1
 echo 1 Alteração feita em HKLM\SYSTEM\ControlSet001\Services\Ndu.
@@ -208,61 +209,68 @@ echo 1 Alteração feita em HKLM\SYSTEM\CurrentControlSet\Services\kbdclass\Para
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\DeviceGuard\Scenarios\HypervisorEnforcedCodeIntegrity" /v "Enabled" /t REG_DWORD /d 0 /f >nul 2>&1
 echo 1 Alteração feita em HKLM\SYSTEM\CurrentControlSet\Control\DeviceGuard\Scenarios\HypervisorEnforcedCodeIntegrity.
 
-reg add "HKLM\Software\Policies\Microsoft\SQMClient\Windows" /v "CEIPEnable" /t REG_DWORD /d 0 /f >null 2>&1
+reg add "HKLM\Software\Policies\Microsoft\SQMClient\Windows" /v "CEIPEnable" /t REG_DWORD /d 0 /f >nul 2>&1
 echo 1 Alteração feita em HKLM\Software\Policies\Microsoft\SQMClient\Windows.
 
-reg add "HKLM\Software\Policies\Microsoft\Windows\AppCompat" /v "AITEnable" /t REG_DWORD /d 0 /f >null 2>&1
-echo 1 Alteração feita HKLM\Software\Policies\Microsoft\Windows\AppCompat.
+reg add "HKLM\Software\Policies\Microsoft\Windows\AppCompat" /v "AITEnable" /t REG_DWORD /d 0 /f >nul 2>&1
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\AppCompat" /v "DisableUAR" /t REG_DWORD /d 1 /f >nul 2>&1
+echo 2 Alterações feitas HKLM\Software\Policies\Microsoft\Windows\AppCompat.
 
-reg add "HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Policies\DataCollection" /v "AllowTelemetry" /d 0 /t REG_DWORD /f >null 2>&1
+reg add "HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Policies\DataCollection" /v "AllowTelemetry" /d 0 /t REG_DWORD /f >nul 2>&1
 echo 1 Alteração feita em HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Policies\DataCollection.
 
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection" /v "AllowTelemetry" /t REG_DWORD /d 0 /f >null 2>&1
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection" /v "AllowTelemetry" /t REG_DWORD /d 0 /f >nul 2>&1
 echo 1 Alteração feita em HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection.
 
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v "AllowTelemetry" /t REG_DWORD /d 0 /f >null 2>&1
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v "LimitEnhancedDiagnosticDataWindowsAnalytics" /t REG_DWORD /d 0 /f >null 2>&1
-echo 2 Alterações feitas em HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection.
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v "LimitEnhancedDiagnosticDataWindowsAnalytics" /t REG_DWORD /d 0 /f >nul 2>&1
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v "DoNotShowFeedbackNotifications" /t REG_DWORD /d 1 /f >nul 2>&1
+echo 3 Alterações feitas em HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection.
 
-reg add "HKLM\Software\Policies\Microsoft\Windows NT\CurrentVersion\Software Protection Platform" /v "NoGenTicket" /t REG_DWORD /d 1 /f >null 2>&1
+reg add "HKLM\Software\Policies\Microsoft\Windows NT\CurrentVersion\Software Protection Platform" /v "NoGenTicket" /t REG_DWORD /d 1 /f >nul 2>&1
 echo 1 Alteração feita em HKLM\Software\Policies\Microsoft\Windows NT\CurrentVersion\Software Protection Platform.
 
-reg add "HKLM\Software\Policies\Microsoft\Windows\Windows Error Reporting" /v "Disabled" /t REG_DWORD /d 1 /f >null 2>&1
+reg add "HKLM\Software\Policies\Microsoft\Windows\Windows Error Reporting" /v "Disabled" /t REG_DWORD /d 1 /f >nul 2>&1
 echo 1 Alteração feita em HKLM\Software\Policies\Microsoft\Windows\Windows Error Reporting.
 
-reg add "HKLM\SOFTWARE\Microsoft\Windows\Windows Error Reporting" /v "Disabled" /t REG_DWORD /d 1 /f >null 2>&1
-reg add "HKLM\Software\Microsoft\Windows\Windows Error Reporting" /v "DontSendAdditionalData" /t REG_DWORD /d 1 /f >null 2>&1
-reg add "HKLM\Software\Microsoft\Windows\Windows Error Reporting" /v "LoggingDisabled" /t REG_DWORD /d 1 /f >null 2>&1
-echo 4 Alterações feita em HKLM\Software\Microsoft\Windows\Windows Error Reporting.
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Windows Error Reporting" /v "Disabled" /t REG_DWORD /d 1 /f >nul 2>&1
+reg add "HKLM\Software\Microsoft\Windows\Windows Error Reporting" /v "DontSendAdditionalData" /t REG_DWORD /d 1 /f >nul 2>&1
+reg add "HKLM\Software\Microsoft\Windows\Windows Error Reporting" /v "LoggingDisabled" /t REG_DWORD /d 1 /f >nul 2>&1
+echo 4 Alterações feitas em HKLM\Software\Microsoft\Windows\Windows Error Reporting.
 
-reg add "HKLM\Software\Microsoft\Windows\Windows Error Reporting\Consent" /v "DefaultConsent" /t REG_DWORD /d 0 /f >null 2>&1
-reg add "HKLM\Software\Microsoft\Windows\Windows Error Reporting\Consent" /v "DefaultOverrideBehavior" /t REG_DWORD /d 1 /f >null 2>&1
-echo 2 Alterações feita em HKLM\Software\Microsoft\Windows\Windows Error Reporting\Consent.
+reg add "HKLM\Software\Microsoft\Windows\Windows Error Reporting\Consent" /v "DefaultConsent" /t REG_DWORD /d 0 /f >nul 2>&1
+reg add "HKLM\Software\Microsoft\Windows\Windows Error Reporting\Consent" /v "DefaultOverrideBehavior" /t REG_DWORD /d 1 /f >nul 2>&1
+echo 2 Alterações feitas em HKLM\Software\Microsoft\Windows\Windows Error Reporting\Consent.
 
-reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search" /v "BingSearchEnabled" /t REG_DWORD /d 0 /f >null 2>&1
+reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search" /v "BingSearchEnabled" /t REG_DWORD /d 0 /f >nul 2>&1
 echo 1 Alteração feita em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search.
 
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\DeliveryOptimization\Config" /v "DownloadMode" /t REG_DWORD /d 0 /f >null 2>&1
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\DeliveryOptimization\Config" /v "DownloadMode" /t REG_DWORD /d 0 /f >nul 2>&1
 echo 1 Alteração feita em HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\DeliveryOptimization\Config.
+echo.
 
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\SettingSync" /v "DisableSettingSync" /t REG_DWORD /d 2 /f >null 2>&1
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\SettingSync" /v "DisableSettingSyncUserOverride" /t REG_DWORD /d 1 /f >null 2>&1
-echo 2 Alterações feita em HKLM\SOFTWARE\Policies\Microsoft\Windows\SettingSync.
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DeliveryOptimization" /v "DownloadMode" /d 0 /t REG_DWORD /f >nul 2>&1
+echo 1 Alteração feita em HKLM\SOFTWARE\Policies\Microsoft\Windows\DeliveryOptimization.
 
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\AdvertisingInfo" /v "DisabledByGroupPolicy" /t REG_DWORD /d 1 /f >null 2>&1
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\SettingSync" /v "DisableSettingSync" /t REG_DWORD /d 2 /f >nul 2>&1
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\SettingSync" /v "DisableSettingSyncUserOverride" /t REG_DWORD /d 1 /f >nul 2>&1
+echo 2 Alterações feitas em HKLM\SOFTWARE\Policies\Microsoft\Windows\SettingSync.
+
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\AdvertisingInfo" /v "DisabledByGroupPolicy" /t REG_DWORD /d 1 /f >nul 2>&1
 echo 1 Alteração feita em HKLM\SOFTWARE\Policies\Microsoft\Windows\AdvertisingInfo.
 
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\EnhancedStorageDevices" /v "TCGSecurityActivationDisabled" /t REG_DWORD /d 0 /f >null 2>&1
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\EnhancedStorageDevices" /v "TCGSecurityActivationDisabled" /t REG_DWORD /d 0 /f >nul 2>&1
 echo 1 Alteração feita em HKLM\SOFTWARE\Policies\Microsoft\Windows\EnhancedStorageDevices.
 
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\OneDrive" /v "DisableFileSyncNGSC" /t REG_DWORD /d 1 /f >null 2>&1
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\OneDrive" /v "DisableFileSyncNGSC" /t REG_DWORD /d 1 /f >nul 2>&1
 echo 1 Alteração feita em HKLM\SOFTWARE\Policies\Microsoft\Windows\OneDrive.
 
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\safer\codeidentifiers" /v "authenticodeenabled" /t REG_DWORD /d 0 /f >null 2>&1
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\safer\codeidentifiers" /v "authenticodeenabled" /t REG_DWORD /d 0 /f >nul 2>&1
 echo 1 Alteração feita em HKLM\SOFTWARE\Policies\Microsoft\Windows\safer\codeidentifiers.
 
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Search" /v "AllowCortana" /t REG_DWORD /d 0 /f >null 2>&1
-echo 1 Alteração feita em HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Search.
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Search" /v "AllowCortana" /t REG_DWORD /d 0 /f >nul 2>&1
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Search" /v "EnableDynamicContentInWSB" /t REG_DWORD /d 0 /f >nul 2>&1
+echo 2 Alterações feitas em HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Search.
 
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SystemPaneSuggestionsEnabled" /t REG_DWORD /d 0 /f >nul 2>&1
 echo 1 Alteração feita em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager.
@@ -308,6 +316,7 @@ echo 1 Alteração feita em HKCU\Software\Microsoft\Windows\CurrentVersion\Capab
 
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\userDataTasks" /v "Value" /t REG_SZ /d Deny /f >nul 2>&1
 echo 1 Alteração feita em HKCU\Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\userDataTasks.
+echo.
 
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\chat" /v "Value" /t REG_SZ /d Deny /f >nul 2>&1
 echo 1 Alteração feita em HKCU\Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\chat.
@@ -323,6 +332,7 @@ echo 1 Alteração feita em HKCU\Software\Microsoft\Windows\CurrentVersion\Searc
 
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\appDiagnostics" /v "Value" /t REG_SZ /d Deny /f >nul 2>&1
 echo 1 Alteração feita em HKCU\Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\appDiagnostics.
+echo.
 
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\documentsLibrary" /v "Value" /t REG_SZ /d Deny /f >nul 2>&1
 echo 1 Alteração feita em HKCU\Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\documentsLibrary.
@@ -336,11 +346,113 @@ echo 1 Alteração feita em HKCU\Software\Microsoft\Windows\CurrentVersion\Capab
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\broadFileSystemAccess" /v "Value" /t REG_SZ /d Deny /f >nul 2>&1
 echo 1 Alteração feita em HKCU\Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\broadFileSystemAccess.
 
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "EnableCdp" /t REG_DWORD /d 0 /f >nul 2>&1
-echo 1 Alteração feita em HKLM\SOFTWARE\Policies\Microsoft\Windows\System.
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\downloadsFolder" /v "Value" /t REG_SZ /d Deny /f >nul 2>&1
+echo 1 Alteração feita em HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\downloadsFolder.
 
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\DoSvc" /v "Start" /t REG_DWORD /d 4 /f >null 2>&1 
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\musicLibrary" /v "Value"/t REG_SZ /d Deny /f >nul 2>&1
+echo 1 Alteração feita em HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\musicLibrary.
+
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\graphicsCaptureProgrammatic" /v "Value" /t REG_SZ /d Allow /f >nul 2>&1
+echo 1 Alteração feita em HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\graphicsCaptureProgrammatic.
+
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\graphicsCaptureWithoutBorder" /v "Value" /t REG_SZ /d Allow /f >nul 2>&1
+echo 1 Alteração feita em HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\graphicsCaptureWithoutBorder.
+
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\phoneCall" /v "Value" /t REG_SZ /d Deny /f >nul 2>&1
+echo 1 Alteração feita em HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\phoneCall.
+
+:: Melhor compatibilidade com Windows 11
+
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "EnableCdp" /t REG_DWORD /d 0 /f >nul 2>&1
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "PublishUserActivities" /t REG_DWORD /d 0 /f >nul 2>&1
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "UploadUserActivities" /t REG_DWORD /d 0 /f >nul 2>&1
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /V "EnableSmartScreen" /t REG_DWORD /D 0 /f >nul 2>&1
+echo 4 Alterações feitas em HKLM\SOFTWARE\Policies\Microsoft\Windows\System.
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\DoSvc" /v "Start" /t REG_DWORD /d 4 /f >nul 2>&1 
 echo 1 Alteração feita em HKLM\SYSTEM\CurrentControlSet\Services\DoSvc.
+
+reg add "HKLM\Software\Microsoft\SQMClient\Windows" /v "CEIPEnable" /d 0 /t REG_DWORD /f >nul 2>&1
+echo 1 Alteração feita em HKLM\Software\Microsoft\SQMClient\Windows.
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\WMI\AutoLogger\AutoLogger-Diagtrack-Listener" /v "Start" /t REG_DWORD /d 0 /f >nul 2>&1
+echo 1 Alteração feita em HKLM\SYSTEM\CurrentControlSet\Control\WMI\AutoLogger\AutoLogger-Diagtrack-Listener.
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\WMI\AutoLogger\SQMLogger" /v "Start" /t REG_DWORD /d 0 /f >nul 2>&1
+echo 1 Alteração feita em HKLM\SYSTEM\CurrentControlSet\Control\WMI\AutoLogger\SQMLogger
+echo.
+
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /v "SmartScreenEnabled" /t REG_SZ /d Off /f >nul 2>&1
+echo 1 Alteração feita em HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer.
+
+reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\AppHost" /v "SmartScreenEnabled" /t REG_SZ /d Off /f >nul 2>&1
+echo 1 Alteração feita em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\AppHost.
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Remote Assistance" /v "fAllowFullControl" /t REG_DWORD /d 0 /f >nul 2>&1
+echo 1 Alteração feita em HKLM\SYSTEM\CurrentControlSet\Control\Remote Assistance.
+
+reg add "HKLM\System\CurrentControlSet\Control\DeviceGuard" /v "EnableVirtualizationBasedSecurity" /d 0 /t REG_DWORD /f >nul 2>&1
+echo 1 Alteração feita em HKLM\System\CurrentControlSet\Control\DeviceGuard.
+
+reg add "HKCU\Software\Policies\Microsoft\Windows\EdgeUI" /v "DisableMFUTracking"/t REG_DWORD /d 1 /f >nul 2>&1
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\EdgeUI" /v "DisableMFUTracking" /t REG_DWORD /d 1 /f >nul 2>&1
+echo 2 Alterações feitas em HKLM\SOFTWARE\Policies\Microsoft\Windows\EdgeUI.
+
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\CPSS\Store\InkingAndTypingPersonalization" /v "Value" /t REG_DWORD /d 0 /f >nul 2>&1
+echo 1 Alteração feita em HKCU\Software\Microsoft\Windows\CurrentVersion\CPSS\Store\InkingAndTypingPersonalization.
+
+reg add "HKCU\Software\Microsoft\Personalization\Settings" /v "AcceptedPrivacyPolicy" /t REG_DWORD /d 0 /f >nul 2>&1
+echo 1 Alteração feita em HKCU\Software\Microsoft\Personalization\Settings.
+
+reg add "HKCU\Software\Microsoft\InputPersonalization" /v "RestrictImplicitInkCollection" /t REG_DWORD /d 1 /f >nul 2>&1
+echo 1 Alteração feita em HKCU\Software\Microsoft\InputPersonalization.
+
+reg add "HKCU\Software\Microsoft\InputPersonalization\TrainedDataStore" /v "HarvestContacts" /t REG_DWORD /d 0 /f >nul 2>&1
+echo 1 Alteração feita em HKCU\Software\Microsoft\InputPersonalization\TrainedDataStore.
+
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\SearchSettings" /v "IsDeviceSearchHistoryEnabled" /t REG_DWORD /d 0 /f >nul 2>&1
+echo 1 Alteração feita em HKCU\Software\Microsoft\Windows\CurrentVersion\SearchSettings.
+
+reg add  "HKLM\SOFTWARE\Policies\Microsoft\Windows\CloudContent" /v "DisableSoftLanding" /d 1 /t REG_DWORD /f >nul 2>&1
+echo 1 Alteração feita em HKLM\SOFTWARE\Policies\Microsoft\Windows\CloudContent.
+
+reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\AdvertisingInfo" /v "Enabled" /t REG_DWORD /d 0 /f >nul 2>&1
+echo 1 Alteração feita em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\AdvertisingInfo.
+
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\SmartActionPlatform\SmartClipboard" /v Disabled /t REG_DWORD /d 1 /f >nul 2>&1
+echo 1 Alteração feita em HKCUSoftware\Microsoft\Windows\CurrentVersion\SmartActionPlatform\SmartClipboard.
+
+reg delete "HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\Stickers" /v "EnableStickers" /f >nul 2>&1
+echo 1 Alteração feita em HKLMSOFTWARE\Microsoft\PolicyManager\current\device\Stickers.
+
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "RotatingLockScreenOverlayEnabled" /t REG_DWORD /d 0 /f >nul 2>&1
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SubscribedContent-338387Enabled" /t REG_DWORD /d 0 /f >nul 2>&1
+echo 2 Alterações feitas em HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager.
+
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel" /v "{2cc5ca98-6485-489a-920e-b3e88a6ccce3}" /t REG_DWORD /d 1 /f >nul 2>&1
+echo 1 Alteração feita em HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel.
+
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\TextInput" /v "AllowLinguisticDataCollection" /t REG_DWORD /D 0 /f >nul 2>&1
+echo 1 Alteração feita em HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\TextInput.
+
+reg add "HKCU\Software\Policies\Microsoft\Windows\CloudContent" /v "DisableTailoredExperiencesWithDiagnosticData" /t REG_DWORD /d 1 /f >nul 2>&1
+echo 1 Alteração feita em HKCU\Software\Policies\Microsoft\Windows\CloudContent.
+
+reg add "HKLM\SOFTWARE\Policies\Microsoft\InputPersonalization" /v "AllowInputPersonalization" /t REG_DWORD /d 0 /f >nul 2>&1
+echo 1 Alteração feita em HKLM\SOFTWARE\Policies\Microsoft\InputPersonalization.
+
+reg add "HKCU\Software\Microsoft\Input\Settings" /v "InsightsEnabled" /t REG_DWORD /d 0 /f >nul 2>&1
+echo 1 Alteração feita em HKCU\Software\Microsoft\Input\Settings.
+echo.
+
+reg add "HKCU\Software\Policies\Microsoft\Windows\WindowsAI" /v "DisableAIDataAnalysis" /t REG_DWORD /d 1 /f >nul 2>&1
+echo 1 Alteração feita em HKCU\Software\Policies\Microsoft\Windows\WindowsAI
+
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsAI" /v "DisableAIDataAnalysis" /t REG_DWORD /d 1 /f >nul 2>&1
+echo 1 Alteração feita em HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsAI
+
+reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SubscribedContent-338389Enabled" /t REG_DWORD /d 0 /f >nul 2>&1
+echo 1 Alteração feita em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager.
 
 :: Gpedit.msc
 
@@ -803,6 +915,8 @@ color 06
 
 Fsutil behavior set memoryusage 2 >nul 2>&1
 Fsutil behavior set disabledeletenotify 0 >nul 2>&1
+Fsutil behavior set disableLastAccess 1 >nul 2>&1
+fsutil.exe 8dot3name set 1 >nul 2>&1
 echo Comandos Fsutil aplicados.
 
 bcdedit /set useplatformtick yes >nul 2>&1
@@ -818,6 +932,7 @@ echo Hibernação desativada.
 ipconfig /flushdns >nul 2>&1
 netsh winsock reset >nul 2>&1
 echo Cache de DNS limpo.
+
 
 :: ----------------------------------------------------------------------------------------------
 
@@ -862,6 +977,9 @@ goto pw1
 
 winget uninstall "windows web experience pack" >nul 2>&1
 echo Widgets desinstalados.
+
+DISM /Online /Disable-Feature /FeatureName:"Recall" /Remove >nul 2>&1
+echo Recall removido.
 
 :pw1
 echo Otimize (SSD) ou desfragmente (HD) seus discos e desative a otimização agendada.
