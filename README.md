@@ -1,12 +1,13 @@
 # <p align="center">**🌎 Sobre o projeto**</p>
 
-Tenho o costume de formatar frequentemente meu computador, fiz esse código justamente para economizar tempo, pois sempre que formatava, passava 2 horas apenas otimizando o PC. Além de fazer para economizar tempo, fiz também por diversão e por passatempo, adicionando ou ajustando o código com otimizações que testo e descubro. 
+**WinOptimizer** é um pequeno projeto pessoal desenvolvido apenas por mim, Tavin17, onde o código executado desativa, remove ou limpa arquivos, aplicativos ou serviços que são completamente desnecessários principalmente para pessoas que jogam, diminuindo processos e o uso da sua CPU e GPU. Consequentemente garantindo uma maior estabilidade no FPS, menos InputLag e um Windows mais responsívo.
 
 <!-- ## <p align="center">**Funcionalidades**</p>
 
 Este projeto pessoal tem como objetivo melhorar o desempenho do computador durante jogos, desativando processos que consomem recursos do sistema sem serem necessários, assim garantindo um windows mais responsívo, FPS mais estáveis em jogos e InputLag praticamente zerado. -->
 
 ### <p align="center">**📋 Features:**</p>
+#
 - **Otimizações no Registro (regedit):**
     - ***+100 otimizações das mais básicas até as mais profundas! como:***
     - Desativação da XboxGameBar para menos uso da CPU e GPU
@@ -30,8 +31,6 @@ Este projeto pessoal tem como objetivo melhorar o desempenho do computador duran
 
 ### <p align="center">**⚠️ Coisas que podem parar de funcionar (Até o momento):**</p>
 #
-- **Este código não foi testado no Windows 11! Use por sua conta e risco!**
-#
 - **Windows Update**
 - **Windows Copilot**
 - **Conectar à uma impressora ou imprimir algo**
@@ -39,6 +38,14 @@ Este projeto pessoal tem como objetivo melhorar o desempenho do computador duran
 - **OneDrive**
 - **XboxGamebar**
 - **Máquinas Virtuais**
+
+## <p align="center">**👨‍💻 Compatibilidade**</p>
+
+- **Windows 10:**
+  - Versão 1.0+
+- **Windows 11:**
+  - Versão 1.0, 1,5, 1.8.
+  - Compatibilidade parcial em: v2.0+
 
 ## <p align="center">**🖥️ Como instalar?**</p>
 
@@ -48,7 +55,7 @@ Este projeto pessoal tem como objetivo melhorar o desempenho do computador duran
   - **[O&O ShutUp10++](https://www.oo-software.com/en/shutup10)**
 > **Aviso:** Execute esse arquivo por sua conta e risco. Funções que talvez sejam necessárias para você podem ser desativadas. Não sou responsável por possíveis danos (no sistema operacional) que podem vir a ocorrer.
 
-## <p align="center">**👨‍💻 Contribuição**</p>
+## <p align="center">**🤝 Contribuição**</p>
 
 1. Faça um clone / fork do branch principal
 2. Crie um novo branch no seu fork.
