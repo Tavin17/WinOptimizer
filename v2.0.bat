@@ -11,7 +11,7 @@ color F
 echo ================================================================
 echo.
 
-echo Feito por Gustavin (v2.0)
+echo Feito por Gustavin (v2.0) 
 
 echo.
 echo ================================================================
@@ -30,31 +30,30 @@ echo Serão feitas alterações, adições e aplicações em:
 
 echo.
 
-echo 1. Regedit. (108 arquivos serão alterados/criados)
+echo 1. Regedit. (106 arquivos serão alterados/criados)
 echo 2. Serviços. (Desativação de 87 serviços desnecessários)
 echo 3. CMD. (Aplicação de 15 comandos)
 echo 4. Limpeza de arquivos temporários e cache.
 
 echo.
 
-echo OBS: O intuito desse código é maximizar a perfomance do seu computador para jogos sem precisar instalar nada, desativando muitas coisas que consomem memória e cpu no segundo plano do seu computador, diminuindo processos. 
-echo Assim melhorando o InputLag e deixando o sistema operacional e o FPS nos jogos mais estáveis. Não sou responsável por nenhum tipo de dano em seu sistema operacional, use por sua conta e risco!
-
+echo Obs 1. O intuito desse código é maximizar a perfomance do seu computador para jogos sem precisar instalar nada, desativando muitas coisas que consomem memória e cpu no segundo plano do seu computador, diminuindo processos. Melhorando o InputLag e deixando o sistema operacional e o FPS nos jogos mais estáveis. Não sou responsável por nenhum tipo de dano em seu sistema operacional, use por sua conta e risco!
 echo.
-
-echo Algumas funções do Windows que podem não funcionar ou não funcionar corretamente após as otimizações:
-echo Windows Update, Windows Copilot, Cortana, OneDrive, XboxGameBar, Conectar à uma impressora ou imprimir algo, Máquinas Virtuais.
+echo Obs 2. algumas funções do Windows que podem não funcionar ou não funcionar corretamente após as otimizações: Windows Update, Windows Copilot, Cortana, OneDrive, XboxGameBar, Conectar à uma impressora ou imprimir algo, Máquinas Virtuais.
+echo.
+echo Obs 3. Este código não foi testado no Windows 11. Utilize a versão 1.8 para melhor compatibilidade. 
 
 echo.
 echo ================================================================
 echo.
 
-echo Pressione Enter para iniciar as otimizações.
+echo Pressione Enter para iniciar as otimizações
 pause >nul >null 2>&1
 
 echo.
 cls
 
+:choices
 color 0A
 
 echo ================================================================
@@ -69,7 +68,7 @@ echo Pressione [4] para limpar arquivos temporários.
 echo.
 
 echo Pressione [M] para voltar para o menu inicial.
-echo Pressione [R] para reiniciar.
+echo Pressione [G] para ir para o repositório do código.
 echo Pressione [L] para sair.
 
 echo.
@@ -84,7 +83,7 @@ if /i "%continuar%"=="3" goto parte3
 if /i "%continuar%"=="4" goto parte4
 
 if /i "%continuar%"=="M" goto msginicial
-if /i "%continuar%"=="R" goto reboot
+if /i "%continuar%"=="G" start https://github.com/Tavin17/WinOptimizer && goto choices
 if /i "%continuar%"=="L" exit
 
 :parte1
@@ -145,12 +144,14 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProf
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Games" /v "SFIO Priority" /t REG_SZ /d High /f >nul 2>&1
 echo 4 Alterações feitas em HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Games.
 
+::reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects" /v "VisualFXSetting" /t REG_DWORD /d 2 /f >nul 2>&1
+::echo 1 Alteração feita em HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects.
+
 reg add "HKCU\Control Panel\Desktop" /v "MenuShowDelay" /t REG_SZ /d 0 /f >nul 2>&1
 reg add "HKCU\Control Panel\Desktop" /v "AutoEndTasks" /t REG_DWORD /d 1 /f >nul 2>&1
 reg add "HKCU\Control Panel\Desktop" /v "ForegroundLockTimeout" /t REG_DWORD /d 0 /f >nul 2>&1
-reg add "HKCU\Control Panel\Desktop" /v "FontSmoothing" /t REG_SZ /d 2 /f >nul 2>&1
-reg add "HKCU\Control Panel\Desktop" /v "FontSmoothingType" /t REG_DWORD /d 2 /f >nul 2>&1
-echo 5 Alterações feitas em HKCU\Control Panel\Desktop.
+::reg add "HKCU\Control Panel\Desktop" /v "FontSmoothing" /t REG_SZ /d 2 /f >nul 2>&1
+echo 4 Alterações feitas em HKCU\Control Panel\Desktop.
 
 reg add "HKCU\Control Panel\Accessibility\MouseKeys" /v "flags" /t REG_SZ /d 0 /f >nul 2>&1
 echo 1 Alteração feita HKCU\Control Panel\Accessibility\MouseKeys.
@@ -333,7 +334,13 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\
 echo 1 Alteração feita em HKCU\Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\videosLibrary.
 
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\broadFileSystemAccess" /v "Value" /t REG_SZ /d Deny /f >nul 2>&1
-echo 1 Alteração feita em HKCU\Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\broadFileSystemAcces.
+echo 1 Alteração feita em HKCU\Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\broadFileSystemAccess.
+
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "EnableCdp" /t REG_DWORD /d 0 /f >nul 2>&1
+echo 1 Alteração feita em HKLM\SOFTWARE\Policies\Microsoft\Windows\System.
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\DoSvc" /v "Start" /t REG_DWORD /d 4 /f >null 2>&1 
+echo 1 Alteração feita em HKLM\SYSTEM\CurrentControlSet\Services\DoSvc.
 
 :: Gpedit.msc
 
@@ -346,10 +353,6 @@ echo 1 Alteração feita em HKLM\SOFTWARE\Policies\Microsoft\Windows\OneDrive.
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" /v "ExcludeWUDriversInQualityUpdate" /t REG_DWORD /d 1 /f >nul 2>&1
 echo 1 Alteração feita em HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate.
 
-::Efeitos visuais
-
-reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects" /v "VisualFXSetting" /t REG_DWORD /d 2 /f >nul 2>&1
-echo 1 Alteração feita em HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects.
 
 echo.
 
@@ -360,6 +363,7 @@ echo.
 echo Otimizações na regedit concluídas.
 
 color 0A
+
 
 echo.
 echo ================================================================
@@ -374,7 +378,7 @@ echo Pressione [4] para limpar arquivos temporários.
 echo.
 
 echo Pressione [M] para voltar para o menu inicial.
-echo Pressione [R] para reiniciar.
+echo Pressione [G] para ir para o repositório do código.
 echo Pressione [L] para sair.
 
 echo.
@@ -389,7 +393,7 @@ if /i "%continuar%"=="3" goto parte3
 if /i "%continuar%"=="4" goto parte4
 
 if /i "%continuar%"=="M" goto msginicial
-if /i "%continuar%"=="R" goto reboot
+if /i "%continuar%"=="G" start https://github.com/Tavin17/WinOptimizer && goto choices
 if /i "%continuar%"=="L" exit
 
 :parte2
@@ -541,6 +545,10 @@ echo.
 
 echo (OpenSSH Authentication Agent)
 call :stop_and_disable ssh-agent
+echo.
+
+echo (Otimização de Entrega)
+call :stop_and_disable DoSvc
 echo.
 
 echo (Pastas de Trabalho)
@@ -768,7 +776,7 @@ echo Pressione [4] para limpar arquivos temporários.
 echo.
 
 echo Pressione [M] para voltar para o menu inicial.
-echo Pressione [R] para reiniciar.
+echo Pressione [G] para ir para o repositório do código.
 echo Pressione [L] para sair.
 
 echo.
@@ -783,7 +791,7 @@ if /i "%continuar%"=="3" goto parte3
 if /i "%continuar%"=="4" goto parte4
 
 if /i "%continuar%"=="M" goto msginicial
-if /i "%continuar%"=="R" goto reboot
+if /i "%continuar%"=="G" start https://github.com/Tavin17/WinOptimizer && goto choices
 if /i "%continuar%"=="L" exit
 
 :parte3
@@ -816,6 +824,7 @@ echo Cache de DNS limpo.
 powercfg /list | findstr /i "%PLANO_NOME%" > nul
 
 if %errorlevel% equ 0 (
+    echo Plano de Energia "%PLANO_NOME%" já ativado.
     goto escolha
 ) 
 
@@ -847,6 +856,7 @@ if /i "%continuar%"=="N" goto pw1
 :pw
 PowerShell -command "Get-AppxPackage Microsoft.XboxGamingOverlay | Remove-AppxPackage" >nul 2>&1
 echo XboxGameBar desinstalada.
+goto pw1
 
 :: ----------------------------------------------------------------------------------------------
 
@@ -884,7 +894,7 @@ echo Pressione [4] para limpar arquivos temporários.
 echo.
 
 echo Pressione [M] para voltar para o menu inicial.
-echo Pressione [R] para reiniciar.
+echo Pressione [G] para ir para o repositório do código.
 echo Pressione [L] para sair.
 
 echo.
@@ -899,7 +909,7 @@ if /i "%continuar%"=="3" goto parte3
 if /i "%continuar%"=="4" goto parte4
 
 if /i "%continuar%"=="M" goto msginicial
-if /i "%continuar%"=="R" goto reboot
+if /i "%continuar%"=="G" start https://github.com/Tavin17/WinOptimizer && goto choices
 if /i "%continuar%"=="L" exit
 
 :parte4
@@ -969,7 +979,7 @@ echo Pressione [4] para limpar arquivos temporários.
 echo.
 
 echo Pressione [M] para voltar para o menu inicial.
-echo Pressione [R] para reiniciar.
+echo Pressione [G] para ir para o repositório do código.
 echo Pressione [L] para sair.
 
 echo.
@@ -984,7 +994,7 @@ if /i "%continuar%"=="3" goto parte3
 if /i "%continuar%"=="4" goto parte4
 
 if /i "%continuar%"=="M" goto msginicial
-if /i "%continuar%"=="R" goto reboot
+if /i "%continuar%"=="G" start https://github.com/Tavin17/WinOptimizer && goto choices
 if /i "%continuar%"=="L" exit
 
 pause
@@ -1016,10 +1026,5 @@ if %errorlevel% equ 0 (
     ::echo O Serviço %service% foi desativado com sucesso.
     echo Foi desativado com sucesso.
 )
-
-:reboot
-echo Reiniciando, por favor aguarde.
-powershell -Command "Start-Process '%~f0' -Verb RunAs"
-exit
 
 goto :eof
