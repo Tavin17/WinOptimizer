@@ -11,7 +11,7 @@ color F
 echo ================================================================
 echo.
 
-echo Feito por Gustavin (v2.5 Beta)
+echo Feito por Gustavin (v2.5)
 
 echo.
 echo ================================================================
