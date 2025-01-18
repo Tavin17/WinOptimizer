@@ -7,7 +7,6 @@ Tenho o costume de formatar frequentemente meu computador, fiz esse código just
 Este projeto pessoal tem como objetivo melhorar o desempenho do computador durante jogos, desativando processos que consomem recursos do sistema sem serem necessários, assim garantindo um windows mais responsívo, FPS mais estáveis em jogos e InputLag praticamente zerado. -->
 
 ### <p align="center">**📋 Features:**</p>
-
 - **Otimizações no Registro (regedit):**
     - ***+100 otimizações das mais básicas até as mais profundas! como:***
     - Desativação da XboxGameBar para menos uso da CPU e GPU
@@ -29,10 +28,10 @@ Este projeto pessoal tem como objetivo melhorar o desempenho do computador duran
     - Desinstalação completa da **XboxGameBar**
     - Limpeza de **arquivos temporários** e **cache**
 
-- **Código não testado no Windows 11.**
-
 ### <p align="center">**⚠️ Coisas que podem parar de funcionar (Até o momento):**</p>
-
+#
+- **Este código não foi testado no Windows 11! Use por sua conta e risco!**
+#
 - **Windows Update**
 - **Windows Copilot**
 - **Conectar à uma impressora ou imprimir algo**
@@ -41,10 +40,12 @@ Este projeto pessoal tem como objetivo melhorar o desempenho do computador duran
 - **XboxGamebar**
 - **Máquinas Virtuais**
 
-## <p align="center">**Caso queira usar**</p>
+## <p align="center">**🖥️ Como instalar?**</p>
 
-- Vá para [Releases](https://github.com/Tavin17/WinOptimizer/releases) e instale a versão mais recente.
-
+- Vá para **[Releases](https://github.com/Tavin17/WinOptimizer/releases)** e instale a versão mais recente.
+- Para complementar e fazer uma otimização completa, você também pode usar:
+  - **[Chris Titus Tech's Windows Utility](https://github.com/ChrisTitusTech/winutil)** (Bastante recomendado)
+  - **[O&O ShutUp10++](https://www.oo-software.com/en/shutup10)**
 > **Aviso:** Execute esse arquivo por sua conta e risco. Funções que talvez sejam necessárias para você podem ser desativadas. Não sou responsável por possíveis danos (no sistema operacional) que podem vir a ocorrer.
 
 ## <p align="center">**👨‍💻 Contribuição**</p>

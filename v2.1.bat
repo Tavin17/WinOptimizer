@@ -30,8 +30,6 @@ echo Serão feitas alterações, adições e aplicações em:
 
 echo.
 
-v2.1 - Windows 10
-
 echo 1. Regedit. (106 arquivos serão alterados/criados)
 echo 2. Serviços. (Desativação de 87 serviços desnecessários)
 echo 3. CMD. (Aplicação de 15 comandos)
@@ -39,24 +37,23 @@ echo 4. Limpeza de arquivos temporários e cache.
 
 echo.
 
-echo OBS: O intuito desse código é maximizar a perfomance do seu computador para jogos sem precisar instalar nada, desativando muitas coisas que consomem memória e cpu no segundo plano do seu computador, diminuindo processos. 
-echo Assim melhorando o InputLag e deixando o sistema operacional e o FPS nos jogos mais estáveis. Não sou responsável por nenhum tipo de dano em seu sistema operacional, use por sua conta e risco!
-
+echo Obs 1. O intuito desse código é maximizar a perfomance do seu computador para jogos sem precisar instalar nada, desativando muitas coisas que consomem memória e cpu no segundo plano do seu computador, diminuindo processos. Melhorando o InputLag e deixando o sistema operacional e o FPS nos jogos mais estáveis. Não sou responsável por nenhum tipo de dano em seu sistema operacional, use por sua conta e risco!
 echo.
-
-echo Algumas funções do Windows que podem não funcionar ou não funcionar corretamente após as otimizações:
-echo Windows Update, Windows Copilot, Cortana, OneDrive, XboxGameBar, Conectar à uma impressora ou imprimir algo, Máquinas Virtuais.
+echo Obs 2. algumas funções do Windows que podem não funcionar ou não funcionar corretamente após as otimizações: Windows Update, Windows Copilot, Cortana, OneDrive, XboxGameBar, Conectar à uma impressora ou imprimir algo, Máquinas Virtuais.
+echo.
+echo Obs 3. Este código não foi testado no Windows 11. Utilize a versão 1.8 para melhor compatibilidade. 
 
 echo.
 echo ================================================================
 echo.
 
-echo Pressione Enter para iniciar as otimizações.
+echo Pressione Enter para iniciar as otimizações
 pause >nul >null 2>&1
 
 echo.
 cls
 
+:choices
 color 0A
 
 echo ================================================================
@@ -71,6 +68,7 @@ echo Pressione [4] para limpar arquivos temporários.
 echo.
 
 echo Pressione [M] para voltar para o menu inicial.
+echo Pressione [G] para ir para o repositório do código.
 echo Pressione [L] para sair.
 
 echo.
@@ -85,6 +83,7 @@ if /i "%continuar%"=="3" goto parte3
 if /i "%continuar%"=="4" goto parte4
 
 if /i "%continuar%"=="M" goto msginicial
+if /i "%continuar%"=="G" start https://github.com/Tavin17/WinOptimizer && goto choices
 if /i "%continuar%"=="L" exit
 
 :parte1
@@ -365,6 +364,7 @@ echo Otimizações na regedit concluídas.
 
 color 0A
 
+
 echo.
 echo ================================================================
 
@@ -378,6 +378,7 @@ echo Pressione [4] para limpar arquivos temporários.
 echo.
 
 echo Pressione [M] para voltar para o menu inicial.
+echo Pressione [G] para ir para o repositório do código.
 echo Pressione [L] para sair.
 
 echo.
@@ -392,6 +393,7 @@ if /i "%continuar%"=="3" goto parte3
 if /i "%continuar%"=="4" goto parte4
 
 if /i "%continuar%"=="M" goto msginicial
+if /i "%continuar%"=="G" start https://github.com/Tavin17/WinOptimizer && goto choices
 if /i "%continuar%"=="L" exit
 
 :parte2
@@ -774,6 +776,7 @@ echo Pressione [4] para limpar arquivos temporários.
 echo.
 
 echo Pressione [M] para voltar para o menu inicial.
+echo Pressione [G] para ir para o repositório do código.
 echo Pressione [L] para sair.
 
 echo.
@@ -788,6 +791,7 @@ if /i "%continuar%"=="3" goto parte3
 if /i "%continuar%"=="4" goto parte4
 
 if /i "%continuar%"=="M" goto msginicial
+if /i "%continuar%"=="G" start https://github.com/Tavin17/WinOptimizer && goto choices
 if /i "%continuar%"=="L" exit
 
 :parte3
@@ -890,6 +894,7 @@ echo Pressione [4] para limpar arquivos temporários.
 echo.
 
 echo Pressione [M] para voltar para o menu inicial.
+echo Pressione [G] para ir para o repositório do código.
 echo Pressione [L] para sair.
 
 echo.
@@ -904,6 +909,7 @@ if /i "%continuar%"=="3" goto parte3
 if /i "%continuar%"=="4" goto parte4
 
 if /i "%continuar%"=="M" goto msginicial
+if /i "%continuar%"=="G" start https://github.com/Tavin17/WinOptimizer && goto choices
 if /i "%continuar%"=="L" exit
 
 :parte4
@@ -973,6 +979,7 @@ echo Pressione [4] para limpar arquivos temporários.
 echo.
 
 echo Pressione [M] para voltar para o menu inicial.
+echo Pressione [G] para ir para o repositório do código.
 echo Pressione [L] para sair.
 
 echo.
@@ -987,6 +994,7 @@ if /i "%continuar%"=="3" goto parte3
 if /i "%continuar%"=="4" goto parte4
 
 if /i "%continuar%"=="M" goto msginicial
+if /i "%continuar%"=="G" start https://github.com/Tavin17/WinOptimizer && goto choices
 if /i "%continuar%"=="L" exit
 
 pause
