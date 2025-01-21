@@ -29,14 +29,14 @@ Este projeto pessoal tem como objetivo melhorar o desempenho do computador duran
     - Desinstalação completa da **XboxGameBar**
     - Limpeza de **arquivos temporários** e **cache**
 
-### <p align="center">**⚠️ Coisas que podem parar de funcionar (Até o momento):**</p>
+### <p align="center">**⚠️ Coisas que podem parar de funcionar:**</p>
 #
-- **Windows Update**
 - **Windows Copilot**
+- **Windows Recall**
 - **Conectar à uma impressora ou imprimir algo**
 - **Cortana**
 - **OneDrive**
-- **XboxGamebar**
+- **XboxGameBar**
 - **Máquinas Virtuais**
 
 ## <p align="center">**👨‍💻 Compatibilidade**</p>
