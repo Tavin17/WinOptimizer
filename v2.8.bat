@@ -30,8 +30,8 @@ echo Serão feitas alterações, adições e aplicações em:
 
 echo.
 
-echo 1. Regedit. (177 arquivos serão alterados/criados)
-echo 2. Serviços. (Desativação de 87 serviços desnecessários)
+echo 1. Regedit. (179 arquivos serão alterados/criados)
+echo 2. Serviços. (Desativação de 88 serviços desnecessários)
 echo 3. CMD. (Aplicação de 18 comandos)
 echo 4. Limpeza de arquivos temporários e cache.
 
@@ -39,9 +39,7 @@ echo.
 
 echo Obs 1. O intuito desse código é maximizar a perfomance do seu computador para jogos sem precisar instalar nada, desativando muitas coisas que consomem memória e cpu no segundo plano do seu computador, diminuindo processos. Melhorando o InputLag e deixando o sistema operacional e o FPS nos jogos mais estáveis. Não sou responsável por nenhum tipo de dano em seu sistema operacional, use por sua conta e risco!
 echo.
-echo Obs 2. algumas funções do Windows que podem não funcionar ou não funcionar corretamente após as otimizações:" Windows Update, Windows Copilot, Cortana, OneDrive, XboxGameBar, Conectar à uma impressora ou imprimir algo, Máquinas Virtuais.
-echo.
-echo Obs 3. Este código não foi testado no Windows 11. Utilize a versão 1.8 para melhor compatibilidade. 
+echo Obs 2. algumas funções do Windows que podem não funcionar ou não funcionar corretamente após as otimizações: Windows Update, Windows Copilot, Cortana, OneDrive, XboxGameBar, Conectar à uma impressora ou imprimir algo, Máquinas Virtuais.
 
 echo.
 echo ================================================================
@@ -730,6 +728,10 @@ echo.
 
 echo (Microsoft App-V Client)
 call :stop_and_disable AppVClient
+echo.
+
+echo (Monitor do Servidor de Quadro da Câmera do Windows)
+call :stop_and_disable FrameServerMonitor
 echo.
 
 echo (OpenSSH Authentication Agent)
