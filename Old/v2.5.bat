@@ -30,8 +30,6 @@ echo Serão feitas alterações, adições e aplicações em:
 
 echo.
 
-echo +11 regedits
-
 echo 1. Regedit. (150 arquivos serão alterados/criados)
 echo 2. Serviços. (Desativação de 87 serviços desnecessários)
 echo 3. CMD. (Aplicação de 18 comandos)
