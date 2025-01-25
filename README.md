@@ -1,6 +1,6 @@
 # <p align="center">**🌎 Sobre o projeto**</p>
 
-**WinOptimizer** é um pequeno projeto pessoal desenvolvido apenas por mim, Tavin17, onde o código executado desativa, remove ou limpa arquivos, aplicativos ou serviços que são completamente desnecessários principalmente para pessoas que jogam, diminuindo processos e o uso da sua CPU e GPU. Consequentemente garantindo uma maior estabilidade no FPS, menos InputLag e um Windows mais responsívo.
+**WinOptimizer** é um pequeno projeto pessoal desenvolvido apenas por mim, Tavin17, onde o código executado desativa, remove ou limpa arquivos, aplicativos ou serviços que são completamente desnecessários principalmente para pessoas que jogam, diminuindo drasticamente o número de processos e o uso da sua CPU e GPU. Consequentemente garantindo uma maior estabilidade no FPS, menos InputLag e um Windows mais responsívo.
 
 <!-- ## <p align="center">**Funcionalidades**</p>
 
@@ -34,6 +34,7 @@ Este projeto pessoal tem como objetivo melhorar o desempenho do computador duran
 - **Windows Copilot**
 - **Windows Recall**
 - **Conectar à uma impressora ou imprimir algo**
+- **Instalar algum aplicativo da MS Store**
 - **Cortana**
 - **OneDrive**
 - **XboxGameBar**
@@ -42,10 +43,11 @@ Este projeto pessoal tem como objetivo melhorar o desempenho do computador duran
 ## <p align="center">**👨‍💻 Compatibilidade**</p>
 
 - **Windows 10:**
-  - Versão 1.0+
+  - Todas as versões
 - **Windows 11:**
-  - Versão 1.0, 1,5, 1.8.
-  - Parcialmente compatível nas versões 2.0+
+  - Versões 1.0, 1,5, 1.8, 2.8+
+  - Compatibilidade parcial nas versões 2.0 e 2.5
+
 
 ## <p align="center">**🖥️ Como instalar?**</p>
 
@@ -53,7 +55,8 @@ Este projeto pessoal tem como objetivo melhorar o desempenho do computador duran
 - Para complementar e fazer uma otimização completa, você também pode usar:
   - **[Chris Titus Tech's Windows Utility](https://github.com/ChrisTitusTech/winutil)** (Bastante recomendado)
   - **[O&O ShutUp10++](https://www.oo-software.com/en/shutup10)**
-> **Aviso:** Execute esse arquivo por sua conta e risco. Funções que talvez sejam necessárias para você podem ser desativadas. Não sou responsável por possíveis danos (no sistema operacional) que podem vir a ocorrer.
+  
+> **Aviso:** Crie um ponto de restauração antes de realizar qualquer otimização. Execute esse arquivo por sua conta e risco. Funções que talvez sejam necessárias para você podem ser desativadas. Não sou responsável por possíveis problemas que podem vir a ocorrer.
 
 ## <p align="center">**🤝 Contribuição**</p>
 
