@@ -1,12 +1,20 @@
 # <p align="center">**🌎 Sobre o projeto**</p>
 
-**WinOptimizer** é um pequeno projeto pessoal desenvolvido apenas por mim, Tavin17, onde o código executado desativa, remove ou limpa arquivos, aplicativos ou serviços que são completamente desnecessários principalmente para pessoas que jogam, diminuindo drasticamente o número de processos e o uso da sua CPU e GPU. Consequentemente garantindo uma maior estabilidade no FPS, menos InputLag e um Windows mais responsívo.
+`WinOptimizer` é um pequeno projeto pessoal desenvolvido apenas por mim, **Tavin17**, onde o código executado desativa, remove ou limpa arquivos, aplicativos ou serviços que são completamente desnecessários principalmente para pessoas que jogam, diminuindo drasticamente o número de processos e o uso da sua CPU e GPU. Consequentemente garantindo uma maior estabilidade no FPS, menos InputLag e um Windows mais responsívo.
+
+
+<br>
+<div align="center">
+    <img src="https://img.shields.io/github/tag/Tavin17/WinOptimizer?color=blue&label=Release&style=for-the-badge" alt="Release Version" />
+    <img src="https://img.shields.io/github/release-date/Tavin17/WinOptimizer?color=green&label=Updated&style=for-the-badge" alt="Release Date" />
+    <img src="https://img.shields.io/github/repo-size/Tavin17/WinOptimizer?color=orange&label=Size&style=for-the-badge" alt="Downloads Size" />
+</div>
 
 <!-- ## <p align="center">**Funcionalidades**</p>
 
 Este projeto pessoal tem como objetivo melhorar o desempenho do computador durante jogos, desativando processos que consomem recursos do sistema sem serem necessários, assim garantindo um windows mais responsívo, FPS mais estáveis em jogos e InputLag praticamente zerado. -->
 
-### <p align="center">**📋 Features:**</p>
+### <p align="center">**📋 Recursos:**</p>
 #
 - **Otimizações no Registro (regedit):**
     - ***+100 otimizações das mais básicas até as mais profundas! como:***
@@ -42,11 +50,11 @@ Este projeto pessoal tem como objetivo melhorar o desempenho do computador duran
 
 ## <p align="center">**👨‍💻 Compatibilidade**</p>
 
-- **Windows 10:**
+- **`Windows 10:`**
   - Todas as versões
-- **Windows 11:**
-  - Versões 1.0, 1,5, 1.8, 2.8+
-  - Compatibilidade parcial nas versões 2.0 e 2.5
+- **`Windows 11:`**
+  - Versões **1.0**, **1.5**, **1.8**, **2.8+**
+  - Compatibilidade parcial nas versões **2.0** e **2.5**
 
 
 ## <p align="center">**🖥️ Como instalar?**</p>
@@ -55,13 +63,15 @@ Este projeto pessoal tem como objetivo melhorar o desempenho do computador duran
 - Para complementar e fazer uma otimização completa, você também pode usar:
   - **[Chris Titus Tech's Windows Utility](https://github.com/ChrisTitusTech/winutil)** (Bastante recomendado)
   - **[O&O ShutUp10++](https://www.oo-software.com/en/shutup10)**
+  - **[Optimizer](https://github.com/hellzerg/optimizer)**
   
-> **Aviso:** Crie um ponto de restauração antes de realizar qualquer otimização. Execute esse arquivo por sua conta e risco. Funções que talvez sejam necessárias para você podem ser desativadas. Não sou responsável por possíveis problemas que podem vir a ocorrer.
+>[!WARNING]
+> Crie um ponto de restauração antes de realizar qualquer otimização. Execute esse arquivo por sua conta e risco. Funções que talvez sejam necessárias para você podem ser desativadas. Caso tenha problemas, utilize um `Ponto de Restauração`.
 
 ## <p align="center">**🤝 Contribuição**</p>
 
 1. Faça um clone / fork do branch principal
-2. Crie um novo branch no seu fork.
+2. Crie um novo branch no seu fork
 3. Faça suas alterações
 4. Faça um commit das suas mudanças depois faça um push delas
 5. Solicite um Pull Request [aqui](https://github.com/Tavin17/WinOptimizer/pulls)!
