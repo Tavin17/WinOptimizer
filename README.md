@@ -65,7 +65,7 @@ Este projeto pessoal tem como objetivo melhorar o desempenho do computador duran
   - **[O&O ShutUp10++](https://www.oo-software.com/en/shutup10)**
   - **[Optimizer](https://github.com/hellzerg/optimizer)**
   
->[!WARNING]
+>[!AVISO]
 > Crie um ponto de restauração antes de realizar qualquer otimização. Execute esse arquivo por sua conta e risco. Funções que talvez sejam necessárias para você podem ser desativadas. Caso tenha problemas, utilize um `Ponto de Restauração`.
 
 ## <p align="center">**🤝 Contribuição**</p>
