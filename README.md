@@ -17,7 +17,7 @@ Este projeto pessoal tem como objetivo melhorar o desempenho do computador duran
 ### <p align="center">**📋 Recursos:**</p>
 #
 - **Otimizações no Registro (regedit):**
-    - ***+100 otimizações das mais básicas até as mais profundas! como:***
+    - ***+200 otimizações das mais básicas até as mais profundas! como:***
     - Desativação da XboxGameBar para menos uso da CPU e GPU
     - Priorizar o máximo do seu computador para jogos
     - Otimizações para praticamente ZERAR seu InputLag
