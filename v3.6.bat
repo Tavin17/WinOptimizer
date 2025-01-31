@@ -9,7 +9,7 @@
 
 :: O que você está fazendo aqui?
 
-:: 241 REGEDITS
+:: 244 REGEDITS
 :: 88 Serviços
 :: 19 cmds
 
@@ -220,7 +220,10 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "OverlayTestMode" /t REG_DWORD 
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SOFTWARE\Microsoft\Windows\Dwm.
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "HwSchMode" /t REG_DWORD /d 2 /f >nul 2>&1
-echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler.
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "TdrLevel" /t REG_DWORD /d 0 /f >nul 2>&1
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "TdrDelay" /t REG_DWORD /d 0 /f >nul 2>&1
+echo !COLOR_ORANGE!3!COLOR_GREEN! Alterações feita em HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler.
+
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "EnablePreemption" /t REG_DWORD /d 0 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler.
@@ -669,6 +672,11 @@ echo !COLOR_ORANGE!1!COLOR_GREEN! Alterações feitas em HKLM\SYSTEM\CurrentCont
 
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\BackgroundAccessApplications" /v "GlobalUserDisabled" /t REG_DWORD /d 1 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alterações feitas em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\BackgroundAccessApplications.
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v "HeterogeneousPolicy" /t REG_DWORD /d 0 /f >nul 2>&1
+echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feitas em HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power.
+
+
 
 :: Gpedit.msc
 
