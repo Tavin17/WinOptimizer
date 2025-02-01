@@ -9,8 +9,8 @@
 
 :: O que você está fazendo aqui?
 
-:: 244 REGEDITS
-:: 88 Serviços
+:: 252 REGEDITS
+:: 91 Serviços
 :: 19 cmds
 
 @echo off
@@ -91,7 +91,7 @@ echo !COLOR_RED!═════════════════════�
 echo.
 echo.
 
-echo                                                                                !COLOR_GREEN![1]!COLOR_WHITE! Otimizar regedit                            !COLOR_GREEN![4]!COLOR_WHITE! Limpar arquivos temporários e cache
+echo                                                                                !COLOR_GREEN![1]!COLOR_WHITE! Otimizações regedit                         !COLOR_GREEN![4]!COLOR_WHITE! Limpar arquivos temporários e cache
 echo.
 echo                                                                                !COLOR_GREEN![2]!COLOR_WHITE! Desativar serviços desnecessários           !COLOR_GREEN![5]!COLOR_WHITE! Desativar tarefas agendadas
 echo.
@@ -101,7 +101,9 @@ echo                                                                            
 
 echo.
 
-set /p continuar="" || set continuar= 
+set /p continuar=""
+
+if /i "%continuar%"=="" goto nochoice
 
 cls
 
@@ -114,7 +116,6 @@ if /i "%continuar%"=="5" goto parte5
 if /i "%continuar%"=="R" rstrui.exe && goto msginicial
 if /i "%continuar%"=="G" start https://github.com/Tavin17/WinOptimizer && goto msginicial
 if /i "%continuar%"=="L" exit
-if /i "%continuar%"=="" goto nochoice
 
 goto nochoice
 
@@ -264,7 +265,8 @@ reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v "DoNotShowF
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v "AllowDeviceNameInTelemetry" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v "AllowCommercialDataPipeline" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v "MicrosoftEdgeDataOptIn" /t REG_DWORD /d 0 /f >nul 2>&1
-echo !COLOR_ORANGE!6!COLOR_GREEN! Alterações feitas em HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection.
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v "MaxTelemetryAllowed" /t REG_DWORD /d 0 /f >nul 2>&1
+echo !COLOR_ORANGE!7!COLOR_GREEN! Alterações feitas em HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection.
 
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows NT\CurrentVersion\Software Protection Platform" /v "NoGenTicket" /t REG_DWORD /d 1 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SOFTWARE\Policies\Microsoft\Windows NT\CurrentVersion\Software Protection Platform.
@@ -340,12 +342,13 @@ echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\W
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\AppPrivacy" /v "LetAppsRunInBackground" /t REG_DWORD /d 2 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SOFTWARE\Policies\Microsoft\Windows\AppPrivacy.
 
+reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "AllowOnlineTips" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "LinkResolveIgnoreLinkInfo" /t REG_DWORD /d 1 /f >nul 2>&1
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "NoInternetOpenWith" /t REG_DWORD /d 1 /f >nul 2>&1
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "NoLowDiskSpaceChecks" /t REG_DWORD /d 1 /f >nul 2>&1
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "NoResolveSearch" /t REG_DWORD /d 1 /f >nul 2>&1
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "NoResolveTrack" /t REG_DWORD /d 1 /f >nul 2>&1
-echo !COLOR_ORANGE!5!COLOR_GREEN! Alterações feitas em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer.
+echo !COLOR_ORANGE!6!COLOR_GREEN! Alterações feitas em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer.
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Reliability" /v "TimeStampInterval" /t REG_DWORD /d 0 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração em HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Reliability.
@@ -523,11 +526,11 @@ reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "H
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "TaskbarDa" /t REG_DWORD /d 0 /f >nul 2>&1
 echo !COLOR_ORANGE!6!COLOR_GREEN! Alterações feitas em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced.
 
-reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search" /v "SearchboxTaskbarMode" /t REG_DWORD /d 0 /f >nul 2>&1
-echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search.
-
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "HideSCAMeetNow" /t REG_DWORD /d 1 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer.
+
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "HideSCAMeetNow" /t REG_DWORD /d 1 /f >nul 2>&1
+echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer.
 
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Feeds" /v "EnableFeeds" /t REG_DWORD /d 0 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Feeds.
@@ -583,12 +586,18 @@ echo !COLOR_ORANGE!2!COLOR_GREEN! Alterações feitas em HKLM\SOFTWARE\Policies\
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Feeds" /v "ShellFeedsTaskbarViewMode" /t REG_DWORD /d 2 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Feeds.
 
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Feeds" /v "ShellFeedsTaskbarViewMode" /t REG_DWORD /d 2 /f >nul 2>&1
+echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Feeds.
+
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" /v "IRPStackSize" /t REG_DWORD /d 30 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters.
 echo.
 
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\People" /v "PeopleBand" /t REG_DWORD /d 0 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\People.
+
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\People" /v "PeopleBand" /t REG_DWORD /d 0 /f >nul 2>&1
+echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\People.
 
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\StorageSense\Parameters\StoragePolicy" /v 01 /t REG_DWORD /d 0 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\StorageSense\Parameters\StoragePolicy.
@@ -621,22 +630,22 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "DefaultTTL
 echo !COLOR_ORANGE!3!COLOR_GREEN! Alterações feitas em HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters.
 
 reg add "HKCU\SOFTWARE\Microsoft\Office\15.0\Outlook\Options\Mail" /v "EnableLogging" /t REG_DWORD /d 0 /f >nul 2>&1
-echo !COLOR_ORANGE!1!COLOR_GREEN! Alterações feitas em HKCU\SOFTWARE\Microsoft\Office\15.0\Outlook\Options\Mail.
+echo !COLOR_ORANGE!1!COLOR_GREEN! Alterações feita em HKCU\SOFTWARE\Microsoft\Office\15.0\Outlook\Options\Mail.
 
 reg add "HKCU\SOFTWARE\Microsoft\Office\16.0\Outlook\Options\Mail" /v "EnableLogging" /t REG_DWORD /d 0 /f >nul 2>&1
-echo !COLOR_ORANGE!1!COLOR_GREEN! Alterações feitas em HKCU\SOFTWARE\Microsoft\Office\16.0\Outlook\Options\Mail.
+echo !COLOR_ORANGE!1!COLOR_GREEN! Alterações feita em HKCU\SOFTWARE\Microsoft\Office\16.0\Outlook\Options\Mail.
 
 reg add "HKCU\SOFTWARE\Microsoft\Office\15.0\Outlook\Options\Calendar" /v "EnableCalendarLogging" /t REG_DWORD /d 0 /f >nul 2>&1
-echo !COLOR_ORANGE!1!COLOR_GREEN! Alterações feitas em HKCU\SOFTWARE\Microsoft\Office\15.0\Outlook\Options\Calendar.
+echo !COLOR_ORANGE!1!COLOR_GREEN! Alterações feita em HKCU\SOFTWARE\Microsoft\Office\15.0\Outlook\Options\Calendar.
 
 reg add "HKCU\SOFTWARE\Microsoft\Office\16.0\Outlook\Options\Calendar" /v "EnableCalendarLogging" /t REG_DWORD /d 0 /f >nul 2>&1
-echo !COLOR_ORANGE!1!COLOR_GREEN! Alterações feitas em HKCU\SOFTWARE\Microsoft\Office\16.0\Outlook\Options\Calendar.
+echo !COLOR_ORANGE!1!COLOR_GREEN! Alterações feita em HKCU\SOFTWARE\Microsoft\Office\16.0\Outlook\Options\Calendar.
 
 reg add "HKCU\SOFTWARE\Microsoft\Office\15.0\Word\Options" /v "EnableLogging" /t REG_DWORD /d 0 /f >nul 2>&1
-echo !COLOR_ORANGE!1!COLOR_GREEN! Alterações feitas em HKCU\SOFTWARE\Microsoft\Office\15.0\Word\Options.
+echo !COLOR_ORANGE!1!COLOR_GREEN! Alterações feita em HKCU\SOFTWARE\Microsoft\Office\15.0\Word\Options.
 
 reg add "HKCU\SOFTWARE\Microsoft\Office\16.0\Word\Options" /v "EnableLogging" /t REG_DWORD /d 0 /f >nul 2>&1
-echo !COLOR_ORANGE!1!COLOR_GREEN! Alterações feitas em HKCU\SOFTWARE\Microsoft\Office\16.0\Word\Options.
+echo !COLOR_ORANGE!1!COLOR_GREEN! Alterações feita em HKCU\SOFTWARE\Microsoft\Office\16.0\Word\Options.
 
 reg add "HKCU\SOFTWARE\Policies\Microsoft\Office\15.0\OSM" /v "EnableUpload" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKCU\SOFTWARE\Policies\Microsoft\Office\15.0\OSM" /v "EnableLogging" /t REG_DWORD /d 0 /f >nul 2>&1
@@ -656,27 +665,40 @@ echo !COLOR_ORANGE!2!COLOR_GREEN! Alterações feitas em HKCU\SOFTWARE\Microsoft
 echo.
 
 reg add "HKCU\SOFTWARE\Microsoft\Office\15.0\Common" /v "QMEnable" /t REG_DWORD /d 0 /f >nul 2>&1
-echo !COLOR_ORANGE!1!COLOR_GREEN! Alterações feitas em HKCU\SOFTWARE\Microsoft\Office\15.0\Common.
+echo !COLOR_ORANGE!1!COLOR_GREEN! Alterações feita em HKCU\SOFTWARE\Microsoft\Office\15.0\Common.
 
 reg add "HKCU\SOFTWARE\Microsoft\Office\16.0\Common" /v "QMEnable" /t REG_DWORD /d 0 /f >nul 2>&1
-echo !COLOR_ORANGE!1!COLOR_GREEN! Alterações feitas em HKCU\SOFTWARE\Microsoft\Office\16.0\Common.
+echo !COLOR_ORANGE!1!COLOR_GREEN! Alterações feita em HKCU\SOFTWARE\Microsoft\Office\16.0\Common.
 
 reg add "HKCU\SOFTWARE\Microsoft\Office\15.0\Common\Feedback" /v "Enabled" /t REG_DWORD /d 0 /f >nul 2>&1
-echo !COLOR_ORANGE!1!COLOR_GREEN! Alterações feitas em HKCU\SOFTWARE\Microsoft\Office\15.0\Common\Feedback.
+echo !COLOR_ORANGE!1!COLOR_GREEN! Alterações feita em HKCU\SOFTWARE\Microsoft\Office\15.0\Common\Feedback.
 
 reg add "HKCU\SOFTWARE\Microsoft\Office\16.0\Common\Feedback" /v "Enabled" /t REG_DWORD /d 0 /f >nul 2>&1
-echo !COLOR_ORANGE!1!COLOR_GREEN! Alterações feitas em HKCU\SOFTWARE\Microsoft\Office\16.0\Common\Feedback.
+echo !COLOR_ORANGE!1!COLOR_GREEN! Alterações feita em HKCU\SOFTWARE\Microsoft\Office\16.0\Common\Feedback.
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters" /v "DisabledComponents" /t REG_DWORD /d 32 /f >nul 2>&1
-echo !COLOR_ORANGE!1!COLOR_GREEN! Alterações feitas em HKLM\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters.
+echo !COLOR_ORANGE!1!COLOR_GREEN! Alterações feita em HKLM\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters.
 
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\BackgroundAccessApplications" /v "GlobalUserDisabled" /t REG_DWORD /d 1 /f >nul 2>&1
-echo !COLOR_ORANGE!1!COLOR_GREEN! Alterações feitas em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\BackgroundAccessApplications.
+echo !COLOR_ORANGE!1!COLOR_GREEN! Alterações feita em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\BackgroundAccessApplications.
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v "HeterogeneousPolicy" /t REG_DWORD /d 0 /f >nul 2>&1
-echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feitas em HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power.
+echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power.
 
+reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Notifications\Settings\Windows.SystemToast.SecurityAndMaintenance" /v "Enabled" /t REG_DWORD /d 0 /f >nul 2>&1
+echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Notifications\Settings\Windows.SystemToast.SecurityAndMaintenance.
 
+reg add "HKCU\Software\Policies\Microsoft\Windows\Explorer" /v "HidePeopleBar" /t REG_DWORD /d 1 /f >nul 2>&1
+echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\Software\Policies\Microsoft\Windows\Explorer.
+
+reg add "HKLM\Software\Policies\Microsoft\Windows\Explorer" /v "HidePeopleBar" /t REG_DWORD /d 1 /f >nul 2>&1
+echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\Software\Policies\Microsoft\Windows\Explorer.
+
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Chat" /v "ChatIcon" /t REG_DWORD /d 3 /f >nul 2>&1
+echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Chat.
+
+reg add "HKCU\Software\Microsoft\Clipboard" /v "EnableClipboardHistory" /t REG_DWORD /d 1 /f >nul 2>&1
+echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\Software\Microsoft\Clipboard.
 
 :: Gpedit.msc
 
@@ -686,7 +708,7 @@ echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SOFTWARE\Policies\Mi
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\OneDrive" /v "DisableFileSyncNGSC" /t REG_DWORD /d 1 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SOFTWARE\Policies\Microsoft\Windows\OneDrive.
 
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" /v "ExcludeWUDriversInQualityUpdate" /t REG_DWORD /d 1 /f >nul 2>&1 rem 241
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" /v "ExcludeWUDriversInQualityUpdate" /t REG_DWORD /d 1 /f >nul 2>&1 rem 247
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate.
 
 echo.
@@ -852,6 +874,19 @@ echo.
 echo (Microsoft App-V Client)
 call :stop_and_disable AppVClient
 echo.
+
+echo (Microsoft Edge Elevation Service)
+call :stop_and_disable MicrosoftEdgeElevationService
+echo.
+
+echo (Microsoft Edge Update Service [edgeupdate])
+call :stop_and_disable edgeupdate
+echo.
+
+echo (Microsoft Edge Update Service [edgeupdatem])
+call :stop_and_disable edgeupdatem
+echo.
+
 
 echo (Monitor do Servidor de Quadro da Câmera do Windows)
 call :stop_and_disable FrameServerMonitor
@@ -1166,9 +1201,8 @@ dism /online /remove-package /package-name:Microsoft.Windows.Copilot >nul 2>&1
 echo !COLOR_GREEN!Copilot removido.!COLOR_WHITE!
 
 :pw1
-echo !COLOR_ORANGE!Otimize !COLOR_WHITE!(!COLOR_GREEN!SSD!COLOR_WHITE!) !COLOR_ORANGE!ou desfragmente !COLOR_WHITE!(!COLOR_GREEN!HD!COLOR_WHITE!) !COLOR_ORANGE!seus discos.!COLOR_WHITE!
-dfrgui
-echo !COLOR_GREEN!Otimização/Desfragmentação de disco concluída.!COLOR_WHITE!
+defrag /C /L >nul 2>&1
+echo !COLOR_GREEN!Unidades otimizadas.!COLOR_WHITE!
 
 echo !COLOR_ORANGE!Conclua a limpeza do seu disco.!COLOR_WHITE!
 net session >nul 2>&1
@@ -1215,11 +1249,9 @@ echo !COLOR_GREEN!Pasta prefetch limpa.!COLOR_WHITE!
 del /f /q "%userprofile%\Recent\*" >nul 2>&1
 echo !COLOR_GREEN!Pasta recent limpa.!COLOR_WHITE!
 
-del c:\windows\logs\cbs\*.log >nul 2>&1
-del C:\Windows\Logs\MoSetup\*.log >nul 2>&1
+del C:\Windows\Logs\* /s /q >nul 2>&1
 del C:\Windows\Panther\*.log /s /q >nul 2>&1
 del C:\Windows\inf\*.log /s /q >nul 2>&1
-del C:\Windows\logs\*.log /s /q >nul 2>&1
 del C:\Windows\SoftwareDistribution\*.log /s /q >nul 2>&1
 del C:\Windows\Microsoft.NET\*.log /s /q >nul 2>&1
 del C:\Users\%USERNAME%\AppData\Local\Microsoft\Windows\WebCache\*.log /s /q >nul 2>&1
@@ -1330,6 +1362,7 @@ schtasks /change /tn "\Microsoft\Office\OfficeTelemetryAgentFallBack" /disable >
 schtasks /end /tn "\Microsoft\Office\OfficeTelemetryAgentLogOn" >nul 2>&1
 schtasks /change /tn "\Microsoft\Office\OfficeTelemetryAgentLogOn" /disable >nul 2>&1
 schtasks /change /tn "\Microsoft\Windows\Defrag\ScheduledDefrag" /disable >nul 2>&1
+schtasks /change /tn "Microsoft\Windows\Maps\MapsUpdateTask" /disable
 
 echo.
 
@@ -1374,6 +1407,7 @@ sc qc %service% | findstr /i "start    disabled" >nul
 if %errorlevel% equ 0 (
     ::echo O Serviço %service% foi desativado com sucesso.
     echo !COLOR_GREEN!Foi desativado com sucesso.!COLOR_WHITE!
+    goto :eof
 )
 
 :nochoice
