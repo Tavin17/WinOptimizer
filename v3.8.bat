@@ -1362,7 +1362,7 @@ schtasks /change /tn "\Microsoft\Office\OfficeTelemetryAgentFallBack" /disable >
 schtasks /end /tn "\Microsoft\Office\OfficeTelemetryAgentLogOn" >nul 2>&1
 schtasks /change /tn "\Microsoft\Office\OfficeTelemetryAgentLogOn" /disable >nul 2>&1
 schtasks /change /tn "\Microsoft\Windows\Defrag\ScheduledDefrag" /disable >nul 2>&1
-schtasks /change /tn "Microsoft\Windows\Maps\MapsUpdateTask" /disable
+schtasks /change /tn "Microsoft\Windows\Maps\MapsUpdateTask" /disable >nul 2>&1
 
 echo.
 
