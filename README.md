@@ -1,37 +1,36 @@
+<p align="center">
+    <img src="" alt="WinOptimizer" width="70"/>
+</p>
+
 # <p align="center">**🌎 Sobre o projeto**</p>
 
-`WinOptimizer` é um pequeno projeto pessoal desenvolvido apenas por mim, **Tavin17**, onde o código executado desativa, remove ou limpa arquivos, aplicativos ou serviços que são completamente desnecessários principalmente para pessoas que jogam, diminuindo drasticamente o número de processos e o uso da sua CPU e GPU. Consequentemente garantindo uma maior estabilidade no FPS, menos InputLag e um Windows mais responsívo.
+`WinOptimizer` é um pequeno projeto pessoal desenvolvido apenas por mim, **Tavin17**, onde o código executado desativa, remove ou limpa arquivos, aplicativos ou serviços que são completamente desnecessários principalmente para pessoas que jogam, diminuindo drasticamente o número de processos e o uso da sua CPU e GPU. Consequentemente garantindo uma maior estabilidade no FPS, menos InputLag e um Windows mais responsivo.
 
-
-<br>
 <div align="center">
     <img src="https://img.shields.io/github/tag/Tavin17/WinOptimizer?color=blue&label=Release&style=for-the-badge" alt="Release Version" />
     <img src="https://img.shields.io/github/release-date/Tavin17/WinOptimizer?color=green&label=Updated&style=for-the-badge" alt="Release Date" />
     <img src="https://img.shields.io/github/repo-size/Tavin17/WinOptimizer?color=orange&label=Size&style=for-the-badge" alt="Downloads Size" />
 </div>
 
-<!-- ## <p align="center">**Funcionalidades**</p>
-
-Este projeto pessoal tem como objetivo melhorar o desempenho do computador durante jogos, desativando processos que consomem recursos do sistema sem serem necessários, assim garantindo um windows mais responsívo, FPS mais estáveis em jogos e InputLag praticamente zerado. -->
-
 ### <p align="center">**📋 Recursos:**</p>
 #
 - **Otimizações regedit:**
     - ***+200 otimizações das mais básicas até as mais profundas! como:***
-    - Desativação da XboxGameBar para menos uso da CPU e GPU
-    - Priorizar o máximo do seu computador para jogos
-    - Otimizações para praticamente ZERAR seu InputLag
-    - Desativação de Logs de Erros do Windows e muito mais! 
+        - Desativação da XboxGameBar para reduzir o uso da CPU e GPU
+        - Priorizar o máximo do seu computador para jogos
+        - Otimizações mais profundas para praticamente ZERAR seu InputLag
+        - Desativação de telemetria e muito mais! 
+
 - **Desativação de Serviços:**
-    - ***+80 Serviços desnecessários que ficam em segundo plano fazendo absolutamente nada apenas consumindo CPU e atrapalhando sua gameplay! Alguns serviços:***
-    - O famoso **SysMain**
-    - Serviço Auxiliar de Compatibilidade de Programas
-    - Registro Remoto
-    - Serviço de Simulação de Percepção do Windows e muito mais!
+    - ***+80 Serviços desnecessários que ficam em segundo plano fazendo absolutamente nada apenas consumindo CPU e prejudicando sua jogabilidade! Alguns serviços:***
+        - SysMain
+        - Serviços Microsoft Edge
+        - Serviço de Política de Diagnóstico
+        - Serviços Hyper-V e muito mais!
 
 - **Aplicação de comandos no CMD:**
-    - **15 comandos para melhorar InputLag, limpar lixo, plano de energia personalizado e mais!**  
-    - Habilitação de **Trim** do SSD
+    - **+15 comandos para melhorar InputLag, limpar lixo, plano de energia personalizado e mais!**  
+    - Otimização de unidades
     - Comandos **FSutil**
     - Comandos **bcdedit**
     - Desinstalação completa da **XboxGameBar**
@@ -46,16 +45,15 @@ Este projeto pessoal tem como objetivo melhorar o desempenho do computador duran
 - **Cortana**
 - **OneDrive**
 - **XboxGameBar**
-- **Máquinas Virtuais**
 
 ## <p align="center">**👨‍💻 Compatibilidade**</p>
 
-- **`Windows 10:`**
+- **Windows 10:**
   - Todas as versões
-- **`Windows 11:`**
+- **Windows 11:**
   - Versões **1.0**, **1.5**, **1.8**, **2.8+**
   - Compatibilidade parcial nas versões **2.0** e **2.5**
-
+    ![Compatibilidade](https://upload.wikimedia.org/wikipedia/commons/4/47/Windows_10_logo_2019.svg)
 
 ## <p align="center">**🖥️ Como instalar?**</p>
 
@@ -75,6 +73,7 @@ Este projeto pessoal tem como objetivo melhorar o desempenho do computador duran
 3. Faça suas alterações
 4. Faça um commit das suas mudanças depois faça um push delas
 5. Solicite um Pull Request [aqui](https://github.com/Tavin17/WinOptimizer/pulls)!
+
 ## <p align="center">**Licença**</p>
 
 Este projeto está licenciado sob a [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](LICENSE). Você pode usar e modificar o código para fins não comerciais, mas não pode redistribuí-lo ou criar trabalhos derivados.

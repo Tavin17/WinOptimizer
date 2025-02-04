@@ -9,7 +9,7 @@
 
 :: O que você está fazendo aqui?
 
-:: 252 REGEDITS
+:: 251 REGEDITS
 :: 91 Serviços
 :: 19 cmds
 
@@ -438,9 +438,6 @@ reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "UploadUserActiviti
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /V "EnableSmartScreen" /t REG_DWORD /D 0 /f >nul 2>&1
 echo !COLOR_ORANGE!5!COLOR_GREEN! Alterações feitas em HKLM\SOFTWARE\Policies\Microsoft\Windows\System.
 
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\DoSvc" /v "Start" /t REG_DWORD /d 4 /f >nul 2>&1 
-echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SYSTEM\CurrentControlSet\Services\DoSvc.
-
 reg add "HKLM\Software\Microsoft\SQMClient\Windows" /v "CEIPEnable" /d 0 /t REG_DWORD /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SOFTWARE\Microsoft\SQMClient\Windows.
 echo.
@@ -734,6 +731,7 @@ goto msginicial
 
 echo ════════════════════════════════════════════════════════════════
 echo.
+
 
 echo (Arquivos Offline)
 call :stop_and_disable CscService
