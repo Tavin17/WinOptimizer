@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="" alt="WinOptimizer" width="70"/>
+    <img src="imgs/WinOptimizer.png" alt="WinOptimizer" width="500"/>
 </p>
 
 # <p align="center">**🌎 Sobre o projeto**</p>
