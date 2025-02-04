@@ -2,7 +2,7 @@
     <img src="imgs/WinOptimizer.png" alt="WinOptimizer" width="500" />
 </p>
 
-<h3 align="center" style="margin-bottom: 5px;"><strong>🌎 Sobre o projeto</strong></h2>
+<h3 align="center" style="margin-bottom: 5px;"><strong>🌎 Sobre o projeto</strong></h3>
 <hr>
 <code>WinOptimizer</code> é um pequeno projeto pessoal desenvolvido apenas por mim, <strong>Tavin17</strong>, onde o código executado desativa, remove ou limpa arquivos, aplicativos ou serviços que são completamente desnecessários principalmente para pessoas que jogam, diminuindo drasticamente o número de processos e o uso da sua CPU e GPU. Consequentemente garantindo maior estabilidade no FPS, menos InputLag e um Windows mais responsivo.
 
@@ -94,7 +94,6 @@
 </div>
 
 <h2 align="center"><strong>🖥️ Como instalar?</strong></h2>
-<hr>
 
 <ul>
   <li>Vá para <strong><a href="https://github.com/Tavin17/WinOptimizer/releases">Releases</a></strong> e instale a versão mais recente.</li>
@@ -112,7 +111,6 @@
 </div>
 
 <h2 align="center"><strong>🤝 Contribuição</strong></h2>
-<hr>
 
 <ol>
   <li>Faça um clone / fork do branch principal</li>
@@ -123,6 +121,5 @@
 </ol>
 
 <h2 align="center"><strong>Licença</strong></h2>
-<hr>
 
 <p>Este projeto está licenciado sob a <a href="LICENSE">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>. Você pode usar e modificar o código para fins não comerciais, mas não pode redistribuí-lo ou criar trabalhos derivados.</p>
