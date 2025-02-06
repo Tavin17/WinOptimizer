@@ -17,7 +17,6 @@
 
 <h3 align="center">📋 Recursos:</h3>
 <hr>
-
 <ul>
 
   <li><strong>Otimizações regedit:</strong>
@@ -60,7 +59,6 @@
 
 <h3 align="center">⚠️ Coisas que podem parar de funcionar:</h3>
 <hr>
-
 <ul>
   <li><strong>Windows Copilot</strong></li>
   <li><strong>Windows Recall</strong></li>
@@ -73,8 +71,6 @@
 
 <h3 align="center" style="margin-bottom: 5px;"><strong>👨‍💻 Compatibilidade</strong></h2>
 <hr>
-
-
   <li><strong>Windows 10:</strong>
     <ul>
       <li>Todas as versões.</li>
@@ -89,6 +85,7 @@
   </li>
 
 <h3 align="center" style="margin-bottom: 5px;"><strong>🖥️ Como instalar?</strong></h2>
+<hr>
 <ul>
   <li>Vá para <strong><a href="https://github.com/Tavin17/WinOptimizer/releases">Releases</a></strong> e faça o download da versão mais recente.</li>
   <li>Para complementar e fazer uma otimização completa, você também pode usar:
@@ -105,6 +102,7 @@
 </div>
 
 <h3 align="center" style="margin-bottom: 5px;"><strong>🤝 Contribuições</strong></h2>
+<hr>
 <ol>
   <li>Faça um clone / fork do branch principal</li>
   <li>Crie um novo branch no seu fork</li>
@@ -114,4 +112,5 @@
 </ol>
 
 <h3 align="center" style="margin-bottom: 5px;"><strong>📕 Licença</strong></h2>
+<hr>
 <p>Este projeto está licenciado sob a <a href="LICENSE">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>. Você pode usar e modificar o código para fins não comerciais, mas não pode redistribuí-lo ou criar trabalhos derivados.</p>
