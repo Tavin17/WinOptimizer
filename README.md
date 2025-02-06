@@ -93,7 +93,7 @@
   </ul>
 </div>
 
-<h2 align="center"><strong>🖥️ Como instalar?</strong></h2>
+<!-- <h2 align="center"><strong>🖥️ Como instalar?</strong></h2>
 
 <ul>
   <li>Vá para <strong><a href="https://github.com/Tavin17/WinOptimizer/releases">Releases</a></strong> e instale a versão mais recente.</li>
@@ -122,4 +122,4 @@
 
 <h2 align="center"><strong>Licença</strong></h2>
 
-<p>Este projeto está licenciado sob a <a href="LICENSE">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>. Você pode usar e modificar o código para fins não comerciais, mas não pode redistribuí-lo ou criar trabalhos derivados.</p>
+<p>Este projeto está licenciado sob a <a href="LICENSE">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>. Você pode usar e modificar o código para fins não comerciais, mas não pode redistribuí-lo ou criar trabalhos derivados.</p> -->
