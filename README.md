@@ -74,17 +74,17 @@
 <h3 align="center" style="margin-bottom: 5px;"><strong>👨‍💻 Compatibilidade</strong></h2>
 <hr>
 
-<div style="display: flex; align-items: center;">
-  <img src="https://img.icons8.com/?size=512&id=108792&format=png" alt="Windows 10 Logo" width="35" style="margin-right: 10px;" />
-  <span style="font-weight: bold;">Windows 10:</span>
+<div style="display: flex; align-items: center; gap: 10px;">
+  <img src="https://img.icons8.com/?size=512&id=108792&format=png" alt="Windows 10 Logo" width="35" />
+  <strong style="line-height: 35px;">Windows 10:</strong>
 </div>
 <ul style="padding-left: 45px;">
   <li>Todas as versões.</li>
 </ul>
 
-<div style="display: flex; align-items: center;">
-  <img src="https://w11.es/wp-content/uploads/2021/07/LOGO-W11.ES_.png" alt="Windows 11 Logo" width="35" style="margin-right: 10px;" />
-  <span style="font-weight: bold;">Windows 11:</span>
+<div style="display: flex; align-items: center; gap: 10px;">
+  <img src="https://w11.es/wp-content/uploads/2021/07/LOGO-W11.ES_.png" alt="Windows 11 Logo" width="35" />
+  <strong style="line-height: 35px;">Windows 11:</strong>
 </div>
 <ul style="padding-left: 45px;">
   <li>Versões <strong>1.0</strong>, <strong>1.5</strong>, <strong>1.8</strong>, <strong>2.8+.</strong></li>
