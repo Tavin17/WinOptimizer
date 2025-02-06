@@ -87,10 +87,10 @@
     <li>Compatibilidade parcial nas versões <strong>2.0</strong> e <strong>2.5</strong>.</li>
     </ul>
   </li>
-  
-<h2 align="center"><strong>🖥️ Como instalar?</strong></h2>
+
+<h3 align="center" style="margin-bottom: 5px;"><strong>🖥️ Como instalar?</strong></h2>
 <ul>
-  <li>Vá para <strong><a href="https://github.com/Tavin17/WinOptimizer/releases">Releases</a></strong> e instale a versão mais recente.</li>
+  <li>Vá para <strong><a href="https://github.com/Tavin17/WinOptimizer/releases">Releases</a></strong> e faça o download da versão mais recente.</li>
   <li>Para complementar e fazer uma otimização completa, você também pode usar:
     <ul>
       <li><strong><a href="https://github.com/ChrisTitusTech/winutil">Chris Titus Tech's Windows Utility</a></strong> (Bastante recomendado)</li>
@@ -100,11 +100,11 @@
   </li>
 </ul>
 
-<div style="background-color: #ffcc00; padding: 10px; border-radius: 5px;">
+<div style="background-color:rgb(199, 159, 0); padding: 10px; border-radius: 5px;">
   <strong>⚠️</strong> Crie um ponto de restauração antes de realizar qualquer otimização. Execute esse arquivo por sua conta e risco. Funções que talvez sejam necessárias para você podem ser desativadas. Caso tenha problemas, utilize um <code>Ponto de Restauração</code>.
 </div>
 
-<h2 align="center"><strong>🤝 Contribuição</strong></h2>
+<h3 align="center" style="margin-bottom: 5px;"><strong>🤝 Contribuições</strong></h2>
 <ol>
   <li>Faça um clone / fork do branch principal</li>
   <li>Crie um novo branch no seu fork</li>
@@ -113,5 +113,5 @@
   <li>Solicite um Pull Request <a href="https://github.com/Tavin17/WinOptimizer/pulls">aqui</a>!</li>
 </ol>
 
-<h2 align="center"><strong>Licença</strong></h2>
+<h3 align="center" style="margin-bottom: 5px;"><strong>📕 Licença</strong></h2>
 <p>Este projeto está licenciado sob a <a href="LICENSE">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>. Você pode usar e modificar o código para fins não comerciais, mas não pode redistribuí-lo ou criar trabalhos derivados.</p>
