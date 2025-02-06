@@ -74,23 +74,20 @@
 <h3 align="center" style="margin-bottom: 5px;"><strong>👨‍💻 Compatibilidade</strong></h2>
 <hr>
 
-<div style="display: flex; align-items: center;">
-  <strong>&#8226; Windows 10:</strong>
-    </div>
-    <ul style="padding-left: 60px;">
-    <li>Todas as versões.</li>
-  </ul>
-</div>
 
-<div style="display: flex; align-items: center;">
-  <strong>&#8226; Windows 11:</strong>
-  </div>
-    <ul style="padding-left: 60px;">
-    <li>Versões <strong>1.0</strong>, <strong>1.5</strong>, <strong>1.8</strong>, <strong>2.8+.</strong></li>
+  <li><strong>Windows 10:</strong>
+    <ul>
+      <li>Todas as versões.</li>
+    </ul>
+  </li>
+
+  <li><strong>Windows 11:</strong>
+    <ul>
+          <li>Versões <strong>1.0</strong>, <strong>1.5</strong>, <strong>1.8</strong>, <strong>2.8+.</strong></li>
     <li>Compatibilidade parcial nas versões <strong>2.0</strong> e <strong>2.5</strong>.</li>
-  </ul>
-</div>
-
+    </ul>
+  </li>
+  
 <h2 align="center"><strong>🖥️ Como instalar?</strong></h2>
 <ul>
   <li>Vá para <strong><a href="https://github.com/Tavin17/WinOptimizer/releases">Releases</a></strong> e instale a versão mais recente.</li>
