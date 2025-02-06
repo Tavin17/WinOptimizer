@@ -15,7 +15,7 @@
     <img src="https://img.shields.io/github/repo-size/Tavin17/WinOptimizer?color=orange&label=Size&style=for-the-badge" alt="Downloads Size" />
 </div>
 
-<h2 align="center">📋 Recursos:</h2>
+<h3 align="center" style="margin-bottom: 5px;"><strong>📋 Recursos</strong></h3>
 <hr>
 <ul>
 
@@ -57,7 +57,7 @@
   </li>
 </ul>
 
-<h2 align="center">⚠️ Coisas que podem parar de funcionar:</h2>
+<h3 align="center" style="margin-bottom: 5px;"><strong>⚠️ Coisas que podem parar de funcionar</strong></h3>
 <hr>
 <ul>
   <li><strong>Windows Copilot</strong></li>
@@ -69,7 +69,7 @@
   <li><strong>XboxGameBar</strong></li>
 </ul>
 
-<h2 align="center" style="margin-bottom: 5px;"><strong>👨‍💻 Compatibilidade</strong></h2>
+<h3 align="center" style="margin-bottom: 5px;"><strong>👨‍💻 Compatibilidade</strong></h3>
 <hr>
   <li><strong>Windows 10:</strong>
     <ul>
@@ -84,7 +84,7 @@
     </ul>
   </li>
 
-<h2 align="center" style="margin-bottom: 5px;"><strong>🖥️ Como instalar?</strong></h2>
+<h3 align="center" style="margin-bottom: 5px;"><strong>🖥️ Como instalar?</strong></h3>
 <hr>
 <ul>
   <li>Vá para <strong><a href="https://github.com/Tavin17/WinOptimizer/releases">Releases</a></strong> e faça o download da versão mais recente.</li>
@@ -100,8 +100,7 @@
 <div style="background-color:rgb(199, 159, 0); padding: 10px; border-radius: 5px;">
   <strong>⚠️</strong> Crie um ponto de restauração antes de realizar qualquer otimização. Execute esse arquivo por sua conta e risco. Funções que talvez sejam necessárias para você podem ser desativadas. Caso tenha problemas, utilize um <code>Ponto de Restauração</code>.
 </div>
-
-<h2 align="center" style="margin-bottom: 5px;"><strong>🤝 Contribuições</strong></h2>
+<h3 align="center" style="margin-bottom: 5px;"><strong>🤝 Contribuições</strong></h3>
 <hr>
 <ol>
   <li>Faça um clone / fork do branch principal</li>
@@ -111,6 +110,6 @@
   <li>Solicite um Pull Request <a href="https://github.com/Tavin17/WinOptimizer/pulls">aqui</a>!</li>
 </ol>
 
-<h2 align="center" style="margin-bottom: 5px;"><strong>📕 Licença</strong></h2>
+<h3 align="center" style="margin-bottom: 5px;"><strong>📕 Licença</strong></h3>
 <hr>
 <p>Este projeto está licenciado sob a <a href="LICENSE">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>. Você pode usar e modificar o código para fins não comerciais, mas não pode redistribuí-lo ou criar trabalhos derivados.</p>
