@@ -2,7 +2,8 @@
     <img src="imgs/WinOptimizer.png" alt="WinOptimizer" width="500" />
 </p>
 
-<h1 align="center" style="margin-bottom: 5px;"><strong>🌎 Sobre o projeto</strong></h3>
+<h3 align="center" style="margin-bottom: 5px;"><strong>🌎 Sobre o projeto</strong></h3>
+<hr>
 <code>WinOptimizer</code> é um pequeno projeto pessoal desenvolvido apenas por mim, <strong>Tavin17</strong>, onde o código executado desativa, remove ou limpa arquivos, aplicativos ou serviços que são completamente desnecessários principalmente para pessoas que jogam, diminuindo drasticamente o número de processos e o uso da sua CPU e GPU. Consequentemente garantindo maior estabilidade no FPS, menos InputLag e um Windows mais responsivo.
 
 </br>
@@ -15,6 +16,7 @@
 </div>
 
 <h2 align="center">📋 Recursos:</h2>
+<hr>
 <ul>
 
   <li><strong>Otimizações regedit:</strong>
@@ -56,6 +58,7 @@
 </ul>
 
 <h2 align="center">⚠️ Coisas que podem parar de funcionar:</h2>
+<hr>
 <ul>
   <li><strong>Windows Copilot</strong></li>
   <li><strong>Windows Recall</strong></li>
@@ -67,6 +70,7 @@
 </ul>
 
 <h2 align="center" style="margin-bottom: 5px;"><strong>👨‍💻 Compatibilidade</strong></h2>
+<hr>
   <li><strong>Windows 10:</strong>
     <ul>
       <li>Todas as versões.</li>
@@ -81,6 +85,7 @@
   </li>
 
 <h2 align="center" style="margin-bottom: 5px;"><strong>🖥️ Como instalar?</strong></h2>
+<hr>
 <ul>
   <li>Vá para <strong><a href="https://github.com/Tavin17/WinOptimizer/releases">Releases</a></strong> e faça o download da versão mais recente.</li>
   <li>Para complementar e fazer uma otimização completa, você também pode usar:
@@ -97,6 +102,7 @@
 </div>
 
 <h2 align="center" style="margin-bottom: 5px;"><strong>🤝 Contribuições</strong></h2>
+<hr>
 <ol>
   <li>Faça um clone / fork do branch principal</li>
   <li>Crie um novo branch no seu fork</li>
@@ -106,4 +112,5 @@
 </ol>
 
 <h2 align="center" style="margin-bottom: 5px;"><strong>📕 Licença</strong></h2>
+<hr>
 <p>Este projeto está licenciado sob a <a href="LICENSE">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>. Você pode usar e modificar o código para fins não comerciais, mas não pode redistribuí-lo ou criar trabalhos derivados.</p>
