@@ -75,24 +75,23 @@
 <hr>
 
 <div style="display: flex; align-items: center;">
-  <img src="https://img.icons8.com/?size=512&id=108792&format=png" alt="Windows 10 Logo" width="35" />
-  <strong style="margin-left: 10px; position: relative; top: -2px;">Windows 10:</strong>
+  <strong>&#8226; Windows 10:</strong>
+    </div>
+    <ul style="padding-left: 60px;">
+    <li>Todas as versões.</li>
+  </ul>
 </div>
-<ul style="padding-left: 45px;">
-  <li>Todas as versões.</li>
-</ul>
 
 <div style="display: flex; align-items: center;">
-  <img src="https://w11.es/wp-content/uploads/2021/07/LOGO-W11.ES_.png" alt="Windows 11 Logo" width="35" />
-  <strong style="margin-left: 10px; position: relative; top: -2px;">Windows 11:</strong>
+  <strong>&#8226; Windows 11:</strong>
+  </div>
+    <ul style="padding-left: 60px;">
+    <li>Versões <strong>1.0</strong>, <strong>1.5</strong>, <strong>1.8</strong>, <strong>2.8+.</strong></li>
+    <li>Compatibilidade parcial nas versões <strong>2.0</strong> e <strong>2.5</strong>.</li>
+  </ul>
 </div>
-<ul style="padding-left: 45px;">
-  <li>Versões <strong>1.0</strong>, <strong>1.5</strong>, <strong>1.8</strong>, <strong>2.8+.</strong></li>
-  <li>Compatibilidade parcial nas versões <strong>2.0</strong> e <strong>2.5</strong>.</li>
-</ul>
 
-<!-- <h2 align="center"><strong>🖥️ Como instalar?</strong></h2>
-
+<h2 align="center"><strong>🖥️ Como instalar?</strong></h2>
 <ul>
   <li>Vá para <strong><a href="https://github.com/Tavin17/WinOptimizer/releases">Releases</a></strong> e instale a versão mais recente.</li>
   <li>Para complementar e fazer uma otimização completa, você também pode usar:
@@ -109,7 +108,6 @@
 </div>
 
 <h2 align="center"><strong>🤝 Contribuição</strong></h2>
-
 <ol>
   <li>Faça um clone / fork do branch principal</li>
   <li>Crie um novo branch no seu fork</li>
@@ -119,5 +117,4 @@
 </ol>
 
 <h2 align="center"><strong>Licença</strong></h2>
-
-<p>Este projeto está licenciado sob a <a href="LICENSE">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>. Você pode usar e modificar o código para fins não comerciais, mas não pode redistribuí-lo ou criar trabalhos derivados.</p> -->
+<p>Este projeto está licenciado sob a <a href="LICENSE">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>. Você pode usar e modificar o código para fins não comerciais, mas não pode redistribuí-lo ou criar trabalhos derivados.</p>
