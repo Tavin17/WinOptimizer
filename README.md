@@ -2,8 +2,7 @@
     <img src="imgs/WinOptimizer.png" alt="WinOptimizer" width="500" />
 </p>
 
-<h3 align="center" style="margin-bottom: 5px;"><strong>🌎 Sobre o projeto</strong></h3>
-<hr>
+<h1 align="center" style="margin-bottom: 5px;"><strong>🌎 Sobre o projeto</strong></h3>
 <code>WinOptimizer</code> é um pequeno projeto pessoal desenvolvido apenas por mim, <strong>Tavin17</strong>, onde o código executado desativa, remove ou limpa arquivos, aplicativos ou serviços que são completamente desnecessários principalmente para pessoas que jogam, diminuindo drasticamente o número de processos e o uso da sua CPU e GPU. Consequentemente garantindo maior estabilidade no FPS, menos InputLag e um Windows mais responsivo.
 
 </br>
@@ -15,8 +14,7 @@
     <img src="https://img.shields.io/github/repo-size/Tavin17/WinOptimizer?color=orange&label=Size&style=for-the-badge" alt="Downloads Size" />
 </div>
 
-<h3 align="center">📋 Recursos:</h3>
-<hr>
+<h2 align="center">📋 Recursos:</h2>
 <ul>
 
   <li><strong>Otimizações regedit:</strong>
@@ -57,8 +55,7 @@
   </li>
 </ul>
 
-<h3 align="center">⚠️ Coisas que podem parar de funcionar:</h3>
-<hr>
+<h2 align="center">⚠️ Coisas que podem parar de funcionar:</h2>
 <ul>
   <li><strong>Windows Copilot</strong></li>
   <li><strong>Windows Recall</strong></li>
@@ -69,8 +66,7 @@
   <li><strong>XboxGameBar</strong></li>
 </ul>
 
-<h3 align="center" style="margin-bottom: 5px;"><strong>👨‍💻 Compatibilidade</strong></h2>
-<hr>
+<h2 align="center" style="margin-bottom: 5px;"><strong>👨‍💻 Compatibilidade</strong></h2>
   <li><strong>Windows 10:</strong>
     <ul>
       <li>Todas as versões.</li>
@@ -84,8 +80,7 @@
     </ul>
   </li>
 
-<h3 align="center" style="margin-bottom: 5px;"><strong>🖥️ Como instalar?</strong></h2>
-<hr>
+<h2 align="center" style="margin-bottom: 5px;"><strong>🖥️ Como instalar?</strong></h2>
 <ul>
   <li>Vá para <strong><a href="https://github.com/Tavin17/WinOptimizer/releases">Releases</a></strong> e faça o download da versão mais recente.</li>
   <li>Para complementar e fazer uma otimização completa, você também pode usar:
@@ -101,8 +96,7 @@
   <strong>⚠️</strong> Crie um ponto de restauração antes de realizar qualquer otimização. Execute esse arquivo por sua conta e risco. Funções que talvez sejam necessárias para você podem ser desativadas. Caso tenha problemas, utilize um <code>Ponto de Restauração</code>.
 </div>
 
-<h3 align="center" style="margin-bottom: 5px;"><strong>🤝 Contribuições</strong></h2>
-<hr>
+<h2 align="center" style="margin-bottom: 5px;"><strong>🤝 Contribuições</strong></h2>
 <ol>
   <li>Faça um clone / fork do branch principal</li>
   <li>Crie um novo branch no seu fork</li>
@@ -111,6 +105,5 @@
   <li>Solicite um Pull Request <a href="https://github.com/Tavin17/WinOptimizer/pulls">aqui</a>!</li>
 </ol>
 
-<h3 align="center" style="margin-bottom: 5px;"><strong>📕 Licença</strong></h2>
-<hr>
+<h2 align="center" style="margin-bottom: 5px;"><strong>📕 Licença</strong></h2>
 <p>Este projeto está licenciado sob a <a href="LICENSE">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>. Você pode usar e modificar o código para fins não comerciais, mas não pode redistribuí-lo ou criar trabalhos derivados.</p>
