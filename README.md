@@ -24,9 +24,9 @@
       <li><em>+200 otimizações das mais básicas até as mais profundas! Como:</em></li>
       <ul>
         <li>Desativação da XboxGameBar para reduzir o uso da CPU e GPU</li>
-        <li>Priorizar o máximo do seu computador para jogos</li>
-        <li>Otimizações mais profundas para praticamente <strong>ZERAR</strong> seu InputLag</li>
-        <li>Desativação de telemetria e muito mais!</li>
+        <li>Otimização de Rede</li>
+        <li>Otimização de Energia para melhor desempenho do computador</li>
+        <li>Remoção de telemetria e muito mais!</li>
       </ul>
     </ul>
   </li>
@@ -98,7 +98,7 @@
 </ul>
 
 <div style="background-color:rgb(199, 159, 0); padding: 10px; border-radius: 5px;">
-  <strong>⚠️</strong> Crie um ponto de restauração antes de realizar qualquer otimização. Execute esse arquivo por sua conta e risco. Funções que talvez sejam necessárias para você podem ser desativadas. Caso tenha problemas, utilize um <code>Ponto de Restauração</code>.
+  <strong>⚠️</strong> Crie um ponto de restauração antes de realizar qualquer otimização. Execute esse arquivo por sua conta e risco. Funções que talvez sejam necessárias para você podem ser desativadas. Caso tenha problemas ou não goste do resultado, utilize um <code>Ponto de Restauração</code>.
 </div>
 <h3 align="center" style="margin-bottom: 5px;"><strong>🤝 Contribuições</strong></h3>
 <hr>
