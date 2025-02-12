@@ -1171,10 +1171,11 @@ echo !COLOR_GREEN!Processos que não está respondendo encerrados.!COLOR_WHITE!
 powercfg /list | findstr /i "%PLANO_NOME%" > nul
 
 if %errorlevel% equ 0 (
+    echo !COLOR_GREEN!Plano de Energia !COLOR_ORANGE!%PLANO_NOME%!COLOR_GREEN! já ativado.!COLOR_WHITE!
     goto escolha
 ) 
 
-echo !COLOR_ORANGE!Deseja aplicar plano de energia máximo desempenho? !COLOR_WHITE![!COLOR_ORANGE!S/N!COLOR_WHITE!]
+echo !COLOR_ORANGE!Deseja aplicar plano de energia máximo desempenho? !COLOR_WHITE!(!COLOR_GREEN!WinOptimizer!COLOR_WHITE!)? [!COLOR_ORANGE!S/N!COLOR_WHITE!]
 
 set /p continuar=""
 
@@ -1183,7 +1184,7 @@ if /i "%continuar%"=="N" goto escolha
 
 :plano
 chcp 437 >nul
-powershell -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/Tavin17/WinOptimizer/main/MaxPerfomance.pow' -OutFile '%USERPROFILE%\Downloads\MaxPerfomance.pow" >nul 2>&1
+powershell -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/Tavin17/WinOptimizer/main/Power.pow' -OutFile '%USERPROFILE%\Downloads\Power.pow'" >nul 2>&1
 
 powercfg /import "%USERPROFILE%\Downloads\Power.pow" 2ea46c19-adf6-4b49-bf6a-755d7f5d9ea1 >nul 2>&1
 
