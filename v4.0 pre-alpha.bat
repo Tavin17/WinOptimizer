@@ -17,7 +17,7 @@
 if not "%1" == "max" start /MAX cmd /c %0 max & exit/b >nul 2>&1 
 chcp 65001 >nul
 setlocal enabledelayedexpansion
-set PLANO_NOME=WinOptimizer Plan
+set PLANO_NOME=Desempenho Máximo
 title WinOptimizer by Tavin17
 call :Colors
 
@@ -1171,11 +1171,10 @@ echo !COLOR_GREEN!Processos que não está respondendo encerrados.!COLOR_WHITE!
 powercfg /list | findstr /i "%PLANO_NOME%" > nul
 
 if %errorlevel% equ 0 (
-    echo !COLOR_GREEN!Plano de Energia !COLOR_ORANGE!%PLANO_NOME%!COLOR_GREEN! já ativado.!COLOR_WHITE!
     goto escolha
 ) 
 
-echo !COLOR_ORANGE!Deseja aplicar plano de energia máximo desempenho? !COLOR_WHITE!(!COLOR_GREEN!WinOptimizer!COLOR_WHITE!)? [!COLOR_ORANGE!S/N!COLOR_WHITE!]
+echo !COLOR_ORANGE!Deseja aplicar plano de energia %PLANO_NOME%? !COLOR_WHITE![!COLOR_ORANGE!S/N!COLOR_WHITE!]
 
 set /p continuar=""
 
@@ -1191,7 +1190,7 @@ powercfg /import "%USERPROFILE%\Downloads\Power.pow" 2ea46c19-adf6-4b49-bf6a-755
 powercfg /setactive 2ea46c19-adf6-4b49-bf6a-755d7f5d9ea1 >nul 2>&1
 del "%USERPROFILE%\Downloads\Power.pow" >nul 2>&1
 chcp 65001 >nul
-echo !COLOR_GREEN!Plano de energia !COLOR_ORANGE!%PLANO_NOME%!COLOR_GREEN! ativado.!COLOR_WHITE!
+echo !COLOR_GREEN!Plano de energia !COLOR_ORANGE!%PLANO_NOME%!COLOR_GREEN! ativado com sucesso.!COLOR_WHITE!
 
 :: ----------------------------------------------------------------------------------------------
 

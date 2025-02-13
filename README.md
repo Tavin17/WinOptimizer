@@ -93,6 +93,7 @@
       <li><strong><a href="https://github.com/ChrisTitusTech/winutil">Chris Titus Tech's Windows Utility</a></strong> (Bastante recomendado)</li>
       <li><strong><a href="https://www.oo-software.com/en/shutup10">O&O ShutUp10++</a></strong></li>
       <li><strong><a href="https://github.com/hellzerg/optimizer">Optimizer</a></strong></li>
+      <li><strong><a href="https://github.com/memstechtips/Winhance">Winhance</a></strong></li>
     </ul>
   </li>
 </ul>
