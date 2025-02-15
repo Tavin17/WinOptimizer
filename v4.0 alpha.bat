@@ -9,7 +9,7 @@
 
 :: 
 
-:: 262 REGEDITS
+:: 263 REGEDITS
 :: 91 Serviços
 :: 19 cmds
 
@@ -21,6 +21,54 @@ set PLANO_NOME=Desempenho Máximo
 title WinOptimizer by Tavin17
 call :Colors
 
+:: Packages
+
+set "cmd_1=Get-AppxPackage -AllUsers Microsoft.WindowsAlarms | Remove-AppxPackage"
+set "cmd_2=Get-AppxPackage -AllUsers Microsoft.XboxApp | Remove-AppxPackage ^&" ^
+    "Get-AppxPackage -AllUsers Microsoft.XboxGameOverlay | Remove-AppxPackage ^&" ^
+    "Get-AppxPackage -AllUsers Microsoft.XboxGamingOverlay | Remove-AppxPackage ^&" ^
+    "Get-AppxPackage -AllUsers Microsoft.XboxIdentityProvider | Remove-AppxPackage ^&" ^
+    "Get-AppxPackage -AllUsers Microsoft.Xbox.TCUI | Remove-AppxPackage ^&" ^
+    "Get-AppxPackage -AllUsers Microsoft.GamingApp | Remove-AppxPackage"
+set "cmd_3=Get-AppxPackage -AllUsers MicrosoftCorporationII.QuickAssist | Remove-AppxPackage"
+set "cmd_4=Get-AppxPackage -AllUsers microsoft.windowscommunicationsapps | Remove-AppxPackage"
+set "cmd_5=Get-AppxPackage -AllUsers Microsoft.WindowsCalculator | Remove-AppxPackage"
+set "cmd_6=Get-AppxPackage -AllUsers Microsoft.WindowsCamera | Remove-AppxPackage"
+set "cmd_7=Get-AppxPackage -AllUsers Microsoft.ScreenSketch | Remove-AppxPackage"
+set "cmd_8=Get-AppxPackage -AllUsers Microsoft.BingWeather | Remove-AppxPackage"
+set "cmd_9=Get-AppxPackage -AllUsers Microsoft.549981C3F5F10 | Remove-AppxPackage"
+set "cmd_10=Get-AppxPackage -AllUsers Microsoft.Windows.DevHome | Remove-AppxPackage"
+set "cmd_11=Get-AppxPackage -AllUsers Microsoft.Getstarted | Remove-AppxPackage"
+set "cmd_12=Get-AppxPackage -AllUsers Microsoft.ZuneVideo | Remove-AppxPackage"
+set "cmd_13=Get-AppxPackage -AllUsers Microsoft.Windows.Photos | Remove-AppxPackage"
+set "cmd_14=Get-AppxPackage -AllUsers Microsoft.WindowsSoundRecorder | Remove-AppxPackage"
+set "cmd_15=Get-AppxPackage -AllUsers Microsoft.ZuneMusic | Remove-AppxPackage"
+set "cmd_16=Get-AppxPackage -AllUsers Microsoft.WindowsFeedbackHub | Remove-AppxPackage"
+set "cmd_17=Get-AppxPackage -AllUsers Microsoft.MicrosoftOfficeHub | Remove-AppxPackage"
+set "cmd_18=Get-AppxPackage -AllUsers Microsoft.WindowsMaps | Remove-AppxPackage"
+set "cmd_19=Get-AppxPackage -AllUsers Clipchamp.Clipchamp | Remove-AppxPackage"
+set "cmd_20=Get-AppxPackage -AllUsers Microsoft.Windows.Ai.Copilot.Provider | Remove-AppxPackage ^&" ^
+    "Get-AppxPackage -AllUsers Microsoft.Copilot | Remove-AppxPackage ^&" ^
+    "Get-AppxPackage -AllUsers Microsoft.Copilot_8wekyb3d8bbwe | Remove-AppxPackage"
+set "cmd_21=Get-AppxPackage -AllUsers MicrosoftCorporationII.MicrosoftFamily | Remove-AppxPackage"
+set "cmd_22=Get-AppxPackage -AllUsers Microsoft.BingNews | Remove-AppxPackage"
+set "cmd_23=Get-AppxPackage -AllUsers Microsoft.MicrosoftSolitaireCollection | Remove-AppxPackage"
+set "cmd_24=Get-AppxPackage -AllUsers Microsoft Teams | Remove-AppxPackage"
+set "cmd_25=Get-AppxPackage -AllUsers Microsoft.Todos | Remove-AppxPackage"
+set "cmd_26=Get-AppxPackage -AllUsers Microsoft.GetHelp | Remove-AppxPackage"
+set "cmd_27=Get-AppxPackage -AllUsers Microsoft.Office.OneNote | Remove-AppxPackage"
+set "cmd_28=Get-AppxPackage -AllUsers Microsoft.OutlookForWindows | Remove-AppxPackage"
+set "cmd_29=Get-AppxPackage -AllUsers Microsoft.Paint | Remove-AppxPackage"
+set "cmd_30=Get-AppxPackage -AllUsers Microsoft.BingSearch | Remove-AppxPackage"
+set "cmd_31=Get-AppxPackage -AllUsers Microsoft.People | Remove-AppxPackage"
+set "cmd_32=Get-AppxPackage -AllUsers Microsoft.PowerAutomateDesktop | Remove-AppxPackage"
+set "cmd_33=Get-AppxPackage -AllUsers Microsoft.WindowsMeetNow | Remove-AppxPackage"
+set "cmd_34=Get-AppxPackage -AllUsers Microsoft.SkypeApp | Remove-AppxPackage"
+set "cmd_35=Get-AppxPackage -AllUsers Microsoft.MicrosoftStickyNotes | Remove-AppxPackage"
+set "cmd_36=Get-AppxPackage -AllUsers Microsoft.YourPhone | Remove-AppxPackage"
+set "cmd_37=Get-AppxPackage -AllUsers Microsoft.Microsoft3DViewer | Remove-AppxPackage"
+set "cmd_38=Get-AppxPackage -AllUsers Microsoft.MixedReality.Portal | Remove-AppxPackage"
+
 net session >nul 2>&1
 if %errorlevel% neq 0 (
     echo Arquivo não foi executado como administrador, reexecutando como adm...
@@ -30,7 +78,7 @@ if %errorlevel% neq 0 (
 )
 
 :pr2
-
+chcp 65001 >nul
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v "EnableLUA" /t REG_DWORD /d 0 /f >nul 2>&1
 
 echo.
@@ -95,13 +143,18 @@ echo.
 
 echo                                                                                !COLOR_GREEN![1]!COLOR_WHITE! Otimizar regedit                            !COLOR_GREEN![4]!COLOR_WHITE! Limpar arquivos temporários e cache
 echo.
-echo                                                                                !COLOR_GREEN![2]!COLOR_WHITE! Desativar serviços desnecessários           !COLOR_GREEN![5]!COLOR_WHITE! Desativar tarefas agendadas desnecessárias
+echo                                                                                !COLOR_GREEN![2]!COLOR_WHITE! Desativar serviços desnecessários           !COLOR_GREEN![5]!COLOR_WHITE! Desinstalar aplicativos desnecessários
 echo.
-echo                                                                                !COLOR_GREEN![3]!COLOR_WHITE! Aplicar comandos CMD                        !COLOR_GREEN![R]!COLOR_WHITE! Usar ponto de restauração
+echo                                                                                !COLOR_GREEN![3]!COLOR_WHITE! Aplicar comandos CMD                        !COLOR_GREEN![6]!COLOR_WHITE! Desativar tarefas agendadas desnecessárias
 echo.
 echo                                                                                !COLOR_GREEN![G]!COLOR_WHITE! Repositório do código                       !COLOR_GREEN![L]!COLOR_WHITE! Sair
-
 echo.
+echo.
+echo.
+
+echo                                                                                                         !COLOR_RED![R]!COLOR_WHITE! Usar ponto de restauração           
+
+echo.                                                                                            
 
 set /p continuar=""
 
@@ -114,6 +167,7 @@ if /i "%continuar%"=="2" goto parte2
 if /i "%continuar%"=="3" goto parte3
 if /i "%continuar%"=="4" goto parte4
 if /i "%continuar%"=="5" goto parte5
+if /i "%continuar%"=="6" goto parte6
 
 if /i "%continuar%"=="R" rstrui.exe && goto msginicial
 if /i "%continuar%"=="G" start https://github.com/Tavin17/WinOptimizer && goto msginicial
@@ -692,7 +746,6 @@ echo !COLOR_ORANGE!1!COLOR_GREEN! Alterações feita em HKCU\SOFTWARE\Microsoft\
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v "HeterogeneousPolicy" /t REG_DWORD /d 0 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power.
 
-
 reg add "HKCU\SOFTWARE\Policies\Microsoft\Windows\Explorer" /v "HidePeopleBar" /t REG_DWORD /d 1 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Policies\Microsoft\Windows\Explorer.
 
@@ -701,6 +754,9 @@ echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SOFTWARE\Policies\Mi
 
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Chat" /v "ChatIcon" /t REG_DWORD /d 3 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Chat.
+
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Windows Chat" /v "ChatIcon" /t REG_DWORD /d 3 /f >nul 2>&1
+echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SOFTWARE\Microsoft\Windows\Windows Chat.
 
 reg add "HKCU\SOFTWARE\Microsoft\Clipboard" /v "EnableClipboardHistory" /t REG_DWORD /d 0 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\Clipboard.
@@ -1171,7 +1227,7 @@ echo !COLOR_GREEN!Processos que não está respondendo encerrados.!COLOR_WHITE!
 powercfg /list | findstr /i "%PLANO_NOME%" > nul
 
 if %errorlevel% equ 0 (
-    goto escolha
+    goto pw1
 ) 
 
 echo !COLOR_ORANGE!Deseja aplicar plano de energia %PLANO_NOME%? !COLOR_WHITE![!COLOR_ORANGE!S/N!COLOR_WHITE!]
@@ -1179,7 +1235,7 @@ echo !COLOR_ORANGE!Deseja aplicar plano de energia %PLANO_NOME%? !COLOR_WHITE![!
 set /p continuar=""
 
 if /i "%continuar%"=="S" goto plano
-if /i "%continuar%"=="N" goto escolha
+if /i "%continuar%"=="N" goto pw1
 
 :plano
 chcp 437 >nul
@@ -1192,34 +1248,16 @@ del "%USERPROFILE%\Downloads\Power.pow" >nul 2>&1
 chcp 65001 >nul
 echo !COLOR_GREEN!Plano de energia !COLOR_ORANGE!%PLANO_NOME%!COLOR_GREEN! ativado com sucesso.!COLOR_WHITE!
 
-:: ----------------------------------------------------------------------------------------------
-
-:escolha
-echo !COLOR_ORANGE!Deseja desinstalar XboxGameBar!COLOR_WHITE!? [!COLOR_ORANGE!S/N!COLOR_WHITE!]
-
-set /p continuar=""
-if /i "%continuar%"=="S" goto pw >nul 2>&1
-if /i "%continuar%"=="N" goto pw1 >nul 2>&1
-
-:pw
-chcp 437 >nul
-PowerShell -command "Get-AppxPackage Microsoft.XboxGamingOverlay | Remove-AppxPackage" >nul 2>&1
-chcp 65001 >nul
-echo !COLOR_GREEN!XboxGameBar desinstalada.!COLOR_WHITE!
-goto pw1
-
-:: ----------------------------------------------------------------------------------------------
-
+:pw1
 winget uninstall "windows web experience pack" >nul 2>&1
-echo !COLOR_GREEN!Widgets desinstalados.!COLOR_WHITE!
+echo !COLOR_GREEN!Widgets removidos.!COLOR_WHITE!
 
 DISM /Online /Disable-Feature /FeatureName:"Recall" /Remove >nul 2>&1
-echo !COLOR_GREEN!Recall removido.!COLOR_WHITE!
+echo !COLOR_GREEN!Recall desabilitado.!COLOR_WHITE!
 
 dism /online /remove-package /package-name:Microsoft.Windows.Copilot >nul 2>&1
-echo !COLOR_GREEN!Copilot removido.!COLOR_WHITE!
+echo !COLOR_GREEN!Copilot desabilitado.!COLOR_WHITE!
 
-:pw1
 defrag /C /L >nul 2>&1
 echo !COLOR_GREEN!Unidades otimizadas.!COLOR_WHITE!
 
@@ -1304,10 +1342,92 @@ pause >nul 2>&1
 goto msginicial
 
 :parte5
+chcp 65001 >nul
 echo ════════════════════════════════════════════════════════════════
 echo.
 
-echo Desativando tarefas agendadas desnecessárias...
+echo Digite o número do respectivo aplicativo que deseja remover.
+echo.
+
+echo [1] Alarmes e Relógio
+echo [2] Aplicativos Xbox (inclui, XboxGameBar e serviços de jogos)
+echo [3] Assistência Rápida
+echo [4] Calendário
+echo [5] Calculadora
+echo [6] Câmera
+echo [7] Captura e Esboço
+echo [8] Clima
+echo [9] Cortana
+echo [10] Dev Home
+echo [11] Dicas
+echo [12] Filmes e TV
+echo [13] Fotos
+echo [14] Gravador de Som
+echo [15] Groove Music
+echo [16] Hub de Comentários
+echo [17] Hub do Office
+echo [18] Mapas
+echo [19] Microsoft Clipchamp
+echo [20] Microsoft Copilot
+echo [21] Microsoft Family
+echo [22] Microsoft Notícias
+echo [23] Microsoft Solitaire Collection
+echo [24] Microsoft Teams
+echo [25] Microsoft To Do
+echo [26] Obter Ajuda
+echo [27] OneNote
+echo [28] Outlook
+echo [29] Paint
+echo [30] Pesquisa do Bing
+echo [31] Pessoas
+echo [32] Powershell Automate
+echo [33] Reunir agora
+echo [34] Skype
+echo [35] Stick Notes
+echo [36] Vincular ao Celular
+echo [37] Visualizador 3D
+echo [38] Windows Mixed Reality
+
+echo.
+
+echo [M] Menu Inicial
+echo.
+
+set /p continuar=""
+
+if /i "%continuar%"=="" goto nochoice
+
+cls
+
+chcp 437 >nul
+
+if defined cmd_%continuar% (
+    PowerShell -command "!cmd_%continuar%!" >nul 2>&1
+    echo.
+    echo ════════════════════════════════════════════════════════════════
+    echo !COLOR_GREEN!Removido com sucesso.!COLOR_WHITE!
+    echo.
+    goto parte5 >nul 2>&1
+) else (
+    goto nochoice
+)
+
+
+echo.
+
+echo Pressione !COLOR_GREEN!M!COLOR_WHITE! para continuar
+pause >nul 2>&1
+goto msginicial
+
+echo.
+echo ════════════════════════════════════════════════════════════════
+echo.
+
+:parte6
+echo ════════════════════════════════════════════════════════════════
+echo.
+
+echo Desativando tarefas agendadas desnecessárias, por favor aguarde...
 
 schtasks /end /tn "\Microsoft\Windows\Customer Experience Improvement Program\Consolidator" >nul 2>&1
 schtasks /change /tn "\Microsoft\Windows\Customer Experience Improvement Program\Consolidator" /disable >nul 2>&1
@@ -1430,6 +1550,7 @@ if %errorlevel% equ 0 (
 )
 
 :nochoice
+chcp 65001 >nul
 echo ════════════════════════════════════════════════════════════════!COLOR_WHITE!
 echo.
 echo !COLOR_RED!ERRO 001:!COLOR_WHITE!
@@ -1441,6 +1562,7 @@ cls
 goto msginicial
 
 :prmsg
+chcp 65001 >nul
 echo ════════════════════════════════════════════════════════════════!COLOR_WHITE!
 echo.
 echo !COLOR_RED!ERRO 001:!COLOR_WHITE!
