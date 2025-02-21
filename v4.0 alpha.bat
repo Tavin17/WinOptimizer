@@ -69,6 +69,47 @@ set "cmd_36=Get-AppxPackage -AllUsers Microsoft.YourPhone | Remove-AppxPackage"
 set "cmd_37=Get-AppxPackage -AllUsers Microsoft.Microsoft3DViewer | Remove-AppxPackage"
 set "cmd_38=Get-AppxPackage -AllUsers Microsoft.MixedReality.Portal | Remove-AppxPackage"
 
+:: Nomes
+
+set "app_1=Alarmes e Relógio"
+set "app_2=Aplicativos do Xbox"
+set "app_3=Assistência Rápida"
+set "app_4=Calendário"
+set "app_5=Calculadora"
+set "app_6=Câmera"
+set "app_7=Ferramenta de Captura"
+set "app_8=Clima"
+set "app_9=Cortana"
+set "app_10=Dev Home"
+set "app_11=Dicas"
+set "app_12=Filmes e TV"
+set "app_13=Fotos"
+set "app_14=Gravador de Som"
+set "app_15=Groove Music"
+set "app_16=Hub de Comentários"
+set "app_17=Hub do Office"
+set "app_18=Mapas"
+set "app_19=Microsoft Clipchamp"
+set "app_20=Microsoft Copilot"
+set "app_21=Família Microsoft"
+set "app_22=Notícias"
+set "app_23=Microsoft Solitaire Collection"
+set "app_24=Microsoft Teams"
+set "app_25=Microsoft To Do"
+set "app_26=Obter Ajuda"
+set "app_27=OneNote"
+set "app_28=Outlook"
+set "app_29=Paint"
+set "app_30=Pesquisa Bing"
+set "app_31=Pessoas"
+set "app_32=Power Automate"
+set "app_33=Meet Now"
+set "app_34=Skype"
+set "app_35=Sticky Notes"
+set "app_36=Seu Telefone"
+set "app_37=Visualizador 3D"
+set "app_38=Windows Mixed Reality"
+
 net session >nul 2>&1
 if %errorlevel% neq 0 (
     echo Arquivo não foi executado como administrador, reexecutando como adm...
@@ -120,6 +161,7 @@ goto msginicial
 
 
 :msginicial
+chcp 65001 >nul
 cls
 echo.
 echo.
@@ -1222,33 +1264,34 @@ taskkill /f /fi "status eq not responding" >nul 2>&1
 echo !COLOR_GREEN!Processos que não está respondendo encerrados.!COLOR_WHITE!
 
 
-:: ----------------------------------------------------------------------------------------------
+@REM :: ----------------------------------------------------------------------------------------------
 
-powercfg /list | findstr /i "%PLANO_NOME%" > nul
+@REM powercfg /list | findstr /i "%PLANO_NOME%" > nul
 
-if %errorlevel% equ 0 (
-    goto pw1
-) 
+@REM if %errorlevel% equ 0 (
+@REM     goto pw1
+@REM ) 
 
-echo !COLOR_ORANGE!Deseja aplicar plano de energia %PLANO_NOME%? !COLOR_WHITE![!COLOR_ORANGE!S/N!COLOR_WHITE!]
+@REM echo !COLOR_ORANGE!Deseja aplicar plano de energia %PLANO_NOME%? !COLOR_WHITE![!COLOR_ORANGE!S/N!COLOR_WHITE!]
 
-set /p continuar=""
+@REM set /p continuar=""
 
-if /i "%continuar%"=="S" goto plano
-if /i "%continuar%"=="N" goto pw1
+@REM if /i "%continuar%"=="S" goto plano
+@REM if /i "%continuar%"=="N" goto pw1
 
-:plano
-chcp 437 >nul
-powershell -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/Tavin17/WinOptimizer/main/Power.pow' -OutFile '%USERPROFILE%\Downloads\Power.pow'" >nul 2>&1
+@REM :plano
+@REM chcp 437 >nul
+@REM powershell -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/Tavin17/WinOptimizer/main/Power.pow' -OutFile '%USERPROFILE%\Downloads\Power.pow'" >nul 2>&1
 
-powercfg /import "%USERPROFILE%\Downloads\Power.pow" 2ea46c19-adf6-4b49-bf6a-755d7f5d9ea1 >nul 2>&1
+@REM powercfg /import "%USERPROFILE%\Downloads\Power.pow" 2ea46c19-adf6-4b49-bf6a-755d7f5d9ea1 >nul 2>&1
 
-powercfg /setactive 2ea46c19-adf6-4b49-bf6a-755d7f5d9ea1 >nul 2>&1
-del "%USERPROFILE%\Downloads\Power.pow" >nul 2>&1
-chcp 65001 >nul
-echo !COLOR_GREEN!Plano de energia !COLOR_ORANGE!%PLANO_NOME%!COLOR_GREEN! ativado com sucesso.!COLOR_WHITE!
+@REM powercfg /setactive 2ea46c19-adf6-4b49-bf6a-755d7f5d9ea1 >nul 2>&1
+@REM del "%USERPROFILE%\Downloads\Power.pow" >nul 2>&1
+@REM chcp 65001 >nul
+@REM echo !COLOR_GREEN!Plano de energia !COLOR_ORANGE!%PLANO_NOME%!COLOR_GREEN! ativado com sucesso.!COLOR_WHITE!
 
-:pw1
+@REM :pw1
+
 winget uninstall "windows web experience pack" >nul 2>&1
 echo !COLOR_GREEN!Widgets removidos.!COLOR_WHITE!
 
@@ -1342,76 +1385,76 @@ pause >nul 2>&1
 goto msginicial
 
 :parte5
-chcp 65001 >nul
 echo ════════════════════════════════════════════════════════════════
 echo.
 
 echo Digite o número do respectivo aplicativo que deseja remover.
 echo.
 
-echo [1] Alarmes e Relógio
-echo [2] Aplicativos Xbox (inclui, XboxGameBar e serviços de jogos)
-echo [3] Assistência Rápida
-echo [4] Calendário
-echo [5] Calculadora
-echo [6] Câmera
-echo [7] Captura e Esboço
-echo [8] Clima
-echo [9] Cortana
-echo [10] Dev Home
-echo [11] Dicas
-echo [12] Filmes e TV
-echo [13] Fotos
-echo [14] Gravador de Som
-echo [15] Groove Music
-echo [16] Hub de Comentários
-echo [17] Hub do Office
-echo [18] Mapas
-echo [19] Microsoft Clipchamp
-echo [20] Microsoft Copilot
-echo [21] Microsoft Family
-echo [22] Microsoft Notícias
-echo [23] Microsoft Solitaire Collection
-echo [24] Microsoft Teams
-echo [25] Microsoft To Do
-echo [26] Obter Ajuda
-echo [27] OneNote
-echo [28] Outlook
-echo [29] Paint
-echo [30] Pesquisa do Bing
-echo [31] Pessoas
-echo [32] Powershell Automate
-echo [33] Reunir agora
-echo [34] Skype
-echo [35] Stick Notes
-echo [36] Vincular ao Celular
-echo [37] Visualizador 3D
-echo [38] Windows Mixed Reality
+echo [!COLOR_ORANGE!1!COLOR_WHITE!] Alarmes e Relógio
+echo [!COLOR_ORANGE!2!COLOR_WHITE!] Aplicativos Xbox (inclui, XboxGameBar e serviços de jogos)
+echo [!COLOR_ORANGE!3!COLOR_WHITE!] Assistência Rápida
+echo [!COLOR_ORANGE!4!COLOR_WHITE!] Calendário
+echo [!COLOR_ORANGE!5!COLOR_WHITE!] Calculadora
+echo [!COLOR_ORANGE!6!COLOR_WHITE!] Câmera
+echo [!COLOR_ORANGE!7!COLOR_WHITE!] Ferramenta de Captura
+echo [!COLOR_ORANGE!8!COLOR_WHITE!] Clima
+echo [!COLOR_ORANGE!9!COLOR_WHITE!] Cortana
+echo [!COLOR_ORANGE!10!COLOR_WHITE!] Dev Home
+echo [!COLOR_ORANGE!11!COLOR_WHITE!] Dicas
+echo [!COLOR_ORANGE!12!COLOR_WHITE!] Filmes e TV
+echo [!COLOR_ORANGE!13!COLOR_WHITE!] Fotos
+echo [!COLOR_ORANGE!14!COLOR_WHITE!] Gravador de Som
+echo [!COLOR_ORANGE!15!COLOR_WHITE!] Groove Music
+echo [!COLOR_ORANGE!16!COLOR_WHITE!] Hub de Comentários
+echo [!COLOR_ORANGE!17!COLOR_WHITE!] Hub do Office
+echo [!COLOR_ORANGE!18!COLOR_WHITE!] Mapas
+echo [!COLOR_ORANGE!19!COLOR_WHITE!] Microsoft Clipchamp
+echo [!COLOR_ORANGE!20!COLOR_WHITE!] Microsoft Copilot
+echo [!COLOR_ORANGE!21!COLOR_WHITE!] Microsoft Family
+echo [!COLOR_ORANGE!22!COLOR_WHITE!] Microsoft Notícias
+echo [!COLOR_ORANGE!23!COLOR_WHITE!] Microsoft Solitaire Collection
+echo [!COLOR_ORANGE!24!COLOR_WHITE!] Microsoft Teams
+echo [!COLOR_ORANGE!25!COLOR_WHITE!] Microsoft To Do
+echo [!COLOR_ORANGE!26!COLOR_WHITE!] Obter Ajuda
+echo [!COLOR_ORANGE!27!COLOR_WHITE!] OneNote
+echo [!COLOR_ORANGE!28!COLOR_WHITE!] Outlook
+echo [!COLOR_ORANGE!29!COLOR_WHITE!] Paint
+echo [!COLOR_ORANGE!30!COLOR_WHITE!] Pesquisa do Bing
+echo [!COLOR_ORANGE!31!COLOR_WHITE!] Pessoas
+echo [!COLOR_ORANGE!32!COLOR_WHITE!] Powershell Automate
+echo [!COLOR_ORANGE!33!COLOR_WHITE!] Reunir agora
+echo [!COLOR_ORANGE!34!COLOR_WHITE!] Skype
+echo [!COLOR_ORANGE!35!COLOR_WHITE!] Stick Notes
+echo [!COLOR_ORANGE!36!COLOR_WHITE!] Vincular ao Celular
+echo [!COLOR_ORANGE!37!COLOR_WHITE!] Visualizador 3D
+echo [!COLOR_ORANGE!38!COLOR_WHITE!] Windows Mixed Reality
 
 echo.
 
-echo [M] Menu Inicial
+echo [!COLOR_RED!M!COLOR_WHITE!] Menu Inicial
 echo.
 
-set /p continuar=""
-
-if /i "%continuar%"=="" goto nochoice
+set /p continuar="" || set continuar= 
 
 cls
 
-chcp 437 >nul
+if /i "%continuar%"=="M" goto msginicial
 
 if defined cmd_%continuar% (
+    chcp 437 >nul
     PowerShell -command "!cmd_%continuar%!" >nul 2>&1
-    echo.
-    echo ════════════════════════════════════════════════════════════════
-    echo !COLOR_GREEN!Removido com sucesso.!COLOR_WHITE!
-    echo.
+    chcp 65001 >nul
+    echo.╔══════════════════════════════════════════════════════════════╗
+    echo ║            !COLOR_GREEN!!app_%continuar%! removido com sucesso!COLOR_WHITE!            ║
+    echo.╚══════════════════════════════════════════════════════════════╝
     goto parte5 >nul 2>&1
 ) else (
     goto nochoice
 )
 
+
+goto nochoice
 
 echo.
 
