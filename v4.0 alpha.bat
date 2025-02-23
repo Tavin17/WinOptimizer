@@ -9,7 +9,7 @@
 
 :: 
 
-:: 263 REGEDITS
+:: 264 REGEDITS
 :: 91 Serviços
 :: 19 cmds
 
@@ -535,8 +535,6 @@ echo !COLOR_ORANGE!2!COLOR_GREEN! Alterações feitas em HKLM\SOFTWARE\Microsoft
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DeliveryOptimization" /v "DownloadMode" /d 0 /t REG_DWORD /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SOFTWARE\Policies\Microsoft\Windows\DeliveryOptimization.
 
-:: Melhor compatibilidade com Windows 11
-
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "EnableActivityFeed" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "EnableCdp" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "PublishUserActivities" /t REG_DWORD /d 0 /f >nul 2>&1
@@ -825,8 +823,11 @@ echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SOFTWARE\Policies\Mi
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\OneDrive" /v "DisableFileSyncNGSC" /t REG_DWORD /d 1 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SOFTWARE\Policies\Microsoft\Windows\OneDrive.
 
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" /v "ExcludeWUDriversInQualityUpdate" /t REG_DWORD /d 1 /f >nul 2>&1 rem 247
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" /v "ExcludeWUDriversInQualityUpdate" /t REG_DWORD /d 1 /f >nul 2>&1 
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate.
+
+reg add "HKLM\SYSTEM\Maps" /v "AutoUpdateEnabled" /t REG_DWORD /d 0 /f >nul 2>&1 
+echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SYSTEM\Maps
 
 echo.
 
@@ -1441,18 +1442,31 @@ cls
 
 if /i "%continuar%"=="M" goto msginicial
 
+chcp 437 >nul
+for /f "tokens=*" %%A in ('PowerShell -command "(Get-AppxPackage -AllUsers !cmd_%continuar%:| Remove-AppxPackage=!).Name"') do set "found=%%A"
+
+chcp 65001 >nul
+
+if not defined found (
+    echo ════════════════════════════════════════════════════════════════
+    echo.
+    echo !COLOR_RED!!app_%continuar%! já está desinstalado.!COLOR_WHITE!
+    echo.
+    goto parte5
+)
+
 if defined cmd_%continuar% (
     chcp 437 >nul
     PowerShell -command "!cmd_%continuar%!" >nul 2>&1
     chcp 65001 >nul
-    echo.╔══════════════════════════════════════════════════════════════╗
-    echo ║            !COLOR_GREEN!!app_%continuar%! removido com sucesso!COLOR_WHITE!            ║
-    echo.╚══════════════════════════════════════════════════════════════╝
-    goto parte5 >nul 2>&1
+    echo ════════════════════════════════════════════════════════════════
+    echo.
+    echo !COLOR_GREEN!!app_%continuar%! foi removido com sucesso!COLOR_WHITE!
+    echo.
+    goto parte5
 ) else (
     goto nochoice
 )
-
 
 goto nochoice
 
@@ -1520,8 +1534,11 @@ schtasks /end /tn "\Microsoft\Windows\NetTrace\GatherNetworkInfo" >nul 2>&1
 schtasks /change /tn "\Microsoft\Windows\NetTrace\GatherNetworkInfo" /disable >nul 2>&1
 schtasks /end /tn "\Microsoft\Windows\AppID\SmartScreenSpecific" >nul 2>&1
 schtasks /change /tn "\Microsoft\Windows\AppID\SmartScreenSpecific" /disable >nul 2>&1
+schtasks end /tn "\Microsoft\Windows\WindowsUpdate\Automatic App Update" /disable >nul 2>&1
 schtasks /change /tn "\Microsoft\Windows\WindowsUpdate\Automatic App Update" /disable >nul 2>&1
+schtasks /end /tn "\Microsoft\Windows\Time Synchronization\ForceSynchronizeTime" /disable >nul 2>&1
 schtasks /change /tn "\Microsoft\Windows\Time Synchronization\ForceSynchronizeTime" /disable >nul 2>&1
+schtasks /end /tn "\Microsoft\Windows\Time Synchronization\SynchronizeTime" /disable >nul 2>&1
 schtasks /change /tn "\Microsoft\Windows\Time Synchronization\SynchronizeTime" /disable >nul 2>&1
 schtasks /end /tn "\Microsoft\Windows\HelloFace\FODCleanupTask" >nul 2>&1
 schtasks /change /tn "\Microsoft\Windows\HelloFace\FODCleanupTask" /disable >nul 2>&1
@@ -1543,7 +1560,9 @@ schtasks /end /tn "\Microsoft\Office\OfficeTelemetryAgentFallBack" >nul 2>&1
 schtasks /change /tn "\Microsoft\Office\OfficeTelemetryAgentFallBack" /disable >nul 2>&1
 schtasks /end /tn "\Microsoft\Office\OfficeTelemetryAgentLogOn" >nul 2>&1
 schtasks /change /tn "\Microsoft\Office\OfficeTelemetryAgentLogOn" /disable >nul 2>&1
+schtasks /end /tn "\Microsoft\Windows\Defrag\ScheduledDefrag" /disable >nul 2>&1
 schtasks /change /tn "\Microsoft\Windows\Defrag\ScheduledDefrag" /disable >nul 2>&1
+schtasks /end /tn "Microsoft\Windows\Maps\MapsUpdateTask" /disable >nul 2>&1
 schtasks /change /tn "Microsoft\Windows\Maps\MapsUpdateTask" /disable >nul 2>&1
 
 echo.
