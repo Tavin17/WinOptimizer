@@ -1442,18 +1442,7 @@ cls
 
 if /i "%continuar%"=="M" goto msginicial
 
-chcp 437 >nul
-for /f "tokens=*" %%A in ('PowerShell -command "(Get-AppxPackage -AllUsers !cmd_%continuar%:| Remove-AppxPackage=!).Name"') do set "found=%%A"
-
 chcp 65001 >nul
-
-if not defined found (
-    echo ════════════════════════════════════════════════════════════════
-    echo.
-    echo !COLOR_RED!!app_%continuar%! já está desinstalado.!COLOR_WHITE!
-    echo.
-    goto parte5
-)
 
 if defined cmd_%continuar% (
     chcp 437 >nul
@@ -1464,11 +1453,9 @@ if defined cmd_%continuar% (
     echo !COLOR_GREEN!!app_%continuar%! foi removido com sucesso!COLOR_WHITE!
     echo.
     goto parte5
-) else (
+) else ( rem Se nenhum valor for digitado ou o valor for inválido, ir para nochoice
     goto nochoice
 )
-
-goto nochoice
 
 echo.
 
