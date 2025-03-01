@@ -17,7 +17,7 @@
 if not "%1" == "max" start /MAX cmd /c %0 max & exit/b >nul 2>&1 
 chcp 65001 >nul
 setlocal enabledelayedexpansion
-set PLANO_NOME=Desempenho Máximo
+set PLANO_NOME=WinOptimizer Plan
 title WinOptimizer by Tavin17
 call :Colors
 
@@ -300,13 +300,14 @@ echo !COLOR_ORANGE!3!COLOR_GREEN! Alterações feitas em HKLM\SYSTEM\CurrentCont
 
 reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\ApplicationManagement" /v "AllowGameDVR" /t REG_DWORD /d 0 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\ApplicationManagement.
-echo.
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "GPU_SCHEDULER_MODE" /t REG_SZ /d 47 /f>nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment.
 
 reg add "HKLM\SYSTEM\ControlSet001\Services\Ndu" /v "Start" /t REG_DWORD /d 4 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SYSTEM\ControlSet001\Services\Ndu.
+echo.
+
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "OverlayTestMode" /t REG_DWORD /d 5 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SOFTWARE\Microsoft\Windows\Dwm.
@@ -383,6 +384,7 @@ echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SOFTWARE\Policies\Mi
 
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\EnhancedStorageDevices" /v "TCGSecurityActivationDisabled" /t REG_DWORD /d 0 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SOFTWARE\Policies\Microsoft\Windows\EnhancedStorageDevices.
+echo.
 
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\OneDrive" /v "DisableFileSyncNGSC" /t REG_DWORD /d 1 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SOFTWARE\Policies\Microsoft\Windows\OneDrive.
@@ -454,7 +456,6 @@ echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\W
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\phoneCallHistory" /v "Value" /t REG_SZ /d Deny /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\phoneCallHistory.
-echo.
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\email" /v "Value" /t REG_SZ /d Deny /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\email.
@@ -473,6 +474,7 @@ echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\W
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Search" /v "Value" /t REG_DWORD /d 0/f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search.
+echo.
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\appDiagnostics" /v "Value" /t REG_SZ /d Deny /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\appDiagnostics.
@@ -526,7 +528,6 @@ echo !COLOR_ORANGE!3!COLOR_GREEN! Alterações feitas em HKCU\SOFTWARE\Microsoft
 
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search" /v "BingSearchEnabled" /t REG_DWORD /d 0 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search.
-echo.
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\DeliveryOptimization\Config" /v "DownloadMode" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\DeliveryOptimization\Config" /v "DODownloadMode" /t REG_DWORD /d 1 /f >nul 2>&1
@@ -689,10 +690,10 @@ echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\W
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Feeds" /v "ShellFeedsTaskbarViewMode" /t REG_DWORD /d 2 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Feeds.
+echo.
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" /v "IRPStackSize" /t REG_DWORD /d 30 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters.
-echo.
 
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\People" /v "PeopleBand" /t REG_DWORD /d 0 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\People.
@@ -828,10 +829,6 @@ echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SOFTWARE\Policies\Mi
 
 reg add "HKLM\SYSTEM\Maps" /v "AutoUpdateEnabled" /t REG_DWORD /d 0 /f >nul 2>&1 
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SYSTEM\Maps
-
-echo.
-
-echo !COLOR_WHITE!Para abrir a regedit presione !COLOR_ORANGE!Win + R!COLOR_WHITE! e digite regedit.!COLOR_WHITE!
 
 echo.
 
@@ -1223,8 +1220,6 @@ echo (Serviço de Teclado Virtual e Painel de Manuscrito)
 call :stop_and_disable TabletInputService
 echo.
 
-echo Para ver todos os serviços do Windows presione !COLOR_ORANGE!Win + R!COLOR_WHITE! e digite services.msc.
-
 echo.
 
 echo.╔═══════════════════════════════════════════════════════════════════╗
@@ -1264,34 +1259,33 @@ echo !COLOR_GREEN!Hibernação desativada.!COLOR_WHITE!
 taskkill /f /fi "status eq not responding" >nul 2>&1
 echo !COLOR_GREEN!Processos que não está respondendo encerrados.!COLOR_WHITE!
 
+:: ----------------------------------------------------------------------------------------------
 
-@REM :: ----------------------------------------------------------------------------------------------
+powercfg /list | findstr /i "%PLANO_NOME%" > nul
 
-@REM powercfg /list | findstr /i "%PLANO_NOME%" > nul
+if %errorlevel% equ 0 (
+    goto pw1
+) 
 
-@REM if %errorlevel% equ 0 (
-@REM     goto pw1
-@REM ) 
+echo !COLOR_ORANGE!Deseja aplicar o plano de energia WinOptimizer? !COLOR_WHITE![!COLOR_ORANGE!S/N!COLOR_WHITE!]
 
-@REM echo !COLOR_ORANGE!Deseja aplicar plano de energia %PLANO_NOME%? !COLOR_WHITE![!COLOR_ORANGE!S/N!COLOR_WHITE!]
+set /p continuar=""
 
-@REM set /p continuar=""
+if /i "%continuar%"=="S" goto plano
+if /i "%continuar%"=="N" goto pw1
 
-@REM if /i "%continuar%"=="S" goto plano
-@REM if /i "%continuar%"=="N" goto pw1
+:plano
+chcp 437 >nul
+powershell -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/Tavin17/WinOptimizer/main/WinOptimizer.pow' -OutFile '%USERPROFILE%\Downloads\WinOptimizer.pow'" >nul 2>&1
 
-@REM :plano
-@REM chcp 437 >nul
-@REM powershell -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/Tavin17/WinOptimizer/main/Power.pow' -OutFile '%USERPROFILE%\Downloads\Power.pow'" >nul 2>&1
+powercfg /import "%USERPROFILE%\Downloads\WinOptimizer.pow" efd83a6a-9d85-4793-86f7-0ad1a01a951a >nul 2>&1
 
-@REM powercfg /import "%USERPROFILE%\Downloads\Power.pow" 2ea46c19-adf6-4b49-bf6a-755d7f5d9ea1 >nul 2>&1
+powercfg /setactive efd83a6a-9d85-4793-86f7-0ad1a01a951a >nul 2>&1
+del "%USERPROFILE%\Downloads\WinOptimizer.pow" >nul 2>&1
+chcp 65001 >nul
+echo !COLOR_GREEN!Plano de energia !COLOR_ORANGE!WinOptimizer!COLOR_GREEN! ativado com sucesso.!COLOR_WHITE!
 
-@REM powercfg /setactive 2ea46c19-adf6-4b49-bf6a-755d7f5d9ea1 >nul 2>&1
-@REM del "%USERPROFILE%\Downloads\Power.pow" >nul 2>&1
-@REM chcp 65001 >nul
-@REM echo !COLOR_GREEN!Plano de energia !COLOR_ORANGE!%PLANO_NOME%!COLOR_GREEN! ativado com sucesso.!COLOR_WHITE!
-
-@REM :pw1
+:pw1
 
 winget uninstall "windows web experience pack" >nul 2>&1
 echo !COLOR_GREEN!Widgets removidos.!COLOR_WHITE!
