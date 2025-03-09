@@ -17,7 +17,7 @@
 if not "%1" == "max" start /MAX cmd /c %0 max & exit/b >nul 2>&1 
 chcp 65001 >nul
 setlocal enabledelayedexpansion
-set PLANO_NOME=WinOptimizer Plan
+set PLANO_NOME=MaxPower
 title WinOptimizer by Tavin17
 call :Colors
 
@@ -1267,7 +1267,7 @@ if %errorlevel% equ 0 (
     goto pw1
 ) 
 
-echo !COLOR_ORANGE!Deseja aplicar o plano de energia WinOptimizer? !COLOR_WHITE![!COLOR_ORANGE!S/N!COLOR_WHITE!]
+echo !COLOR_ORANGE!Deseja aplicar o plano de energia MaxPower? !COLOR_WHITE![!COLOR_ORANGE!S/N!COLOR_WHITE!]
 
 set /p continuar=""
 
@@ -1276,14 +1276,14 @@ if /i "%continuar%"=="N" goto pw1
 
 :plano
 chcp 437 >nul
-powershell -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/Tavin17/WinOptimizer/main/WinOptimizer.pow' -OutFile '%USERPROFILE%\Downloads\WinOptimizer.pow'" >nul 2>&1
+powershell -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/Tavin17/WinOptimizer/main/MaxPower.pow' -OutFile '%USERPROFILE%\Downloads\MaxPower.pow'" >nul 2>&1
 
-powercfg /import "%USERPROFILE%\Downloads\WinOptimizer.pow" efd83a6a-9d85-4793-86f7-0ad1a01a951a >nul 2>&1
+powercfg /import "%USERPROFILE%\Downloads\MaxPower.pow" 9de523a7-05eb-4ec6-a4ed-688d113e2116 >nul 2>&1
 
-powercfg /setactive efd83a6a-9d85-4793-86f7-0ad1a01a951a >nul 2>&1
-del "%USERPROFILE%\Downloads\WinOptimizer.pow" >nul 2>&1
+powercfg /setactive 9de523a7-05eb-4ec6-a4ed-688d113e2116 >nul 2>&1
+del "%USERPROFILE%\Downloads\MaxPower.pow" >nul 2>&1
 chcp 65001 >nul
-echo !COLOR_GREEN!Plano de energia !COLOR_ORANGE!WinOptimizer!COLOR_GREEN! ativado com sucesso.!COLOR_WHITE!
+echo !COLOR_GREEN!Plano de energia !COLOR_ORANGE!MaxPower!COLOR_GREEN! ativado com sucesso.!COLOR_WHITE!
 
 :pw1
 
