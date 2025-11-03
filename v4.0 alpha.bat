@@ -9,7 +9,7 @@
 
 :: 
 
-:: 264 REGEDITS
+:: 264 REGEDIT
 :: 91 Serviços
 :: 19 cmds
 
