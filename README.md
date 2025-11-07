@@ -7,7 +7,7 @@
 <code>WinOptimizer</code> é um pequeno projeto pessoal que executa um script com otimizações avançadas que desativam, removem ou limpam componentes, aplicativos e serviços desnecessários, consequentemente reduzindo o uso da CPU e GPU, melhorando a responsividade do sistema e aumentando a estabilidade de FPS em jogos.
 
 <br>
-
+<br>
 <div align="center">
     <img src="https://img.shields.io/github/tag/Tavin17/WinOptimizer?color=blue&label=Release&style=for-the-badge" alt="Release Version" />
     <img src="https://img.shields.io/github/release-date/Tavin17/WinOptimizer?color=green&label=Updated&style=for-the-badge" alt="Release Date" />
