@@ -74,7 +74,7 @@
 </ul>
 
 <div style="background-color:rgb(199, 159, 0); padding: 10px; border-radius: 5px;">
-  <strong>⚠️</strong> É extremamente recomendado que você crie um ponto de restauração antes de executar qualquer tipo de script. Execute esse arquivo por sua conta e risco. Funções e/ou aplicativos que talvez sejam necessárias para você podem ser desativadas ou não funcionarem corretamente. Caso tenha problemas ou não goste do resultado, utilize um <code>Ponto de Restauração</code>.
+  <strong>⚠️ É extremamente recomendado que você crie um ponto de restauração antes de executar qualquer tipo de script. Execute esse arquivo por sua conta e risco. Funções e/ou aplicativos que talvez sejam necessárias para você podem ser desativadas ou não funcionarem corretamente. Caso tenha problemas ou não goste do resultado, utilize um <code>Ponto de Restauração</code>.</strong>
 </div>
 <h3 align="center" style="margin-bottom: 5px;"><strong>🤝 Contribuições</strong></h3>
 <hr>
