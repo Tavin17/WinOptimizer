@@ -4,7 +4,7 @@
 
 <h3 align="center" style="margin-bottom: 5px;"><strong>🌎 Sobre o projeto</strong></h3>
 <hr>
-<code>WinOptimizer</code> é um pequeno projeto pessoal que executa um script com otimizações avançadas que desativam, removem ou limpam componentes, aplicativos e serviços desnecessários, consequentemente reduzindo o uso da CPU e GPU, melhorando a responsividade do sistema e aumentando a estabilidade de FPS em jogos.
+<code>WinOptimizer</code> é um pequeno projeto pessoal que executa um script que faz mudanças de básicas até profundas no Windows, desativando, removendo ou limpando, aplicativos, arquivos e serviços desnecessários, consequentemente reduzindo o uso da CPU e GPU, melhorando a responsividade do sistema e aumentando a estabilidade de FPS em jogos.
 
 <br>
 <br>
