@@ -4,10 +4,9 @@
 
 <h3 align="center" style="margin-bottom: 5px;"><strong>🌎 Sobre o projeto</strong></h3>
 <hr>
-<code>WinOptimizer</code> é um pequeno projeto pessoal desenvolvido apenas por mim, <strong>Tavin17</strong>, onde o código executado desativa, remove ou limpa arquivos, aplicativos ou serviços que são completamente desnecessários principalmente para pessoas que jogam, diminuindo drasticamente o número de processos e o uso da sua CPU e GPU. Consequentemente garantindo maior estabilidade no FPS, menos InputLag e um Windows mais responsivo.
+<code>WinOptimizer</code> é um pequeno projeto pessoal que executa um script com otimizações avançadas que desativam, removem ou limpam componentes, aplicativos e serviços desnecessários, consequentemente reduzindo o uso da CPU e GPU, melhorando a responsividade do sistema e aumentando a estabilidade de FPS em jogos.
 
-</br>
-</br>
+<br>
 
 <div align="center">
     <img src="https://img.shields.io/github/tag/Tavin17/WinOptimizer?color=blue&label=Release&style=for-the-badge" alt="Release Version" />
@@ -15,74 +14,51 @@
     <img src="https://img.shields.io/github/repo-size/Tavin17/WinOptimizer?color=orange&label=Size&style=for-the-badge" alt="Downloads Size" />
 </div>
 
-<h3 align="center" style="margin-bottom: 5px;"><strong>📋 Recursos</strong></h3>
-<hr>
-<ul>
 
-  <li><strong>Otimizações regedit:</strong>
-    <ul>
-      <li><em>+200 otimizações das mais básicas até as mais profundas! Como:</em></li>
-      <ul>
-        <li>Desativação da XboxGameBar para reduzir o uso da CPU e GPU</li>
-        <li>Otimização de Rede</li>
-        <li>Otimização de Energia para melhor desempenho do computador</li>
-        <li>Remoção de telemetria e muito mais!</li>
-      </ul>
-    </ul>
-  </li>
+<h3 align="center" style="margin-bottom: 5px;"><strong>🧩 Abas de Otimização</strong></h3>
+<table align="center">
+    <th>🧩 Aba</th>
+    <th>💬 Descrição</th>
+    <tr>
+      <td><strong>⚙️ Otimizações Regedit</strong></td>
+      <td>
+        Contém mais de <strong>200 ajustes</strong> no registro do Windows, incluindo otimizações de rede, energia, interface e telemetria.<br>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>🔧 Desativação de Serviços</strong></td>
+      <td>
+        Desativa mais de <strong>80 serviços desnecessários</strong> que consomem recursos em segundo plano, como <strong>SysMain</strong>, 
+        <strong>Serviços Microsoft Edge</strong>, <strong>Hyper-V</strong> e etc.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>🧾 Comandos CMD</strong></td>
+      <td>
+        Executa <strong>+10 comandos</strong> de otimização que diminuem o Input Lag, deixando o sistema mais estável.<br>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>🧹 Limpeza de Arquivos Temporários</strong></td>
+      <td>
+        Remove caches, logs e arquivos temporários acumulados, liberando espaço em disco e tornando o sistema mais leve e estável.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>📆 Tarefas Agendadas</strong></td>
+      <td>
+        Desativa tarefas automáticas que executam processos desnecessários em segundo plano, reduzindo o uso de CPU e disco.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>💾 Otimização de Memória</strong></td>
+      <td>
+        Ajusta o valor <code>SvcHostSplitThresholdInKB</code> para otimizar o uso da RAM e reduzir a fragmentação de processos <code>svchost.exe</code>.
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-  <li><strong>Desativação de Serviços:</strong>
-    <ul>
-      <li><em>+80 Serviços desnecessários que ficam em segundo plano fazendo absolutamente nada apenas consumindo CPU e prejudicando sua jogabilidade! Alguns serviços:</em></li>
-      <ul>
-        <li>SysMain</li>
-        <li>Serviços Microsoft Edge</li>
-        <li>Serviço de Política de Diagnóstico</li>
-        <li>Serviços Hyper-V e muito mais!</li>
-      </ul>
-    </ul>
-  </li>
-
-  <li><strong>Aplicação de comandos no CMD:</strong>
-    <ul>
-      <li><strong>+15 comandos para melhorar InputLag, limpar lixo, plano de energia personalizado e mais!</strong></li>
-      <ul>
-        <li>Otimização de unidades</li>
-        <li>Comandos <strong>FSutil</strong></li>
-        <li>Comandos <strong>bcdedit</strong></li>
-        <li>Desinstalação completa da <strong>XboxGameBar</strong></li>
-        <li>Limpeza de <strong>arquivos temporários</strong> e <strong>cache</strong></li>
-      </ul>
-    </ul>
-  </li>
-</ul>
-
-<h3 align="center" style="margin-bottom: 5px;"><strong>⚠️ Coisas que podem parar de funcionar</strong></h3>
-<hr>
-<ul>
-  <li><strong>Windows Copilot</strong></li>
-  <li><strong>Windows Recall</strong></li>
-  <li><strong>Conectar à uma impressora ou imprimir algo</strong></li>
-  <li><strong>Instalar algum aplicativo da MS Store</strong></li>
-  <li><strong>Cortana</strong></li>
-  <li><strong>OneDrive</strong></li>
-  <li><strong>XboxGameBar</strong></li>
-</ul>
-
-<h3 align="center" style="margin-bottom: 5px;"><strong>👨‍💻 Compatibilidade</strong></h3>
-<hr>
-  <li><strong>Windows 10:</strong>
-    <ul>
-      <li>Todas as versões.</li>
-    </ul>
-  </li>
-
-  <li><strong>Windows 11:</strong>
-    <ul>
-          <li>Versões <strong>1.0</strong>, <strong>1.5</strong>, <strong>1.8</strong>, <strong>2.8+.</strong></li>
-    <li>Compatibilidade parcial nas versões <strong>2.0</strong> e <strong>2.5</strong>.</li>
-    </ul>
-  </li>
 
 <h3 align="center" style="margin-bottom: 5px;"><strong>🖥️ Como instalar?</strong></h3>
 <hr>
@@ -90,25 +66,27 @@
   <li>Vá para <strong><a href="https://github.com/Tavin17/WinOptimizer/releases">Releases</a></strong> e faça o download da versão mais recente.</li>
   <li>Para complementar e fazer uma otimização completa, você também pode usar:
     <ul>
-      <li><strong><a href="https://github.com/ChrisTitusTech/winutil">Chris Titus Tech's Windows Utility</a></strong> (Bastante recomendado)</li>
-      <li><strong><a href="https://www.oo-software.com/en/shutup10">O&O ShutUp10++</a></strong></li>
-      <li><strong><a href="https://github.com/hellzerg/optimizer">Optimizer</a></strong></li>
+      <li><strong><a href="https://github.com/ChrisTitusTech/winutil">Chris Titus Tech's Windows Utility</a></strong></li>
       <li><strong><a href="https://github.com/memstechtips/Winhance">Winhance</a></strong></li>
+      <li><strong><a href="https://github.com/hellzerg/optimizer">Optimizer</a></strong></li>
     </ul>
   </li>
 </ul>
 
 <div style="background-color:rgb(199, 159, 0); padding: 10px; border-radius: 5px;">
-  <strong>⚠️</strong> Crie um ponto de restauração antes de realizar qualquer otimização. Execute esse arquivo por sua conta e risco. Funções que talvez sejam necessárias para você podem ser desativadas. Caso tenha problemas ou não goste do resultado, utilize um <code>Ponto de Restauração</code>.
+  <strong>⚠️</strong> É extremamente recomendado que você crie um ponto de restauração antes de executar qualquer tipo de script. Execute esse arquivo por sua conta e risco. Funções e/ou aplicativos que talvez sejam necessárias para você podem ser desativadas ou não funcionarem corretamente. Caso tenha problemas ou não goste do resultado, utilize um <code>Ponto de Restauração</code>.
 </div>
 <h3 align="center" style="margin-bottom: 5px;"><strong>🤝 Contribuições</strong></h3>
 <hr>
 <ol>
-  <li>Faça um clone / fork do branch principal</li>
-  <li>Crie um novo branch no seu fork</li>
-  <li>Faça suas alterações</li>
-  <li>Faça um commit das suas mudanças depois faça um push delas</li>
-  <li>Solicite um Pull Request <a href="https://github.com/Tavin17/WinOptimizer/pulls">aqui</a>!</li>
+<strong>Caso queira ajudar no projeto adicionando, ajustando ou deixando o código mais eficiente, siga os passos a seguir:</strong>
+  <ul>
+    <li>Faça um clone / fork do branch principal;</li>
+    <li>Crie um novo branch no seu fork;</li>
+    <li>Faça suas alterações;</li>
+    <li>Faça um commit das suas mudanças depois faça um push delas.</li>
+    <li>Solicite um Pull Request <a href="https://github.com/Tavin17/WinOptimizer/pulls">aqui</a>!</li>
+  </ul>
 </ol>
 
 <h3 align="center" style="margin-bottom: 5px;"><strong>📕 Licença</strong></h3>

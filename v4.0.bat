@@ -7,113 +7,16 @@
 ::                           | |                                   
 ::                           |_|   
 
-:: 
-
-:: 264 REGEDIT
-:: 91 Serviços
-:: 19 cmds
-
 @echo off
 if not "%1" == "max" start /MAX cmd /c %0 max & exit/b >nul 2>&1 
 chcp 65001 >nul
 setlocal enabledelayedexpansion
-set PLANO_NOME=MaxPower
-title WinOptimizer by Tavin17
+title WinOptimizer - v4.0
 call :Colors
-
-:: Packages
-
-set "cmd_1=Get-AppxPackage -AllUsers Microsoft.WindowsAlarms | Remove-AppxPackage"
-set "cmd_2=Get-AppxPackage -AllUsers Microsoft.XboxApp | Remove-AppxPackage ^&" ^
-    "Get-AppxPackage -AllUsers Microsoft.XboxGameOverlay | Remove-AppxPackage ^&" ^
-    "Get-AppxPackage -AllUsers Microsoft.XboxGamingOverlay | Remove-AppxPackage ^&" ^
-    "Get-AppxPackage -AllUsers Microsoft.XboxIdentityProvider | Remove-AppxPackage ^&" ^
-    "Get-AppxPackage -AllUsers Microsoft.Xbox.TCUI | Remove-AppxPackage ^&" ^
-    "Get-AppxPackage -AllUsers Microsoft.GamingApp | Remove-AppxPackage"
-set "cmd_3=Get-AppxPackage -AllUsers MicrosoftCorporationII.QuickAssist | Remove-AppxPackage"
-set "cmd_4=Get-AppxPackage -AllUsers microsoft.windowscommunicationsapps | Remove-AppxPackage"
-set "cmd_5=Get-AppxPackage -AllUsers Microsoft.WindowsCalculator | Remove-AppxPackage"
-set "cmd_6=Get-AppxPackage -AllUsers Microsoft.WindowsCamera | Remove-AppxPackage"
-set "cmd_7=Get-AppxPackage -AllUsers Microsoft.ScreenSketch | Remove-AppxPackage"
-set "cmd_8=Get-AppxPackage -AllUsers Microsoft.BingWeather | Remove-AppxPackage"
-set "cmd_9=Get-AppxPackage -AllUsers Microsoft.549981C3F5F10 | Remove-AppxPackage"
-set "cmd_10=Get-AppxPackage -AllUsers Microsoft.Windows.DevHome | Remove-AppxPackage"
-set "cmd_11=Get-AppxPackage -AllUsers Microsoft.Getstarted | Remove-AppxPackage"
-set "cmd_12=Get-AppxPackage -AllUsers Microsoft.ZuneVideo | Remove-AppxPackage"
-set "cmd_13=Get-AppxPackage -AllUsers Microsoft.Windows.Photos | Remove-AppxPackage"
-set "cmd_14=Get-AppxPackage -AllUsers Microsoft.WindowsSoundRecorder | Remove-AppxPackage"
-set "cmd_15=Get-AppxPackage -AllUsers Microsoft.ZuneMusic | Remove-AppxPackage"
-set "cmd_16=Get-AppxPackage -AllUsers Microsoft.WindowsFeedbackHub | Remove-AppxPackage"
-set "cmd_17=Get-AppxPackage -AllUsers Microsoft.MicrosoftOfficeHub | Remove-AppxPackage"
-set "cmd_18=Get-AppxPackage -AllUsers Microsoft.WindowsMaps | Remove-AppxPackage"
-set "cmd_19=Get-AppxPackage -AllUsers Clipchamp.Clipchamp | Remove-AppxPackage"
-set "cmd_20=Get-AppxPackage -AllUsers Microsoft.Windows.Ai.Copilot.Provider | Remove-AppxPackage ^&" ^
-    "Get-AppxPackage -AllUsers Microsoft.Copilot | Remove-AppxPackage ^&" ^
-    "Get-AppxPackage -AllUsers Microsoft.Copilot_8wekyb3d8bbwe | Remove-AppxPackage"
-set "cmd_21=Get-AppxPackage -AllUsers MicrosoftCorporationII.MicrosoftFamily | Remove-AppxPackage"
-set "cmd_22=Get-AppxPackage -AllUsers Microsoft.BingNews | Remove-AppxPackage"
-set "cmd_23=Get-AppxPackage -AllUsers Microsoft.MicrosoftSolitaireCollection | Remove-AppxPackage"
-set "cmd_24=Get-AppxPackage -AllUsers Microsoft Teams | Remove-AppxPackage"
-set "cmd_25=Get-AppxPackage -AllUsers Microsoft.Todos | Remove-AppxPackage"
-set "cmd_26=Get-AppxPackage -AllUsers Microsoft.GetHelp | Remove-AppxPackage"
-set "cmd_27=Get-AppxPackage -AllUsers Microsoft.Office.OneNote | Remove-AppxPackage"
-set "cmd_28=Get-AppxPackage -AllUsers Microsoft.OutlookForWindows | Remove-AppxPackage"
-set "cmd_29=Get-AppxPackage -AllUsers Microsoft.Paint | Remove-AppxPackage"
-set "cmd_30=Get-AppxPackage -AllUsers Microsoft.BingSearch | Remove-AppxPackage"
-set "cmd_31=Get-AppxPackage -AllUsers Microsoft.People | Remove-AppxPackage"
-set "cmd_32=Get-AppxPackage -AllUsers Microsoft.PowerAutomateDesktop | Remove-AppxPackage"
-set "cmd_33=Get-AppxPackage -AllUsers Microsoft.WindowsMeetNow | Remove-AppxPackage"
-set "cmd_34=Get-AppxPackage -AllUsers Microsoft.SkypeApp | Remove-AppxPackage"
-set "cmd_35=Get-AppxPackage -AllUsers Microsoft.MicrosoftStickyNotes | Remove-AppxPackage"
-set "cmd_36=Get-AppxPackage -AllUsers Microsoft.YourPhone | Remove-AppxPackage"
-set "cmd_37=Get-AppxPackage -AllUsers Microsoft.Microsoft3DViewer | Remove-AppxPackage"
-set "cmd_38=Get-AppxPackage -AllUsers Microsoft.MixedReality.Portal | Remove-AppxPackage"
-
-:: Nomes
-
-set "app_1=Alarmes e Relógio"
-set "app_2=Aplicativos do Xbox"
-set "app_3=Assistência Rápida"
-set "app_4=Calendário"
-set "app_5=Calculadora"
-set "app_6=Câmera"
-set "app_7=Ferramenta de Captura"
-set "app_8=Clima"
-set "app_9=Cortana"
-set "app_10=Dev Home"
-set "app_11=Dicas"
-set "app_12=Filmes e TV"
-set "app_13=Fotos"
-set "app_14=Gravador de Som"
-set "app_15=Groove Music"
-set "app_16=Hub de Comentários"
-set "app_17=Hub do Office"
-set "app_18=Mapas"
-set "app_19=Microsoft Clipchamp"
-set "app_20=Microsoft Copilot"
-set "app_21=Família Microsoft"
-set "app_22=Notícias"
-set "app_23=Microsoft Solitaire Collection"
-set "app_24=Microsoft Teams"
-set "app_25=Microsoft To Do"
-set "app_26=Obter Ajuda"
-set "app_27=OneNote"
-set "app_28=Outlook"
-set "app_29=Paint"
-set "app_30=Pesquisa Bing"
-set "app_31=Pessoas"
-set "app_32=Power Automate"
-set "app_33=Meet Now"
-set "app_34=Skype"
-set "app_35=Sticky Notes"
-set "app_36=Seu Telefone"
-set "app_37=Visualizador 3D"
-set "app_38=Windows Mixed Reality"
 
 net session >nul 2>&1
 if %errorlevel% neq 0 (
     echo Arquivo não foi executado como administrador, reexecutando como adm...
-    ::timeout /t 4 /nobreak >nul
     powershell -Command "Start-Process '%~f0' -Verb RunAs"
     exit
 )
@@ -148,7 +51,7 @@ cls
 if /i "%continuar%"=="1" goto msginicial
 if /i "%continuar%"=="2" goto pr
 
-if "%continuar%"=="" goto prmsg
+if "%continuar%"=="" goto nochoice
 goto prmsg
 
 :pr
@@ -185,9 +88,9 @@ echo.
 
 echo                                                                                !COLOR_GREEN![1]!COLOR_WHITE! Otimizar regedit                            !COLOR_GREEN![4]!COLOR_WHITE! Limpar arquivos temporários e cache
 echo.
-echo                                                                                !COLOR_GREEN![2]!COLOR_WHITE! Desativar serviços desnecessários           !COLOR_GREEN![5]!COLOR_WHITE! Desinstalar aplicativos desnecessários
+echo                                                                                !COLOR_GREEN![2]!COLOR_WHITE! Desativar serviços desnecessários           !COLOR_GREEN![5]!COLOR_WHITE! Desativar tarefas agendadas desnecessárias
 echo.
-echo                                                                                !COLOR_GREEN![3]!COLOR_WHITE! Aplicar comandos CMD                        !COLOR_GREEN![6]!COLOR_WHITE! Desativar tarefas agendadas desnecessárias
+echo                                                                                !COLOR_GREEN![3]!COLOR_WHITE! Aplicar comandos CMD                        !COLOR_GREEN![6]!COLOR_WHITE! Otimizar memória RAM
 echo.
 echo                                                                                !COLOR_GREEN![G]!COLOR_WHITE! Repositório do código                       !COLOR_GREEN![L]!COLOR_WHITE! Sair
 echo.
@@ -215,17 +118,15 @@ if /i "%continuar%"=="R" rstrui.exe && goto msginicial
 if /i "%continuar%"=="G" start https://github.com/Tavin17/WinOptimizer && goto msginicial
 if /i "%continuar%"=="L" exit
 
-goto nochoice
+goto prmsg
 
 :parte1
 
 echo ════════════════════════════════════════════════════════════════
-
-echo.
-
-reg add "HKLM\SYSTEM\ControlSet001\Control" /v "WaitToKillServiceTimeout" /t REG_SZ /d 2000 /f >nul 2>&1
-reg add "HKLM\SYSTEM\ControlSet001\Control" /v "SvcHostSplitThresholdInKB" /t REG_DWORD /d 67108864 /f >nul 2>&1 
-echo !COLOR_ORANGE!2!COLOR_GREEN! Alterações feitas em HKLM\SYSTEM\ControlSet001\Control.
+echo !COLOR_ORANGE!Otimizações de InputLag!COLOR_WHITE!
+echo ════════════════════════════════════════════════════════════════
+reg add "HKLM\SYSTEM\ControlSet001\Control" /v "WaitToKillServiceTimeout" /t REG_SZ /d 3000 /f >nul 2>&1
+echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SYSTEM\ControlSet001\Control.
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "FeatureSettings" /t REG_DWORD /d 1 /f >nul 2>&1 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "FeatureSettingsOverride" /t REG_DWORD /d 3 /f >nul 2>&1 
@@ -256,12 +157,24 @@ reg add "HKCU\SYSTEM\GameConfigStore" /v "GameDVR_EFSEFeatureFlags" /t REG_DWORD
 reg add "HKCU\SYSTEM\GameConfigStore" /v "GameDVR_DSEBehavior" /t REG_DWORD /d 2 /f >nul 2>&1
 echo !COLOR_ORANGE!7!COLOR_GREEN! Alterações feitas em HKCU\SYSTEM\GameConfigStore.
 
+powercfg.exe /hibernate off >nul 2>&1
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v "HibernateEnabled" /t REG_DWORD /d 0 /f >nul 2>&1
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v "HiberbootEnabled" /t REG_DWORD /d 0 /f /f >nul 2>&1
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FlyoutMenuSettings" /v "ShowHibernateOption" /t REG_DWORD /d 0 /f >nul 2>&1
+echo !COLOR_ORANGE!Hibernação e Inicialização rápida!COLOR_GREEN! desativadas com sucesso
+
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "EnableActivityFeed" /t REG_DWORD /d 0 /f >nul 2>&1
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "PublishUserActivities" /t REG_DWORD /d 0 /f >nul 2>&1
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "UploadUserActivities" /t REG_DWORD /d 0 /f >nul 2>&1
+echo !COLOR_ORANGE!Histórico de atividade!COLOR_GREEN! desativado com sucesso.!COLOR_WHITE!
+
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\GameDVR" /v "AppCaptureEnabled" /t REG_DWORD /d 0 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\GameDVR.
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile" /v "NetworkThrottlingIndex" /t REG_DWORD /d 4294967295 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile" /v "SystemResponsiveness" /t REG_DWORD /d 0 /f >nul 2>&1
-echo !COLOR_ORANGE!2!COLOR_GREEN! Alterações feitas em HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile.
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile" /v "NoLazyMode" /t REG_DWORD /d 1 /f >nul 2>&1
+echo !COLOR_ORANGE!3!COLOR_GREEN! Alterações feitas em HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile.
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Games" /v "GPU Priority" /t REG_DWORD /d 8 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Games" /v "Priority" /t REG_DWORD /d 6 /f >nul 2>&1
@@ -269,14 +182,13 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProf
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Games" /v "SFIO Priority" /t REG_SZ /d High /f >nul 2>&1
 echo !COLOR_ORANGE!4!COLOR_GREEN! Alterações feitas em HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Games.
 
-::reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects" /v "VisualFXSetting" /t REG_DWORD /d 2 /f >nul 2>&1
-::echo 1 Alteração feita em HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects.
-
 reg add "HKCU\Control Panel\Desktop" /v "MenuShowDelay" /t REG_SZ /d 0 /f >nul 2>&1
 reg add "HKCU\Control Panel\Desktop" /v "AutoEndTasks" /t REG_DWORD /d 1 /f >nul 2>&1
 reg add "HKCU\Control Panel\Desktop" /v "ForegroundLockTimeout" /t REG_DWORD /d 0 /f >nul 2>&1
-::reg add "HKCU\Control Panel\Desktop" /v "FontSmoothing" /t REG_SZ /d 2 /f >nul 2>&1
-echo !COLOR_ORANGE!3!COLOR_GREEN! Alterações feitas em HKCU\Control Panel\Desktop.
+reg add "HKCU\Control Panel\Desktop" /v "WaitToKillAppTimeout" /t REG_SZ /d 3000 /f >nul 2>&1
+reg add "HKCU\Control Panel\Desktop" /v "WaitToKillServiceTimeout" /t REG_DWORD /d 3000 /f >nul 2>&1
+reg add "HKCU\Control Panel\Desktop" /v "HungAppTimeout" /t REG_SZ /d 3000 /f >nul 2>&1
+echo !COLOR_ORANGE!6!COLOR_GREEN! Alterações feitas em HKCU\Control Panel\Desktop.
 
 reg add "HKCU\Control Panel\Accessibility\MouseKeys" /v "flags" /t REG_SZ /d 0 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita HKCU\Control Panel\Accessibility\MouseKeys.
@@ -308,15 +220,13 @@ reg add "HKLM\SYSTEM\ControlSet001\Services\Ndu" /v "Start" /t REG_DWORD /d 4 /f
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SYSTEM\ControlSet001\Services\Ndu.
 echo.
 
-
 reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "OverlayTestMode" /t REG_DWORD /d 5 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SOFTWARE\Microsoft\Windows\Dwm.
 
-:: reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "HwSchMode" /t REG_DWORD /d 2 /f >nul 2>&1 removido por causar problemas em alguns computadores e jogos
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "HwSchMode" /t REG_DWORD /d 2 /f >nul 2>&1
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "TdrLevel" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "TdrDelay" /t REG_DWORD /d 0 /f >nul 2>&1
 echo !COLOR_ORANGE!3!COLOR_GREEN! Alterações feita em HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers.
-
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "EnablePreemption" /t REG_DWORD /d 0 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler.
@@ -326,7 +236,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters" /v "Enableboottrace" /t REG_DWORD /d 0 /f >nul 2>&1
 echo !COLOR_ORANGE!3!COLOR_GREEN! Alterações feitas em HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters.
 
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\Schedule" /v "Start" /t REG_DWORD /d 2 /f >nul 2>&1 rem 50 
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Schedule" /v "Start" /t REG_DWORD /d 2 /f >nul 2>&1 rem Agendador de Tarefas
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SYSTEM\CurrentControlSet\Services\Schedule.
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\mouclass" /v "MouseDataQueueSize" /t REG_DWORD /d 40 /f >nul 2>&1
@@ -412,16 +322,13 @@ reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" 
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SubscribedContent-338389Enabled" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SubscribedContent-338393Enabled" /t REG_DWORD /d 0 /f >nul 2>&1 
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SubscribedContent-353694Enabled" /t REG_DWORD /d 0 /f >nul 2>&1 
-reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SubscribedContent-353696Enabled" /t REG_DWORD /d 0 /f >nul 2>&1 rem 100
+reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SubscribedContent-353696Enabled" /t REG_DWORD /d 0 /f >nul 2>&1 
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SubscribedContent-353698Enabled" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SystemPaneSuggestionsEnabled" /t REG_DWORD /d 0 /f >nul 2>&1
 echo !COLOR_ORANGE!19!COLOR_GREEN! Alterações feitas em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager.
 
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize" /v "EnableTransparency" /t REG_DWORD /d 0 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize.
-
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\AppPrivacy" /v "LetAppsRunInBackground" /t REG_DWORD /d 2 /f >nul 2>&1
-echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SOFTWARE\Policies\Microsoft\Windows\AppPrivacy.
 
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "AllowOnlineTips" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "LinkResolveIgnoreLinkInfo" /t REG_DWORD /d 1 /f >nul 2>&1
@@ -434,62 +341,65 @@ echo !COLOR_ORANGE!6!COLOR_GREEN! Alterações feitas em HKCU\SOFTWARE\Microsoft
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Reliability" /v "TimeStampInterval" /t REG_DWORD /d 0 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração em HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Reliability.
 
-:: Configurações do Windows
+echo.
+echo !COLOR_ORANGE!Configurações de privacidade do Windows:!COLOR_WHITE!
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\location" /v "Value" /t REG_SZ /d Deny /f >nul 2>&1
-echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\location.
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Sensor\Overrides\{BFA794E4-F964-4FDB-90F6-51056BFE4B44}" /v "SensorPermissionState" /t REG_DWORD /d 0 /f >nul 2>&1
+reg add "HKLM\SYSTEM\Maps" /v "AutoUpdateEnabled" /t REG_DWORD /d 0 /f >nul 2>&1 
+echo !COLOR_ORANGE!Localização!COLOR_GREEN! desativada com sucesso.
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\userNotificationListener" /v "Value" /t REG_SZ /d Deny /f >nul 2>&1
-echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWAREMicrosoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\userNotificationListener.
-
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\activity" /v "Value" /t REG_SZ /d Deny /f >nul 2>&1
-echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\activity.
+echo !COLOR_ORANGE!Notificações!COLOR_GREEN! desativado com sucesso.
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\userAccountInformation" /v "Value" /t REG_SZ /d Deny /f >nul 2>&1
-echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\userAccountInformation.
+echo !COLOR_ORANGE!Informações da conta!COLOR_GREEN! desativada com sucesso.
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\contacts" /v "Value" /t REG_SZ /d Deny /f >nul 2>&1
-echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\contacts.
+echo !COLOR_ORANGE!Contatos!COLOR_GREEN! desativados com sucesso.
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\appointments" /v "Value" /t REG_SZ /d Deny /f >nul 2>&1
-echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\appointments.
+echo !COLOR_ORANGE!Calendário!COLOR_GREEN! desativado com sucesso.
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\phoneCallHistory" /v "Value" /t REG_SZ /d Deny /f >nul 2>&1
-echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\phoneCallHistory.
+echo !COLOR_ORANGE!Histórico de chamadas!COLOR_GREEN! desativado com sucesso.
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\email" /v "Value" /t REG_SZ /d Deny /f >nul 2>&1
-echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\email.
+echo !COLOR_ORANGE!Email!COLOR_GREEN! desativado com sucesso.
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\userDataTasks" /v "Value" /t REG_SZ /d Deny /f >nul 2>&1
-echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\userDataTasks.
+echo !COLOR_ORANGE!Tarefas!COLOR_GREEN! desativado com sucesso.
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\chat" /v "Value" /t REG_SZ /d Deny /f >nul 2>&1
-echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\chat.
+echo !COLOR_ORANGE!Sistema de mensagens!COLOR_GREEN! desativado com sucesso.
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\radios" /v "Value" /t REG_SZ /d Deny /f >nul 2>&1
-echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\radios.
+echo !COLOR_ORANGE!Rádios!COLOR_GREEN! desativado com sucesso.
 
 reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\bluetoothSync" /v "Value" /t REG_SZ /d Deny /f >nul 2>&1
-echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\bluetoothSync.
+echo !COLOR_ORANGE!Outros dispositivos!COLOR_GREEN! desativado com sucesso.
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Search" /v "Value" /t REG_DWORD /d 0/f >nul 2>&1
-echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search.
-echo.
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\AppPrivacy" /v "LetAppsRunInBackground" /t REG_DWORD /d 2 /f >nul 2>&1
+echo !COLOR_ORANGE!Aplicativos em segundo plano!COLOR_GREEN! desativado com sucesso.
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\appDiagnostics" /v "Value" /t REG_SZ /d Deny /f >nul 2>&1
-echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\appDiagnostics.
+echo !COLOR_ORANGE!Diagnóstico de aplicativos!COLOR_GREEN! desativado com sucesso.
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\documentsLibrary" /v "Value" /t REG_SZ /d Deny /f >nul 2>&1
-echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\documentsLibrary.
+echo !COLOR_ORANGE!Documentos!COLOR_GREEN! desativado com sucesso.
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\picturesLibrary" /v "Value" /t REG_SZ /d Deny /f >nul 2>&1
-echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\picturesLibrary.
+echo !COLOR_ORANGE!Imagens!COLOR_GREEN! desativado com sucesso.
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\videosLibrary" /v "Value" /t REG_SZ /d Deny /f >nul 2>&1
-echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\videosLibrary.
+echo !COLOR_ORANGE!Vídeos!COLOR_GREEN! desativado com sucesso.
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\broadFileSystemAccess" /v "Value" /t REG_SZ /d Deny /f >nul 2>&1
-echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\broadFileSystemAccess.
+echo !COLOR_ORANGE!Sistema de arquivos!COLOR_GREEN! desativado com sucesso.
+
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\phoneCall" /v "Value" /t REG_SZ /d Deny /f >nul 2>&1
+echo !COLOR_ORANGE!Chamadas telefônicas!COLOR_GREEN! desativado com sucesso.
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\downloadsFolder" /v "Value" /t REG_SZ /d Deny /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\downloadsFolder.
@@ -503,28 +413,20 @@ echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SOFTWARE\Microsoft\W
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\graphicsCaptureWithoutBorder" /v "Value" /t REG_SZ /d Allow /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\graphicsCaptureWithoutBorder.
 
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\phoneCall" /v "Value" /t REG_SZ /d Deny /f >nul 2>&1
-echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\phoneCall.
-
-reg add "HKLM\SOFTWARE\Microsoft\Speech_OneCore\Settings\VoiceActivation\UserPreferenceForAllApps" /v "AgentActivationEnabled" /t REG_DWORD /d 0 /f  >nul 2>&1
-reg add "HKLM\SOFTWARE\Microsoft\Speech_OneCore\Settings\VoiceActivation\UserPreferenceForAllApps" /v "AgentActivationLastUsed" /t REG_DWORD /d 0 /f >nul 2>&1
-echo !COLOR_ORANGE!2!COLOR_GREEN! Alterações feitas em HKCU\SOFTWARE\Microsoft\Speech_OneCore\Settings\VoiceActivation\UserPreferenceForAllApps.
-
+:: Configurações -> Sistema > Notificações e ações
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Notifications\Settings" /v "NOC_GLOBAL_SETTING_ALLOW_TOASTS_ABOVE_LOCK" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Notifications\Settings" /v "NOC_GLOBAL_SETTING_ALLOW_CRITICAL_TOASTS_ABOVE_LOCK" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Notifications\Settings" /v "NOC_GLOBAL_SETTING_ALLOW_NOTIFICATION_SOUND" /t REG_DWORD /d 0 /f >nul 2>&1
+reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\UserProfileEngagement" /v "ScoobeSystemSettingEnabled" /t REG_DWORD /d 0 /f >nul 2>&1
+reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Notifications\Settings\Windows.SystemToast.SecurityAndMaintenance" /v "Enabled" /t REG_DWORD /d 0 /f >nul 2>&1
 echo !COLOR_ORANGE!3!COLOR_GREEN! Alterações feitas em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Notifications\Settings.
 
-reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\UserProfileEngagement" /v "ScoobeSystemSettingEnabled" /t REG_DWORD /d 0 /f >nul 2>&1
-echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\UserProfileEngagement.
-
-reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Notifications\Settings\Windows.SystemToast.SecurityAndMaintenance" /v "Enabled" /t REG_DWORD /d 0 /f >nul 2>&1
-echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Notifications\Settings\Windows.SystemToast.SecurityAndMaintenance.
-
+:: Configurações -> Jogos
 reg add "HKCU\SOFTWARE\Microsoft\GameBar" /v "AllowAutoGameMode" /t REG_DWORD /d 1 /f >nul 2>&1
 reg add "HKCU\SOFTWARE\Microsoft\GameBar" /v "AutoGameModeEnabled" /t REG_DWORD /d 1 /f >nul 2>&1
+reg add "HKCU\SOFTWARE\Microsoft\GameBar" /v "ShowStartupPanel" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKCU\SOFTWARE\Microsoft\GameBar" /v "UseNexusForGameBarEnabled" /t REG_DWORD /d 0 /f >nul 2>&1
-echo !COLOR_ORANGE!3!COLOR_GREEN! Alterações feitas em HKCU\SOFTWARE\Microsoft\GameBar.
+echo !COLOR_ORANGE!Modo de jogo!COLOR_GREEN! ativado e !COLOR_ORANGE!XboxGameBar!COLOR_GREEN! desativado com sucesso.
 
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search" /v "BingSearchEnabled" /t REG_DWORD /d 0 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search.
@@ -536,16 +438,13 @@ echo !COLOR_ORANGE!2!COLOR_GREEN! Alterações feitas em HKLM\SOFTWARE\Microsoft
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DeliveryOptimization" /v "DownloadMode" /d 0 /t REG_DWORD /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SOFTWARE\Policies\Microsoft\Windows\DeliveryOptimization.
 
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "EnableActivityFeed" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "EnableCdp" /t REG_DWORD /d 0 /f >nul 2>&1
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "PublishUserActivities" /t REG_DWORD /d 0 /f >nul 2>&1
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "UploadUserActivities" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /V "EnableSmartScreen" /t REG_DWORD /D 0 /f >nul 2>&1
-echo !COLOR_ORANGE!5!COLOR_GREEN! Alterações feitas em HKLM\SOFTWARE\Policies\Microsoft\Windows\System.
+echo !COLOR_ORANGE!2!COLOR_GREEN! Alterações feitas em HKLM\SOFTWARE\Policies\Microsoft\Windows\System.
+echo.
 
 reg add "HKLM\Software\Microsoft\SQMClient\Windows" /v "CEIPEnable" /d 0 /t REG_DWORD /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SOFTWARE\Microsoft\SQMClient\Windows.
-echo.
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\WMI\AutoLogger\AutoLogger-Diagtrack-Listener" /v "Start" /t REG_DWORD /d 0 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SYSTEM\CurrentControlSet\Control\WMI\AutoLogger\AutoLogger-Diagtrack-Listener.
@@ -566,7 +465,7 @@ echo !COLOR_ORANGE!2!COLOR_GREEN! Alterações feitas em HKLM\SYSTEM\CurrentCont
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\DeviceGuard" /v "EnableVirtualizationBasedSecurity" /d 0 /t REG_DWORD /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SYSTEM\CurrentControlSet\Control\DeviceGuard.
 
-reg add "HKCU\SOFTWARE\Policies\Microsoft\Windows\EdgeUI" /v "DisableMFUTracking"/t REG_DWORD /d 1 /f >nul 2>&1 rem 150
+reg add "HKCU\SOFTWARE\Policies\Microsoft\Windows\EdgeUI" /v "DisableMFUTracking"/t REG_DWORD /d 1 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\EdgeUI" /v "DisableMFUTracking" /t REG_DWORD /d 1 /f >nul 2>&1
 echo !COLOR_ORANGE!2!COLOR_GREEN! Alterações feitas em HKLM\SOFTWARE\Policies\Microsoft\Windows\EdgeUI.
 
@@ -606,10 +505,10 @@ echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\W
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\TextInput" /v "AllowLinguisticDataCollection" /t REG_DWORD /D 0 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\TextInput.
+echo.
 
 reg add "HKLM\SOFTWARE\Policies\Microsoft\InputPersonalization" /v "AllowInputPersonalization" /t REG_DWORD /d 0 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SOFTWARE\Policies\Microsoft\InputPersonalization.
-echo.
 
 reg add "HKCU\SOFTWARE\Microsoft\Input\Settings" /v "InsightsEnabled" /t REG_DWORD /d 0 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\Input\Settings.
@@ -667,15 +566,17 @@ reg add "HKCU\SOFTWARE\Microsoft\Siuf\Rules" /v "NumberOfSIUFInPeriod" /t REG_DW
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\Siuf\Rules.
 
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\OperationStatusManager" /v "EnthusiastMode" /t REG_DWORD /d 1 /f >nul 2>&1
-echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\OperationStatusManager.
+echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\OperationFManager.
 
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsCopilot" /v "TurnOffWindowsCopilot" /t REG_DWORD /d 1 /f >nul 2>&1
+DISM /Online /Disable-Feature /FeatureName:"Recall" /Remove >nul 2>&1
+dism /online /remove-package /package-name:Microsoft.Windows.Copilot >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsCopilot.
 
 reg add "HKCU\SOFTWARE\Policies\Microsoft\Windows\WindowsCopilot" /v "TurnOffWindowsCopilot" /t REG_DWORD /d 1 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Policies\Microsoft\Windows\WindowsCopilot.
 
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsAI" /v "DisableAIDataAnalysis" /t REG_DWORD /d 1 /f >nul 2>&1 rem 200
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsAI" /v "DisableAIDataAnalysis" /t REG_DWORD /d 1 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsAI. 
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Device Installer" /v "DisableCoInstallers" /t REG_DWORD /d 1 /f >nul 2>&1
@@ -687,10 +588,10 @@ echo !COLOR_ORANGE!2!COLOR_GREEN! Alterações feitas em HKLM\SOFTWARE\Policies\
 
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Feeds" /v "ShellFeedsTaskbarViewMode" /t REG_DWORD /d 2 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Feeds.
+echo.
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Feeds" /v "ShellFeedsTaskbarViewMode" /t REG_DWORD /d 2 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Feeds.
-echo.
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" /v "IRPStackSize" /t REG_DWORD /d 30 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters.
@@ -703,13 +604,6 @@ echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SOFTWARE\Microsoft\W
 
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\StorageSense\Parameters\StoragePolicy" /v 01 /t REG_DWORD /d 0 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\StorageSense\Parameters\StoragePolicy.
-
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v "HibernateEnabled" /t REG_DWORD /d 0 /f >nul 2>&1
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v "HiberbootEnabled" /t REG_DWORD /d 0 /f /f >nul 2>&1
-echo !COLOR_ORANGE!2!COLOR_GREEN! Alteração feita em HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power.
-
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FlyoutMenuSettings" /v "ShowHibernateOption" /t REG_DWORD /d 0 /f >nul 2>&1
-echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FlyoutMenuSettings
 
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\HandwritingErrorReports" /v "PreventHandwritingErrorReports" /t REG_DWORD /d 1 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SOFTWARE\Policies\Microsoft\Windows\HandwritingErrorReports.
@@ -752,6 +646,7 @@ echo !COLOR_ORANGE!1!COLOR_GREEN! Alterações feita em HKCU\SOFTWARE\Microsoft\
 reg add "HKCU\SOFTWARE\Policies\Microsoft\Office\15.0\OSM" /v "EnableUpload" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKCU\SOFTWARE\Policies\Microsoft\Office\15.0\OSM" /v "EnableLogging" /t REG_DWORD /d 0 /f >nul 2>&1
 echo !COLOR_ORANGE!2!COLOR_GREEN! Alterações feitas em HKCU\SOFTWARE\Policies\Microsoft\Office\15.0\OSM.
+echo.
 
 reg add "HKCU\SOFTWARE\Policies\Microsoft\Office\16.0\OSM" /v "EnableLogging" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKCU\SOFTWARE\Policies\Microsoft\Office\16.0\OSM" /v "EnableUpload" /t REG_DWORD /d 0 /f >nul 2>&1
@@ -764,7 +659,6 @@ echo !COLOR_ORANGE!2!COLOR_GREEN! Alterações feitas em HKCU\SOFTWARE\Microsoft
 reg add "HKCU\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry" /v "DisableTelemetry" /t REG_DWORD /d 1 /f >nul 2>&1
 reg add "HKCU\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry" /v "VerboseLogging" /t REG_DWORD /d 0 /f >nul 2>&1
 echo !COLOR_ORANGE!2!COLOR_GREEN! Alterações feitas em HKCU\SOFTWARE\Microsoft\Office\16.0\Common\ClientTelemetry.
-echo.
 
 reg add "HKCU\SOFTWARE\Microsoft\Office\15.0\Common" /v "QMEnable" /t REG_DWORD /d 0 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alterações feita em HKCU\SOFTWARE\Microsoft\Office\15.0\Common.
@@ -820,15 +714,13 @@ echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SYSTEM\CurrentContro
 
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Psched" /v "NonBestEffortLimit" /t REG_DWORD /d 0 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SOFTWARE\Policies\Microsoft\Windows\Psched.
+echo.
 
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\OneDrive" /v "DisableFileSyncNGSC" /t REG_DWORD /d 1 /f >nul 2>&1
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SOFTWARE\Policies\Microsoft\Windows\OneDrive.
 
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" /v "ExcludeWUDriversInQualityUpdate" /t REG_DWORD /d 1 /f >nul 2>&1 
 echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate.
-
-reg add "HKLM\SYSTEM\Maps" /v "AutoUpdateEnabled" /t REG_DWORD /d 0 /f >nul 2>&1 
-echo !COLOR_ORANGE!1!COLOR_GREEN! Alteração feita em HKLM\SYSTEM\Maps
 
 echo.
 
@@ -881,6 +773,10 @@ echo.
 
 echo (Cliente de rastreamento de link distribuído)
 call :stop_and_disable TrkWks
+echo.
+
+echo (Coletor de Eventos do Windows)
+call :stop_and_disable Wecsvc
 echo.
 
 echo (Configuração da Área de Trabalho Remota)
@@ -1052,6 +948,11 @@ echo (Serviço de Biometria do Windows)
 call :stop_and_disable WbioSrvc
 echo.
 
+echo (Serviço de Cache de Fontes do Windows)
+call :stop_and_disable FontCache
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\FontCache3.0.0.0" /v "Start" /t REG_DWORD /d 4 /f >nul 2>&1
+echo.
+
 echo (Serviço de Compartilhamento de Dados)
 call :stop_and_disable DsSvc
 echo.
@@ -1094,15 +995,19 @@ echo.
 
 echo (Serviço de Hotspot Móvel do Windows)
 call :stop_and_disable icssvc
+echo. 
+
+echo (Serviço de Monitoramento de Desempenho Gráfico)
+call :stop_and_disable GraphicsPerfSvc
 echo.
 
 echo (Serviço de Monitoramento de Sensor)
 call :stop_and_disable SensrSvc
 echo.
 
-echo (Serviço de Plataforma de Dispositivos Conectados)
-call :stop_and_disable CDPSvc
-echo.
+::echo (Serviço de Plataforma de Dispositivos Conectados) Removido (temporariamente?) por desativar a aba de Display nas configurações do Windows 11.
+::call :stop_and_disable CDPSvc
+::echo.
 
 echo (Serviço de Política de Diagnóstico)
 call :stop_and_disable DPS
@@ -1247,54 +1152,14 @@ echo !COLOR_GREEN!Comandos Fsutil aplicados.!COLOR_WHITE!
 
 bcdedit /set useplatformtick yes >nul 2>&1
 bcdedit /set disabledynamictick yes >nul 2>&1
-bcdedit /deletevalue useplatformclock false >nul 2>&1
+bcdedit /deletevalue useplatformclock >nul 2>&1
 bcdedit /set tscsyncpolicy Enhanced FPS >nul 2>&1
 bcdedit /set tscsyncpolicy Legacy input >nul 2>&1
 bcdedit /set hypervisorlaunchtype off >nul 2>&1
 echo !COLOR_GREEN!Comandos bcdedit aplicados.!COLOR_WHITE!
 
-powercfg.exe /hibernate off >nul 2>&1
-echo !COLOR_GREEN!Hibernação desativada.!COLOR_WHITE!
-
-taskkill /f /fi "status eq not responding" >nul 2>&1
-echo !COLOR_GREEN!Processos que não está respondendo encerrados.!COLOR_WHITE!
-
-:: ----------------------------------------------------------------------------------------------
-
-powercfg /list | findstr /i "%PLANO_NOME%" > nul
-
-if %errorlevel% equ 0 (
-    goto pw1
-) 
-
-echo !COLOR_ORANGE!Deseja aplicar o plano de energia MaxPower? !COLOR_WHITE![!COLOR_ORANGE!S/N!COLOR_WHITE!]
-
-set /p continuar=""
-
-if /i "%continuar%"=="S" goto plano
-if /i "%continuar%"=="N" goto pw1
-
-:plano
-chcp 437 >nul
-powershell -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/Tavin17/WinOptimizer/main/MaxPower.pow' -OutFile '%USERPROFILE%\Downloads\MaxPower.pow'" >nul 2>&1
-
-powercfg /import "%USERPROFILE%\Downloads\MaxPower.pow" 9de523a7-05eb-4ec6-a4ed-688d113e2116 >nul 2>&1
-
-powercfg /setactive 9de523a7-05eb-4ec6-a4ed-688d113e2116 >nul 2>&1
-del "%USERPROFILE%\Downloads\MaxPower.pow" >nul 2>&1
-chcp 65001 >nul
-echo !COLOR_GREEN!Plano de energia !COLOR_ORANGE!MaxPower!COLOR_GREEN! ativado com sucesso.!COLOR_WHITE!
-
-:pw1
-
-winget uninstall "windows web experience pack" >nul 2>&1
+winget uninstall "windows web experience pack" --accept-source-agreements >nul 2>&1
 echo !COLOR_GREEN!Widgets removidos.!COLOR_WHITE!
-
-DISM /Online /Disable-Feature /FeatureName:"Recall" /Remove >nul 2>&1
-echo !COLOR_GREEN!Recall desabilitado.!COLOR_WHITE!
-
-dism /online /remove-package /package-name:Microsoft.Windows.Copilot >nul 2>&1
-echo !COLOR_GREEN!Copilot desabilitado.!COLOR_WHITE!
 
 defrag /C /L >nul 2>&1
 echo !COLOR_GREEN!Unidades otimizadas.!COLOR_WHITE!
@@ -1319,29 +1184,22 @@ echo Pressione !COLOR_GREEN!qualquer tecla!COLOR_WHITE! para continuar
 pause >nul 2>&1
 goto msginicial
 
-
 :parte4
-
-net stop wuauserv >nul 2>&1
-net stop bits >nul 2>&1
 
 echo ════════════════════════════════════════════════════════════════
 echo.
 
 
-rd /s /q "%temp%" >nul 2>&1
-mkdir "%temp%" >nul 2>&1
+derl /s /f /q %temp% >nul 2>&1
 echo !COLOR_GREEN!Pasta %%temp%% limpa.!COLOR_WHITE!
 
-rd /s /q "C:\Windows\Temp" >nul 2>&1
-mkdir "C:\Windows\Temp" >nul 2>&1
+del /s /f /q %Windir%\Temp >nul 2>&1
 echo !COLOR_GREEN!Pasta temp limpa.!COLOR_WHITE!
 
-rd /s /q "C:\Windows\Prefetch" >nul 2>&1
-mkdir "C:\Windows\Prefetch" >nul 2>&1
+del /s /f /q C:\WINDOWS\Prefetch >nul 2>&1
 echo !COLOR_GREEN!Pasta prefetch limpa.!COLOR_WHITE!
 
-del /f /q "%userprofile%\Recent\*" >nul 2>&1
+del /s /f /q "%userprofile%\Recent" >nul 2>&1
 echo !COLOR_GREEN!Pasta recent limpa.!COLOR_WHITE!
 
 del C:\Windows\Logs\* /s /q >nul 2>&1
@@ -1354,18 +1212,17 @@ del C:\Users\%USERNAME%\AppData\Local\Microsoft\Windows\SettingSync\*.log /s /q 
 del C:\Users\%USERNAME%\AppData\Local\Microsoft\Windows\Explorer\ThumbCacheToDelete\*.tmp /s /q >nul 2>&1
 ipconfig /flushdns >nul 2>&1
 netsh winsock reset >nul 2>&1
-echo !COLOR_GREEN!Cache limpo.!COLOR_WHITE!
+
+for /d /r "%userprofile%\AppData" %%a in (*Cache_Data*) do (
+    if exist "%%a" rmdir /s /q "%%a"
+) >nul 2>&1
+echo !COLOR_GREEN!Cache limpo.!COLOR_WHITE! (!COLOR_ORANGE!Dê F5 em sites que não carregarem seu visual corretamente.!COLOR_WHITE!)
 
 rd /s /q C:\$Recycle.Bin >nul 2>&1
 echo !COLOR_GREEN!Lixeira esvaziada.!COLOR_WHITE!
-
 echo. 
 
-echo !COLOR_ORANGE!Reiniciando BITS...!COLOR_WHITE!
-net start bits >nul 2>&1
-echo !COLOR_GREEN!BITS Reiniciado.!COLOR_WHITE!
-
-echo.
+echo. 
 
 echo.╔═════════════════════════════════════════════════════════════════════╗
 echo ║         !COLOR_GREEN!Limpeza de arquivos temporários e cache concluidas.!COLOR_WHITE!         ║
@@ -1383,170 +1240,126 @@ goto msginicial
 echo ════════════════════════════════════════════════════════════════
 echo.
 
-echo Digite o número do respectivo aplicativo que deseja remover.
+echo !COLOR_GREEN!Desativando tarefas agendadas desnecessárias, por favor aguarde...!COLOR_ORANGE!
 echo.
-
-echo [!COLOR_ORANGE!1!COLOR_WHITE!] Alarmes e Relógio
-echo [!COLOR_ORANGE!2!COLOR_WHITE!] Aplicativos Xbox (inclui, XboxGameBar e serviços de jogos)
-echo [!COLOR_ORANGE!3!COLOR_WHITE!] Assistência Rápida
-echo [!COLOR_ORANGE!4!COLOR_WHITE!] Calendário
-echo [!COLOR_ORANGE!5!COLOR_WHITE!] Calculadora
-echo [!COLOR_ORANGE!6!COLOR_WHITE!] Câmera
-echo [!COLOR_ORANGE!7!COLOR_WHITE!] Ferramenta de Captura
-echo [!COLOR_ORANGE!8!COLOR_WHITE!] Clima
-echo [!COLOR_ORANGE!9!COLOR_WHITE!] Cortana
-echo [!COLOR_ORANGE!10!COLOR_WHITE!] Dev Home
-echo [!COLOR_ORANGE!11!COLOR_WHITE!] Dicas
-echo [!COLOR_ORANGE!12!COLOR_WHITE!] Filmes e TV
-echo [!COLOR_ORANGE!13!COLOR_WHITE!] Fotos
-echo [!COLOR_ORANGE!14!COLOR_WHITE!] Gravador de Som
-echo [!COLOR_ORANGE!15!COLOR_WHITE!] Groove Music
-echo [!COLOR_ORANGE!16!COLOR_WHITE!] Hub de Comentários
-echo [!COLOR_ORANGE!17!COLOR_WHITE!] Hub do Office
-echo [!COLOR_ORANGE!18!COLOR_WHITE!] Mapas
-echo [!COLOR_ORANGE!19!COLOR_WHITE!] Microsoft Clipchamp
-echo [!COLOR_ORANGE!20!COLOR_WHITE!] Microsoft Copilot
-echo [!COLOR_ORANGE!21!COLOR_WHITE!] Microsoft Family
-echo [!COLOR_ORANGE!22!COLOR_WHITE!] Microsoft Notícias
-echo [!COLOR_ORANGE!23!COLOR_WHITE!] Microsoft Solitaire Collection
-echo [!COLOR_ORANGE!24!COLOR_WHITE!] Microsoft Teams
-echo [!COLOR_ORANGE!25!COLOR_WHITE!] Microsoft To Do
-echo [!COLOR_ORANGE!26!COLOR_WHITE!] Obter Ajuda
-echo [!COLOR_ORANGE!27!COLOR_WHITE!] OneNote
-echo [!COLOR_ORANGE!28!COLOR_WHITE!] Outlook
-echo [!COLOR_ORANGE!29!COLOR_WHITE!] Paint
-echo [!COLOR_ORANGE!30!COLOR_WHITE!] Pesquisa do Bing
-echo [!COLOR_ORANGE!31!COLOR_WHITE!] Pessoas
-echo [!COLOR_ORANGE!32!COLOR_WHITE!] Powershell Automate
-echo [!COLOR_ORANGE!33!COLOR_WHITE!] Reunir agora
-echo [!COLOR_ORANGE!34!COLOR_WHITE!] Skype
-echo [!COLOR_ORANGE!35!COLOR_WHITE!] Stick Notes
-echo [!COLOR_ORANGE!36!COLOR_WHITE!] Vincular ao Celular
-echo [!COLOR_ORANGE!37!COLOR_WHITE!] Visualizador 3D
-echo [!COLOR_ORANGE!38!COLOR_WHITE!] Windows Mixed Reality
-
-echo.
-
-echo [!COLOR_RED!M!COLOR_WHITE!] Menu Inicial
-echo.
-
-set /p continuar="" || set continuar= 
-
-cls
-
-if /i "%continuar%"=="M" goto msginicial
-
-chcp 65001 >nul
-
-if defined cmd_%continuar% (
-    chcp 437 >nul
-    PowerShell -command "!cmd_%continuar%!" >nul 2>&1
-    chcp 65001 >nul
-    echo ════════════════════════════════════════════════════════════════
-    echo.
-    echo !COLOR_GREEN!!app_%continuar%! foi removido com sucesso!COLOR_WHITE!
-    echo.
-    goto parte5
-) else ( rem Se nenhum valor for digitado ou o valor for inválido, ir para nochoice
-    goto nochoice
-)
-
-echo.
-
-echo Pressione !COLOR_GREEN!M!COLOR_WHITE! para continuar
-pause >nul 2>&1
-goto msginicial
-
-echo.
-echo ════════════════════════════════════════════════════════════════
-echo.
-
-:parte6
-echo ════════════════════════════════════════════════════════════════
-echo.
-
-echo Desativando tarefas agendadas desnecessárias, por favor aguarde...
 
 schtasks /end /tn "\Microsoft\Windows\Customer Experience Improvement Program\Consolidator" >nul 2>&1
-schtasks /change /tn "\Microsoft\Windows\Customer Experience Improvement Program\Consolidator" /disable >nul 2>&1
-schtasks /end /tn "\Microsoft\Windows\Customer Experience Improvement Program\BthSQM" >nul 2>&1
-schtasks /change /tn "\Microsoft\Windows\Customer Experience Improvement Program\BthSQM" /disable >nul 2>&1
-schtasks /end /tn "\Microsoft\Windows\Customer Experience Improvement Program\KernelCeipTask" >nul 2>&1
-schtasks /change /tn "\Microsoft\Windows\Customer Experience Improvement Program\KernelCeipTask" /disable >nul 2>&1
-schtasks /end /tn "\Microsoft\Windows\Customer Experience Improvement Program\UsbCeip" >nul 2>&1
-schtasks /change /tn "\Microsoft\Windows\Customer Experience Improvement Program\UsbCeip" /disable >nul 2>&1
-schtasks /end /tn "\Microsoft\Windows\Customer Experience Improvement Program\Uploader" >nul 2>&1
-schtasks /change /tn "\Microsoft\Windows\Customer Experience Improvement Program\Uploader" /disable >nul 2>&1
-schtasks /end /tn "\Microsoft\Windows\Application Experience\Microsoft Compatibility Appraiser" >nul 2>&1
-schtasks /change /tn "\Microsoft\Windows\Application Experience\Microsoft Compatibility Appraiser" /disable >nul 2>&1
-schtasks /end /tn "\Microsoft\Windows\Application Experience\ProgramDataUpdater" >nul 2>&1
-schtasks /change /tn "\Microsoft\Windows\Application Experience\ProgramDataUpdater" /disable >nul 2>&1
-schtasks /end /tn "\Microsoft\Windows\Application Experience\StartupAppTask" >nul 2>&1
-schtasks /change /tn "\Microsoft\Windows\Application Experience\StartupAppTask" /disable >nul 2>&1
-schtasks /end /tn "\Microsoft\Windows\DiskDiagnostic\Microsoft-Windows-DiskDiagnosticDataCollector" >nul 2>&1
-schtasks /change /tn "\Microsoft\Windows\DiskDiagnostic\Microsoft-Windows-DiskDiagnosticDataCollector" /disable >nul 2>&1
-schtasks /end /tn "\Microsoft\Windows\DiskDiagnostic\Microsoft-Windows-DiskDiagnosticResolver" >nul 2>&1
-schtasks /change /tn "\Microsoft\Windows\DiskDiagnostic\Microsoft-Windows-DiskDiagnosticResolver" /disable >nul 2>&1
-schtasks /end /tn "\Microsoft\Windows\Power Efficiency Diagnostics\AnalyzeSystem" >nul 2>&1
-schtasks /change /tn "\Microsoft\Windows\Power Efficiency Diagnostics\AnalyzeSystem" /disable >nul 2>&1
-schtasks /end /tn "\Microsoft\Windows\Shell\FamilySafetyMonitor" >nul 2>&1
-schtasks /change /tn "\Microsoft\Windows\Shell\FamilySafetyMonitor" /disable >nul 2>&1
-schtasks /end /tn "\Microsoft\Windows\Shell\FamilySafetyRefresh" >nul 2>&1
-schtasks /change /tn "\Microsoft\Windows\Shell\FamilySafetyRefresh" /disable >nul 2>&1
-schtasks /end /tn "\Microsoft\Windows\Shell\FamilySafetyUpload" >nul 2>&1
-schtasks /change /tn "\Microsoft\Windows\Shell\FamilySafetyUpload" /disable >nul 2>&1
-schtasks /end /tn "\Microsoft\Windows\Autochk\Proxy" >nul 2>&1
-schtasks /change /tn "\Microsoft\Windows\Autochk\Proxy" /disable >nul 2>&1
-schtasks /end /tn "\Microsoft\Windows\Maintenance\WinSAT" >nul 2>&1
-schtasks /change /tn "\Microsoft\Windows\Maintenance\WinSAT" /disable >nul 2>&1
-schtasks /end /tn "\Microsoft\Windows\Application Experience\AitAgent" >nul 2>&1 
-schtasks /change /tn "\Microsoft\Windows\Application Experience\AitAgent" /disable >nul 2>&1
-schtasks /end /tn "\Microsoft\Windows\Windows Error Reporting\QueueReporting" >nul 2>&1
-schtasks /change /tn "\Microsoft\Windows\Windows Error Reporting\QueueReporting" /disable >nul 2>&1
-schtasks /end /tn "\Microsoft\Windows\CloudExperienceHost\CreateObjectTask" >nul 2>&1
-schtasks /change /tn "\Microsoft\Windows\CloudExperienceHost\CreateObjectTask" /disable >nul 2>&1
-schtasks /end /tn "\Microsoft\Windows\DiskFootprint\Diagnostics" >nul 2>&1
-schtasks /change /tn "\Microsoft\Windows\DiskFootprint\Diagnostics" /disable >nul 2>&1
-schtasks /end /tn "\Microsoft\Windows\FileHistory\File History (maintenance mode)" >nul 2>&1
-schtasks /change /tn "\Microsoft\Windows\FileHistory\File History (maintenance mode)" /disable >nul 2>&1
-schtasks /end /tn "\Microsoft\Windows\PI\Sqm-Tasks" >nul 2>&1
-schtasks /change /tn "\Microsoft\Windows\PI\Sqm-Tasks" /disable >nul 2>&1
-schtasks /end /tn "\Microsoft\Windows\NetTrace\GatherNetworkInfo" >nul 2>&1
-schtasks /change /tn "\Microsoft\Windows\NetTrace\GatherNetworkInfo" /disable >nul 2>&1
-schtasks /end /tn "\Microsoft\Windows\AppID\SmartScreenSpecific" >nul 2>&1
-schtasks /change /tn "\Microsoft\Windows\AppID\SmartScreenSpecific" /disable >nul 2>&1
-schtasks end /tn "\Microsoft\Windows\WindowsUpdate\Automatic App Update" /disable >nul 2>&1
-schtasks /change /tn "\Microsoft\Windows\WindowsUpdate\Automatic App Update" /disable >nul 2>&1
-schtasks /end /tn "\Microsoft\Windows\Time Synchronization\ForceSynchronizeTime" /disable >nul 2>&1
-schtasks /change /tn "\Microsoft\Windows\Time Synchronization\ForceSynchronizeTime" /disable >nul 2>&1
-schtasks /end /tn "\Microsoft\Windows\Time Synchronization\SynchronizeTime" /disable >nul 2>&1
-schtasks /change /tn "\Microsoft\Windows\Time Synchronization\SynchronizeTime" /disable >nul 2>&1
-schtasks /end /tn "\Microsoft\Windows\HelloFace\FODCleanupTask" >nul 2>&1
-schtasks /change /tn "\Microsoft\Windows\HelloFace\FODCleanupTask" /disable >nul 2>&1
-schtasks /end /tn "\Microsoft\Windows\Feedback\Siuf\DmClient" >nul 2>&1
-schtasks /change /tn "\Microsoft\Windows\Feedback\Siuf\DmClient" /disable >nul 2>&1
-schtasks /end /tn "\Microsoft\Windows\Feedback\Siuf\DmClientOnScenarioDownload" >nul 2>&1
-schtasks /change /tn "\Microsoft\Windows\Feedback\Siuf\DmClientOnScenarioDownload" /disable >nul 2>&1
-schtasks /end /tn "\Microsoft\Windows\Application Experience\PcaPatchDbTask" >nul 2>&1
-schtasks /change /tn "\Microsoft\Windows\Application Experience\PcaPatchDbTask" /disable >nul 2>&1
-schtasks /end /tn "\Microsoft\Windows\Device Information\Device" >nul 2>&1
-schtasks /change /tn "\Microsoft\Windows\Device Information\Device" /disable >nul 2>&1
-schtasks /end /tn "\Microsoft\Windows\Device Information\Device User" >nul 2>&1
-schtasks /change /tn "\Microsoft\Windows\Device Information\Device User" /disable >nul 2>&1
-schtasks /end /tn "\Microsoft\Office\OfficeTelemetryAgentFallBack2016" >nul 2>&1
-schtasks /change /tn "\Microsoft\Office\OfficeTelemetryAgentFallBack2016" /disable >nul 2>&1
-schtasks /end /tn "\Microsoft\Office\OfficeTelemetryAgentLogOn2016" >nul 2>&1
-schtasks /change /tn "\Microsoft\Office\OfficeTelemetryAgentLogOn2016" /disable >nul 2>&1
-schtasks /end /tn "\Microsoft\Office\OfficeTelemetryAgentFallBack" >nul 2>&1
-schtasks /change /tn "\Microsoft\Office\OfficeTelemetryAgentFallBack" /disable >nul 2>&1
-schtasks /end /tn "\Microsoft\Office\OfficeTelemetryAgentLogOn" >nul 2>&1
-schtasks /change /tn "\Microsoft\Office\OfficeTelemetryAgentLogOn" /disable >nul 2>&1
-schtasks /end /tn "\Microsoft\Windows\Defrag\ScheduledDefrag" /disable >nul 2>&1
-schtasks /change /tn "\Microsoft\Windows\Defrag\ScheduledDefrag" /disable >nul 2>&1
-schtasks /end /tn "Microsoft\Windows\Maps\MapsUpdateTask" /disable >nul 2>&1
-schtasks /change /tn "Microsoft\Windows\Maps\MapsUpdateTask" /disable >nul 2>&1
-
+schtasks /change /tn "\Microsoft\Windows\Customer Experience Improvement Program\Consolidator" /disable
 echo.
+schtasks /end /tn "\Microsoft\Windows\Customer Experience Improvement Program\BthSQM" >nul 2>&1
+schtasks /change /tn "\Microsoft\Windows\Customer Experience Improvement Program\BthSQM" /disable
+echo.
+schtasks /end /tn "\Microsoft\Windows\Customer Experience Improvement Program\KernelCeipTask" >nul 2>&1
+schtasks /change /tn "\Microsoft\Windows\Customer Experience Improvement Program\KernelCeipTask" /disable
+echo.
+schtasks /end /tn "\Microsoft\Windows\Customer Experience Improvement Program\UsbCeip" >nul 2>&1
+schtasks /change /tn "\Microsoft\Windows\Customer Experience Improvement Program\UsbCeip" /disable
+echo.
+schtasks /end /tn "\Microsoft\Windows\Customer Experience Improvement Program\Uploader" >nul 2>&1
+schtasks /change /tn "\Microsoft\Windows\Customer Experience Improvement Program\Uploader" /disable
+echo.
+schtasks /end /tn "\Microsoft\Windows\Application Experience\Microsoft Compatibility Appraiser" >nul 2>&1
+schtasks /change /tn "\Microsoft\Windows\Application Experience\Microsoft Compatibility Appraiser" /disable
+echo.
+schtasks /end /tn "\Microsoft\Windows\Application Experience\ProgramDataUpdater" >nul 2>&1
+schtasks /change /tn "\Microsoft\Windows\Application Experience\ProgramDataUpdater" /disable
+echo.
+schtasks /end /tn "\Microsoft\Windows\Application Experience\StartupAppTask" >nul 2>&1
+schtasks /change /tn "\Microsoft\Windows\Application Experience\StartupAppTask" /disable
+echo.
+schtasks /end /tn "\Microsoft\Windows\DiskDiagnostic\Microsoft-Windows-DiskDiagnosticDataCollector" >nul 2>&1
+schtasks /change /tn "\Microsoft\Windows\DiskDiagnostic\Microsoft-Windows-DiskDiagnosticDataCollector" /disable
+echo.
+schtasks /end /tn "\Microsoft\Windows\DiskDiagnostic\Microsoft-Windows-DiskDiagnosticResolver" >nul 2>&1
+schtasks /change /tn "\Microsoft\Windows\DiskDiagnostic\Microsoft-Windows-DiskDiagnosticResolver" /disable
+echo.
+schtasks /end /tn "\Microsoft\Windows\Power Efficiency Diagnostics\AnalyzeSystem" >nul 2>&1
+schtasks /change /tn "\Microsoft\Windows\Power Efficiency Diagnostics\AnalyzeSystem" /disable
+echo.
+schtasks /end /tn "\Microsoft\Windows\Shell\FamilySafetyMonitor" >nul 2>&1
+schtasks /change /tn "\Microsoft\Windows\Shell\FamilySafetyMonitor" /disable
+echo.
+schtasks /end /tn "\Microsoft\Windows\Shell\FamilySafetyRefresh" >nul 2>&1
+schtasks /change /tn "\Microsoft\Windows\Shell\FamilySafetyRefresh" /disable
+echo.
+schtasks /end /tn "\Microsoft\Windows\Shell\FamilySafetyUpload" >nul 2>&1
+schtasks /change /tn "\Microsoft\Windows\Shell\FamilySafetyUpload" /disable
+echo.
+schtasks /end /tn "\Microsoft\Windows\Autochk\Proxy" >nul 2>&1
+schtasks /change /tn "\Microsoft\Windows\Autochk\Proxy" /disable
+echo.
+schtasks /end /tn "\Microsoft\Windows\Maintenance\WinSAT" >nul 2>&1
+schtasks /change /tn "\Microsoft\Windows\Maintenance\WinSAT" /disable
+echo.
+schtasks /end /tn "\Microsoft\Windows\Application Experience\AitAgent" >nul 2>&1 
+schtasks /change /tn "\Microsoft\Windows\Application Experience\AitAgent" /disable
+echo.
+schtasks /end /tn "\Microsoft\Windows\Windows Error Reporting\QueueReporting" >nul 2>&1
+schtasks /change /tn "\Microsoft\Windows\Windows Error Reporting\QueueReporting" /disable
+echo.
+schtasks /end /tn "\Microsoft\Windows\CloudExperienceHost\CreateObjectTask" >nul 2>&1
+schtasks /change /tn "\Microsoft\Windows\CloudExperienceHost\CreateObjectTask" /disable
+echo.
+schtasks /end /tn "\Microsoft\Windows\DiskFootprint\Diagnostics" >nul 2>&1
+schtasks /change /tn "\Microsoft\Windows\DiskFootprint\Diagnostics" /disable
+echo.
+schtasks /end /tn "\Microsoft\Windows\FileHistory\File History (maintenance mode)" >nul 2>&1
+schtasks /change /tn "\Microsoft\Windows\FileHistory\File History (maintenance mode)" /disable
+echo.
+schtasks /end /tn "\Microsoft\Windows\PI\Sqm-Tasks" >nul 2>&1
+schtasks /change /tn "\Microsoft\Windows\PI\Sqm-Tasks" /disable
+echo.
+schtasks /end /tn "\Microsoft\Windows\NetTrace\GatherNetworkInfo" >nul 2>&1
+schtasks /change /tn "\Microsoft\Windows\NetTrace\GatherNetworkInfo" /disable
+echo.
+schtasks /end /tn "\Microsoft\Windows\AppID\SmartScreenSpecific" >nul 2>&1
+schtasks /change /tn "\Microsoft\Windows\AppID\SmartScreenSpecific" /disable
+echo.
+schtasks end /tn "\Microsoft\Windows\WindowsUpdate\Automatic App Update" >nul 2>&1
+schtasks /change /tn "\Microsoft\Windows\WindowsUpdate\Automatic App Update" /disable
+echo.
+schtasks /end /tn "\Microsoft\Windows\Time Synchronization\ForceSynchronizeTime" >nul 2>&1
+schtasks /change /tn "\Microsoft\Windows\Time Synchronization\ForceSynchronizeTime" /disable
+echo.
+schtasks /end /tn "\Microsoft\Windows\Time Synchronization\SynchronizeTime" >nul 2>&1
+schtasks /change /tn "\Microsoft\Windows\Time Synchronization\SynchronizeTime" /disable
+echo.
+schtasks /end /tn "\Microsoft\Windows\HelloFace\FODCleanupTask" >nul 2>&1
+schtasks /change /tn "\Microsoft\Windows\HelloFace\FODCleanupTask" /disable
+echo.
+schtasks /end /tn "\Microsoft\Windows\Feedback\Siuf\DmClient" >nul 2>&1
+schtasks /change /tn "\Microsoft\Windows\Feedback\Siuf\DmClient" /disable
+echo.
+schtasks /end /tn "\Microsoft\Windows\Feedback\Siuf\DmClientOnScenarioDownload" >nul 2>&1
+schtasks /change /tn "\Microsoft\Windows\Feedback\Siuf\DmClientOnScenarioDownload" /disable
+echo.
+schtasks /end /tn "\Microsoft\Windows\Application Experience\PcaPatchDbTask" >nul 2>&1
+schtasks /change /tn "\Microsoft\Windows\Application Experience\PcaPatchDbTask" /disable
+echo.
+schtasks /end /tn "\Microsoft\Windows\Device Information\Device" >nul 2>&1
+schtasks /change /tn "\Microsoft\Windows\Device Information\Device" /disable
+echo.
+schtasks /end /tn "\Microsoft\Windows\Device Information\Device User" >nul 2>&1
+schtasks /change /tn "\Microsoft\Windows\Device Information\Device User" /disable
+echo.
+schtasks /end /tn "\Microsoft\Office\OfficeTelemetryAgentFallBack2016" >nul 2>&1
+schtasks /change /tn "\Microsoft\Office\OfficeTelemetryAgentFallBack2016" /disable
+echo.
+schtasks /end /tn "\Microsoft\Office\OfficeTelemetryAgentLogOn2016" >nul 2>&1
+schtasks /change /tn "\Microsoft\Office\OfficeTelemetryAgentLogOn2016" /disable
+echo.
+schtasks /end /tn "\Microsoft\Office\OfficeTelemetryAgentFallBack" >nul 2>&1
+schtasks /change /tn "\Microsoft\Office\OfficeTelemetryAgentFallBack" /disable
+echo.
+schtasks /end /tn "\Microsoft\Office\OfficeTelemetryAgentLogOn" >nul 2>&1
+schtasks /change /tn "\Microsoft\Office\OfficeTelemetryAgentLogOn" /disable
+echo.
+schtasks /end /tn "\Microsoft\Windows\Defrag\ScheduledDefrag" >nul 2>&1
+schtasks /change /tn "\Microsoft\Windows\Defrag\ScheduledDefrag" /disable
+echo.
+schtasks /end /tn "Microsoft\Windows\Maps\MapsUpdateTask" >nul 2>&1
+schtasks /change /tn "Microsoft\Windows\Maps\MapsUpdateTask" /disable
+echo. !COLOR_WHITE!
 
 echo.╔══════════════════════════════════════════════════════════════════════╗
 echo ║       !COLOR_GREEN!Tarefas agendadas desnecessárias desativadas com sucesso.!COLOR_WHITE!      ║
@@ -1560,6 +1373,139 @@ echo Pressione !COLOR_GREEN!qualquer tecla!COLOR_WHITE! para continuar
 pause >nul 2>&1
 goto msginicial
 
+:parte6
+echo ════════════════════════════════════════════════════════════════
+echo.
+
+echo !COLOR_GREEN!Escolha a opção baseada na quantidade de RAM em que você possui. Selecione !COLOR_ORANGE!P!COLOR_GREEN! caso for nenhuma das opções.!COLOR_WHITE!
+
+echo.
+echo.
+echo.
+
+echo                [!COLOR_GREEN!1!COLOR_WHITE!] 2Gb RAM         [!COLOR_GREEN!8!COLOR_WHITE!] 20Gb RAM
+echo.
+echo                [!COLOR_GREEN!2!COLOR_WHITE!] 4Gb RAM         [!COLOR_GREEN!9!COLOR_WHITE!] 24Gb RAM
+echo.
+echo                [!COLOR_GREEN!3!COLOR_WHITE!] 6Gb RAM         [!COLOR_GREEN!10!COLOR_WHITE!] 32Gb RAM
+echo.
+echo                [!COLOR_GREEN!4!COLOR_WHITE!] 8Gb RAM         [!COLOR_GREEN!11!COLOR_WHITE!] 64Gb RAM
+echo.
+echo                [!COLOR_GREEN!5!COLOR_WHITE!] 10Gb RAM        [!COLOR_ORANGE!P!COLOR_WHITE!] Padrão
+echo.
+echo                [!COLOR_GREEN!6!COLOR_WHITE!] 12Gb RAM        [!COLOR_RED!V!COLOR_WHITE!] Voltar
+echo.
+echo                [!COLOR_GREEN!7!COLOR_WHITE!] 16Gb RAM
+
+echo.
+echo.
+echo.
+
+set /p valor=""
+echo.
+
+if /i "%valor%"=="" goto nochoice 
+
+if /i "%valor%"=="P" (
+    reg add "HKLM\SYSTEM\ControlSet001\Control" /v "SvcHostSplitThresholdInKB" /t REG_DWORD /d 0x0380000 /f >nul 2>&1
+    echo.╔══════════════════════════════════════════════════════════════════════════╗
+    echo ║         !COLOR_ORANGE!SvcHostSplitThresholdInKB !COLOR_GREEN!alterado para !COLOR_ORANGE!3,5Gb!COLOR_GREEN! com sucesso.!COLOR_WHITE!       ║
+    echo.╚══════════════════════════════════════════════════════════════════════════╝
+    timeout 5 >nul 2>&1
+    goto msginicial
+    )
+if /i "%valor%"=="1" (
+    reg add "HKLM\SYSTEM\ControlSet001\Control" /v "SvcHostSplitThresholdInKB" /t REG_DWORD /d 0x02047152 /f >nul 2>&1
+    echo.╔═════════════════════════════════════════════════════════════════════════╗
+    echo ║         !COLOR_ORANGE!SvcHostSplitThresholdInKB !COLOR_GREEN!alterado para !COLOR_ORANGE!2Gb!COLOR_GREEN! com sucesso.!COLOR_WHITE!        ║
+    echo.╚═════════════════════════════════════════════════════════════════════════╝
+    timeout 5 >nul 2>&1
+    goto msginicial
+    )
+if /i "%valor%"=="2" (
+    reg add "HKLM\SYSTEM\ControlSet001\Control" /v "SvcHostSplitThresholdInKB" /t REG_DWORD /d 0x04194304 /f >nul 2>&1
+    echo.╔═════════════════════════════════════════════════════════════════════════╗
+    echo ║         !COLOR_ORANGE!SvcHostSplitThresholdInKB !COLOR_GREEN!alterado para !COLOR_ORANGE!4Gb!COLOR_GREEN! com sucesso.!COLOR_WHITE!        ║
+    echo.╚═════════════════════════════════════════════════════════════════════════╝
+    timeout 5 >nul 2>&1
+    goto msginicial
+    )
+if /i "%valor%"=="3" (
+    reg add "HKLM\SYSTEM\ControlSet001\Control" /v "SvcHostSplitThresholdInKB" /t REG_DWORD /d 0x06291456 /f >nul 2>&1
+    echo.╔═════════════════════════════════════════════════════════════════════════╗
+    echo ║         !COLOR_ORANGE!SvcHostSplitThresholdInKB !COLOR_GREEN!alterado para !COLOR_ORANGE!6Gb!COLOR_GREEN! com sucesso.!COLOR_WHITE!        ║
+    echo.╚═════════════════════════════════════════════════════════════════════════╝
+    timeout 5 >nul 2>&1
+    goto msginicial
+    )
+if /i "%valor%"=="4" (
+    reg add "HKLM\SYSTEM\ControlSet001\Control" /v "SvcHostSplitThresholdInKB" /t REG_DWORD /d 0x08388608 /f >nul 2>&1
+    echo.╔═════════════════════════════════════════════════════════════════════════╗
+    echo ║         !COLOR_ORANGE!SvcHostSplitThresholdInKB !COLOR_GREEN!alterado para !COLOR_ORANGE!8Gb!COLOR_GREEN! com sucesso.!COLOR_WHITE!        ║
+    echo.╚═════════════════════════════════════════════════════════════════════════╝
+    timeout 5 >nul 2>&1
+    goto msginicial
+    )
+if /i "%valor%"=="5" (
+    reg add "HKLM\SYSTEM\ControlSet001\Control" /v "SvcHostSplitThresholdInKB" /t REG_DWORD /d 0x010877452 /f >nul 2>&1
+    echo.╔══════════════════════════════════════════════════════════════════════════╗
+    echo ║         !COLOR_ORANGE!SvcHostSplitThresholdInKB !COLOR_GREEN!alterado para !COLOR_ORANGE!10Gb!COLOR_GREEN! com sucesso.!COLOR_WHITE!        ║
+    echo.╚══════════════════════════════════════════════════════════════════════════╝
+    timeout 5 >nul 2>&1
+    goto msginicial
+    )
+if /i "%valor%"=="6" (
+    reg add "HKLM\SYSTEM\ControlSet001\Control" /v "SvcHostSplitThresholdInKB" /t REG_DWORD /d 0x012582912 /f >nul 2>&1
+    echo.╔══════════════════════════════════════════════════════════════════════════╗
+    echo ║         !COLOR_ORANGE!SvcHostSplitThresholdInKB !COLOR_GREEN!alterado para !COLOR_ORANGE!12Gb!COLOR_GREEN! com sucesso.!COLOR_WHITE!        ║
+    echo.╚══════════════════════════════════════════════════════════════════════════╝
+    timeout 5 >nul 2>&1
+    goto msginicial
+    )
+if /i "%valor%"=="7" (
+    reg add "HKLM\SYSTEM\ControlSet001\Control" /v "SvcHostSplitThresholdInKB" /t REG_DWORD /d 0x016777216 /f >nul 2>&1
+    echo.╔══════════════════════════════════════════════════════════════════════════╗
+    echo ║         !COLOR_ORANGE!SvcHostSplitThresholdInKB !COLOR_GREEN!alterado para !COLOR_ORANGE!16Gb!COLOR_GREEN! com sucesso.!COLOR_WHITE!        ║
+    echo.╚══════════════════════════════════════════════════════════════════════════╝
+    timeout 5 >nul 2>&1
+    goto msginicial
+    )
+if /i "%valor%"=="8" (
+    reg add "HKLM\SYSTEM\ControlSet001\Control" /v "SvcHostSplitThresholdInKB" /t REG_DWORD /d 0x022446860 /f >nul 2>&1
+    echo.╔══════════════════════════════════════════════════════════════════════════╗
+    echo ║         !COLOR_ORANGE!SvcHostSplitThresholdInKB !COLOR_GREEN!alterado para !COLOR_ORANGE!20Gb!COLOR_GREEN! com sucesso.!COLOR_WHITE!        ║
+    echo.╚══════════════════════════════════════════════════════════════════════════╝
+    timeout 5 >nul 2>&1
+    goto msginicial
+    )
+if /i "%valor%"=="9" (
+    reg add "HKLM\SYSTEM\ControlSet001\Control" /v "SvcHostSplitThresholdInKB" /t REG_DWORD /d 0x024433220 /f >nul 2>&1
+    echo.╔══════════════════════════════════════════════════════════════════════════╗
+    echo ║         !COLOR_ORANGE!SvcHostSplitThresholdInKB !COLOR_GREEN!alterado para !COLOR_ORANGE!24Gb!COLOR_GREEN! com sucesso.!COLOR_WHITE!        ║
+    echo.╚══════════════════════════════════════════════════════════════════════════╝
+    timeout 5 >nul 2>&1
+    goto msginicial
+    )
+if /i "%valor%"=="10" (
+    reg add "HKLM\SYSTEM\ControlSet001\Control" /v "SvcHostSplitThresholdInKB" /t REG_DWORD /d 0x033554432 /f >nul 2>&1
+    echo.╔══════════════════════════════════════════════════════════════════════════╗
+    echo ║         !COLOR_ORANGE!SvcHostSplitThresholdInKB !COLOR_GREEN!alterado para !COLOR_ORANGE!32Gb!COLOR_GREEN! com sucesso.!COLOR_WHITE!        ║
+    echo.╚══════════════════════════════════════════════════════════════════════════╝
+    timeout 5 >nul 2>&1
+    goto msginicial
+    )
+if /i "%valor%"=="11" (
+    reg add "HKLM\SYSTEM\ControlSet001\Control" /v "SvcHostSplitThresholdInKB" /t REG_DWORD /d 0x067108864 /f >nul 2>&1
+    echo.╔══════════════════════════════════════════════════════════════════════════╗
+    echo ║         !COLOR_ORANGE!SvcHostSplitThresholdInKB !COLOR_GREEN!alterado para !COLOR_ORANGE!64Gb!COLOR_GREEN! com sucesso.!COLOR_WHITE!        ║
+    echo.╚══════════════════════════════════════════════════════════════════════════╝
+    timeout 5 >nul 2>&1
+    goto msginicial
+    )
+if /i "%valor%"=="V" goto msginicial
+
+cls
+goto prmsg
 
 pause
 exit
@@ -1592,18 +1538,6 @@ if %errorlevel% equ 0 (
     goto :eof
 )
 
-:nochoice
-chcp 65001 >nul
-echo ════════════════════════════════════════════════════════════════!COLOR_WHITE!
-echo.
-echo !COLOR_RED!ERRO 001:!COLOR_WHITE!
-echo Valor inválido...
-echo.
-echo ════════════════════════════════════════════════════════════════
-timeout 2 >nul 2>&1
-cls
-goto msginicial
-
 :prmsg
 chcp 65001 >nul
 echo ════════════════════════════════════════════════════════════════!COLOR_WHITE!
@@ -1611,8 +1545,20 @@ echo.
 echo !COLOR_RED!ERRO 001:!COLOR_WHITE!
 echo Valor inválido...
 echo.
+echo ════════════════════════════════════════════════════════════════
+timeout 3 >nul 2>&1
+cls
+goto msginicial
+
+:nochoice
+chcp 65001 >nul
 echo ════════════════════════════════════════════════════════════════!COLOR_WHITE!
-timeout 2 >nul 2>&1
+echo.
+echo !COLOR_RED!ERRO 002:!COLOR_WHITE!
+echo É necessário fazer uma escolha...
+echo.
+echo ════════════════════════════════════════════════════════════════!COLOR_WHITE!
+timeout 3 >nul 2>&1
 cls
 goto pr2
 
