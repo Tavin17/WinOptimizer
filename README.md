@@ -22,7 +22,7 @@
     <tr>
       <td><strong>⚙️ Otimizações Regedit</strong></td>
       <td>
-        Contém mais de <strong>200 ajustes</strong> no registro do Windows, incluindo otimizações de rede, energia, interface e telemetria.<br>
+        Separada em 6 categorias: <strong>otimização geral do sistema</strong>, <strong>otimizações essenciais</strong>, <strong>otimização de Latência e GPU</strong>, <strong>otimizações de Rede</strong>, <strong>configurações do Windows</strong> e <strong>remoção de telemetria</strong>, totalizando mais de 250 ajustes.<br>
       </td>
     </tr>
     <tr>
@@ -33,7 +33,7 @@
       </td>
     </tr>
     <tr>
-      <td><strong>🧾 Comandos CMD</strong></td>
+      <td><strong>⌨️ Comandos CMD</strong></td>
       <td>
         Executa <strong>+10 comandos</strong> de otimização que diminuem o Input Lag, deixando o sistema mais estável.<br>
       </td>
