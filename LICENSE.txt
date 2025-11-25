@@ -1,0 +1,11 @@
+Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License
+
+Copyright (c) [2025] [Gustavo Aráujo de Sousa]
+
+Você pode copiar, modificar, distribuir e executar o trabalho para fins não comerciais, desde que o devido crédito seja dado ao autor original. Você não pode distribuir, modificar ou criar trabalhos derivados do código sem permissão explícita.
+
+Você não pode usar o material para fins comerciais.
+
+Este trabalho está protegido sob a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
+
+Para mais detalhes, consulte a licença completa: https://creativecommons.org/licenses/by-nc-nd/4.0/
