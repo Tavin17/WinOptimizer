@@ -256,6 +256,10 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v "Hiberb
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FlyoutMenuSettings" /v "ShowHibernateOption" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power" /v "SleepStudyDisabled" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Quota System" /v "EnableCpuQuota" /t REG_DWORD /d 0 /f >nul 2>&1
+reg add "HKLM\SOFTWARE\Microsoft\Windows\Dwm" /v "OverlayTestMode" /t REG_DWORD /d 5 /f >nul 2>&1
+
+reg add "HKLM\SOFTWARE\Microsoft\DirectX" /v "DisableHWOverlay" /t REG_DWORD /d 1 /f >nul 2>&1
+
 
 echo !COLOR_ORANGE!XboxGameBar!COLOR_GREEN!, !COLOR_ORANGE!PowerThrottling!COLOR_GREEN!, !COLOR_ORANGE!Hibernação!COLOR_GREEN! e !COLOR_ORANGE!Inicialização rápida!COLOR_GREEN! desativados com sucesso.!COLOR_WHITE!
 echo.
@@ -310,6 +314,9 @@ for /f %%a in ('WMIC path Win32_USBHub GET DeviceID^| findstr /L "VID_"') do (
 	reg add "HKLM\SYSTEM\CurrentControlSet\Enum\%%a\Device Parameters" /v "SelectiveSuspendEnabled" /t REG_DWORD /d 0 /f >nul 2>&1
     reg add "HKLM\SYSTEM\CurrentControlSet\Enum\%%a\Device Parameters" /v "IdleInWorkingState" /t REG_DWORD /d 0 /f >nul 2>&1
 )
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power"/v "PowerRequestOverrideEnabled" /t REG_DWORD /d 0 /f >nul 2>&1
+
+
 echo !COLOR_ORANGE!Otimizações de latência e GPU!COLOR_GREEN! aplicadas com sucesso.!COLOR_WHITE!
 echo.
 
