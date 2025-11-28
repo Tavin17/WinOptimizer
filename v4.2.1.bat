@@ -1219,8 +1219,14 @@ echo.
 schtasks /end /tn "\Microsoft\Windows\Defrag\ScheduledDefrag" >nul 2>&1
 schtasks /change /tn "\Microsoft\Windows\Defrag\ScheduledDefrag" /disable
 echo.
-schtasks /end /tn "Microsoft\Windows\Maps\MapsUpdateTask" >nul 2>&1
-schtasks /change /tn "Microsoft\Windows\Maps\MapsUpdateTask" /disable
+schtasks /end /tn "\Microsoft\Windows\Maps\MapsUpdateTask" >nul 2>&1
+schtasks /change /tn "\Microsoft\Windows\Maps\MapsUpdateTask" /disable
+echo.
+schtasks /end /tn "\Microsoft\Windows\SettingSync\NetworkStateChangeTask" >nul 2>&1
+schtasks /change /tn "\Microsoft\Windows\SettingSync\NetworkStateChangeTask" /disable
+echo.
+schtasks /end /tn "\Microsoft\Windows\Application Experience\MareBackup" >nul 2>&1
+schtasks /change /tn "\Microsoft\Windows\Application Experience\MareBackup" /disable
 echo.!COLOR_WHITE!
 
 echo.╔══════════════════════════════════════════════════════════════════════╗
