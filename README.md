@@ -22,20 +22,20 @@
     <tr>
       <td><strong>⚙️ Otimizações Regedit</strong></td>
       <td>
-        Separada em 6 categorias: <strong>otimização geral do sistema</strong>, <strong>otimizações essenciais</strong>, <strong>otimização de Latência e GPU</strong>, <strong>otimizações de Rede</strong>, <strong>configurações do Windows</strong> e <strong>remoção de telemetria</strong>, com mais de 300 comandos.<br>
+        Separada em 6 categorias: <code>otimização geral do sistema</code>, <code>otimizações essenciais</code>, <code>otimização de Latência e GPU</code>, <code>timizações de Rede</code>, <code>onfigurações do Windows</code> e <code>remoção de telemetria</code>, com mais de **300** comandos.<br>
       </td>
     </tr>
     <tr>
       <td><strong>🔧 Desativação de Serviços</strong></td>
       <td>
-        Desativa mais de <strong>80 serviços desnecessários</strong> que consomem recursos em segundo plano, como <strong>SysMain</strong>, 
+        Desativa mais de <code>80 serviços desnecessários</code> que consomem recursos em segundo plano, como <strong>SysMain</strong>, 
         <strong>Serviços Microsoft Edge</strong>, <strong>Hyper-V</strong> e etc.
       </td>
     </tr>
     <tr>
       <td><strong>⌨️ Comandos CMD</strong></td>
       <td>
-        Executa <strong>+10 comandos</strong> de otimização que diminuem o Input Lag, deixando o sistema mais estável.<br>
+        Executa <code>+10 comandos</code> de otimização que diminuem o Input Lag, deixando o sistema mais estável.<br>
       </td>
     </tr>
     <tr>
