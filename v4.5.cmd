@@ -10,7 +10,7 @@
 @echo off
 chcp 65001 >nul
 setlocal enabledelayedexpansion
-title WinOptimizer - v4.5
+title WinOptimizer
 call :Colors
 
 net session >nul 2>&1
@@ -23,7 +23,7 @@ if %errorlevel% neq 0 (
 echo.
 echo.
 echo Para uma melhor visualização, coloque em !COLOR_GREEN!tela cheia!COLOR_WHITE! e altere o zoom usando !COLOR_GREEN!CTRL+Scroll!COLOR_WHITE!.
-timeout /t 9 /nobreak >nul 2>&1
+timeout /t 5 /nobreak >nul 2>&1
 cls
 
 :pr2
@@ -40,7 +40,7 @@ echo.!COLOR_GREEN!                                                              
 echo.!COLOR_GREEN!                                                                           ██║███╗██║██║██║╚██╗██║   ██║   ██║██╔═══╝    ██║   ██║██║╚██╔╝██║██║ ███╔╝  ██╔══╝  ██╔══██╗
 echo.!COLOR_GREEN!                                                                           ╚███╔███╔╝██║██║ ╚████║   ╚██████╔╝██║        ██║   ██║██║ ╚═╝ ██║██║███████╗███████╗██║  ██║
 echo.!COLOR_GREEN!                                                                            ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝    ╚═════╝ ╚═╝        ╚═╝   ╚═╝╚═╝     ╚═╝╚═╝╚══════╝╚══════╝╚═╝  ╚═╝
-echo.                                                                                                                                                                            !COLOR_RED!v4.5!COLOR_WHITE!
+echo.                                                                                                                                                                        !COLOR_ORANGE!v4.5!COLOR_WHITE!
 echo !COLOR_RED!════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════!COLOR_WHITE!
 echo.
 echo                                                                                          [!COLOR_ORANGE!1!COLOR_WHITE!] Ir para otimizações          [!COLOR_ORANGE!2!COLOR_WHITE!] Criar ponto de restauração   
@@ -56,7 +56,7 @@ if /i "%continuar%"=="1" goto msginicial
 if /i "%continuar%"=="2" goto pr
 
 if "%continuar%"=="" goto nochoice
-goto prmsg
+goto prmsg2
 
 :pr
 chcp 437 >nul
@@ -83,20 +83,17 @@ echo.!COLOR_GREEN!                                                              
 echo.!COLOR_GREEN!                                                                           ╚███╔███╔╝██║██║ ╚████║   ╚██████╔╝██║        ██║   ██║██║ ╚═╝ ██║██║███████╗███████╗██║  ██║
 echo.!COLOR_GREEN!                                                                            ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝    ╚═════╝ ╚═╝        ╚═╝   ╚═╝╚═╝     ╚═╝╚═╝╚══════╝╚══════╝╚═╝  ╚═╝
 
-echo.                                                                                                                                                                         By Tavin17
+echo.                                                                                                                                                                        !COLOR_ORANGE!v4.5!COLOR_WHITE!
 echo !COLOR_RED!════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════!COLOR_WHITE!
-
-
 echo.
 echo.
-
 echo                                                                                !COLOR_GREEN![1]!COLOR_WHITE! Otimizar regedit                            !COLOR_GREEN![4]!COLOR_WHITE! Limpar arquivos temporários e cache
 echo.
 echo                                                                                !COLOR_GREEN![2]!COLOR_WHITE! Desativar serviços desnecessários           !COLOR_GREEN![5]!COLOR_WHITE! Desativar tarefas agendadas desnecessárias
 echo.
 echo                                                                                !COLOR_GREEN![3]!COLOR_WHITE! Aplicar comandos CMD                        !COLOR_GREEN![6]!COLOR_WHITE! Otimizar memória RAM
 echo.
-echo                                                                                !COLOR_GREEN![G]!COLOR_WHITE! Repositório do código                       !COLOR_GREEN![L]!COLOR_WHITE! Sair
+echo                                                                                !COLOR_GREEN![G]!COLOR_WHITE! Repositório do código                       !COLOR_ORANGE![L]!COLOR_WHITE! Sair
 echo.
 echo.
 echo.
@@ -105,22 +102,21 @@ echo                                                                            
 
 echo.                                                                                            
 
-set /p continuar=""
-
-if /i "%continuar%"=="" goto nochoice
+set /p continuar2=""
 
 cls
 
-if /i "%continuar%"=="1" goto parte1
-if /i "%continuar%"=="2" goto parte2
-if /i "%continuar%"=="3" goto parte3
-if /i "%continuar%"=="4" goto parte4
-if /i "%continuar%"=="5" goto parte5
-if /i "%continuar%"=="6" goto parte6
+if "%continuar2%"=="" goto nochoice2
+if /i "%continuar2%"=="1" goto parte1
+if /i "%continuar2%"=="2" goto parte2
+if /i "%continuar2%"=="3" goto parte3
+if /i "%continuar2%"=="4" goto parte4
+if /i "%continuar2%"=="5" goto parte5
+if /i "%continuar2%"=="6" goto parte6
 
-if /i "%continuar%"=="R" rstrui.exe && goto msginicial
-if /i "%continuar%"=="G" start https://github.com/Tavin17/WinOptimizer && goto msginicial
-if /i "%continuar%"=="L" exit
+if /i "%continuar2%"=="R" rstrui.exe && goto msginicial
+if /i "%continuar2%"=="G" start https://github.com/Tavin17/WinOptimizer && goto msginicial
+if /i "%continuar2%"=="L" exit
 
 goto prmsg
 
@@ -223,7 +219,7 @@ echo !COLOR_RED!Aguarde...
 DISM /Online /Disable-Feature /FeatureName:"Recall" /Remove >nul 2>&1
 dism /online /remove-package /package-name:Microsoft.Windows.Copilot >nul 2>&1
 echo.
-echo !COLOR_ORANGE!Otimizações gerais do sistema concluidas com sucesso.!COLOR_WHITE!
+echo !COLOR_ORANGE!Otimizações gerais do sistema !COLOR_GREEN!aplicadas com sucesso.!COLOR_WHITE!
 echo.
 
 echo              ═══════════════════════════════════
@@ -266,7 +262,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Quota System" /v 
 reg add "HKLM\SOFTWARE\Microsoft\DirectX" /v "DisableHWOverlay" /t REG_DWORD /d 1 /f >nul 2>&1
 
 
-echo !COLOR_ORANGE!XboxGameBar!COLOR_GREEN!, !COLOR_ORANGE!PowerThrottling!COLOR_GREEN!, !COLOR_ORANGE!Hibernação!COLOR_GREEN! e !COLOR_ORANGE!Inicialização rápida!COLOR_GREEN! desativados com sucesso.!COLOR_WHITE!
+echo !COLOR_ORANGE!Otimizações essenciais!COLOR_GREEN! aplicadas com sucesso.!COLOR_WHITE!
 echo.
 
 echo              ═══════════════════════════════════
@@ -325,6 +321,10 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "HwSchMode" /
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile" /v "EnableMMCSS" /t REG_DWORD /d 1 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile" /v "AlwaysUseDirectFlip" /t REG_DWORD /d 1 /f >nul 2>&1
 reg add "HKCU\SOFTWARE\Microsoft\DirectX\UserGpuPreferences" /v "DirectXUserGlobalSettings" /t REG_SZ /d VRROptimizeEnable=0;SwapEffectUpgradeEnable=1; /f >nul 2>&1
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power" /v "CsEnabled" /t REG_DWORD /d 0 /f >nul 2>&1
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "GlobalTimerResolutionRequests" /t REG_DWORD /d 1 /f >nul 2>&1
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "IgnoreTimerResolutionRequests" /t REG_DWORD /d 0 /f >nul 2>&1
 echo !COLOR_ORANGE!Otimizações de latência e GPU!COLOR_GREEN! aplicadas com sucesso.!COLOR_WHITE!
 echo.
 
@@ -336,6 +336,9 @@ echo.
 echo !COLOR_RED!Aguarde...
 echo.
 timeout /t 2 /nobreak >nul 2>&1
+netsh int ip set global taskoffload=enabled >nul 2>&1 
+netsh int tcp set supplemental internet congestionprovider=ctcp >nul 2>&1 
+netsh int tcp set global ecncapability=enabled >nul 2>&1 
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\DeliveryOptimization\Config" /v "DownloadMode" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\DeliveryOptimization\Config" /v "DODownloadMode" /t REG_DWORD /d 1 /f >nul 2>&1
@@ -352,7 +355,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\ServiceProvider" /v "DnsPr
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\ServiceProvider" /v "LocalPriority" /t REG_DWORD /d 4 /f >nul 2>&1
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\ServiceProvider" /v "HostsPriority" /t REG_DWORD /d 5 /f >nul 2>&1
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\ServiceProvider" /v "NetbtPriority" /t REG_DWORD /d 7 /f >nul 2>&1
-echo !COLOR_ORANGE!Otimizações de rede!COLOR_GREEN! concluida com sucesso.!COLOR_WHITE!
+echo !COLOR_ORANGE!Otimizações de rede!COLOR_GREEN! aplicadas com sucesso.!COLOR_WHITE!
 echo.
 
 echo              ═══════════════════════════════════
@@ -392,11 +395,11 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Notifications\Settings\W
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Notifications\Settings\Windows.SystemToast.StartupApp" /v "Enabled" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKCU\Software\Policies\Microsoft\Windows\Explorer" /v "DisableNotificationCenter" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKCU\SOFTWARE\Microsoft\Siuf\Rules" /v "NumberOfSIUFInPeriod" /t REG_DWORD /d 0 /f >nul 2>&1
-reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Notifications\Settings\windows.immersivecontrolpanel_cw5n1h2txyewy!microsoft.windows.immersivecontrolpanel" /v "Enabled" /t REG_DWORD /d 0 /f 
-reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Notifications\Settings\Windows.SystemToast.AutoPlay" /v "Enabled" /t REG_DWORD /d 0 /f 
-reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Notifications\Settings\Windows.SystemToast.LowDisk" /v "Enabled" /t REG_DWORD /d 0 /f 
-reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Notifications\Settings\Windows.SystemToast.Print.Notification" /v "Enabled" /t REG_DWORD /d 0 /f 
-reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Notifications\Settings\Windows.SystemToast.WiFiNetworkManager" /v "Enabled" /t REG_DWORD /d 0 /f 
+reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Notifications\Settings\windows.immersivecontrolpanel_cw5n1h2txyewy!microsoft.windows.immersivecontrolpanel" /v "Enabled" /t REG_DWORD /d 0 /f >nul 2>&1 
+reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Notifications\Settings\Windows.SystemToast.AutoPlay" /v "Enabled" /t REG_DWORD /d 0 /f >nul 2>&1 
+reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Notifications\Settings\Windows.SystemToast.LowDisk" /v "Enabled" /t REG_DWORD /d 0 /f >nul 2>&1 
+reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Notifications\Settings\Windows.SystemToast.Print.Notification" /v "Enabled" /t REG_DWORD /d 0 /f >nul 2>&1 
+reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Notifications\Settings\Windows.SystemToast.WiFiNetworkManager" /v "Enabled" /t REG_DWORD /d 0 /f >nul 2>&1 
 echo !COLOR_ORANGE!Notificações!COLOR_GREEN! desativado com sucesso.
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\userAccountInformation" /v "Value" /t REG_SZ /d Deny /f >nul 2>&1
@@ -583,12 +586,12 @@ reg add "HKLM\SOFTWARE\Microsoft\PCHealth\ErrorReporting" /v "DoReport" /t REG_D
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\EnergyEstimation\TaggedEnergy" /v "DisableTaggedEnergyLogging" /t REG_DWORD /d 1 /f >nul 2>&1
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\EnergyEstimation\TaggedEnergy" /v "TelemetryMaxApplication" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\EnergyEstimation\TaggedEnergy" /v "TelemetryMaxTagPerApplication" /t REG_DWORD /d 0 /f >nul 2>&1
-echo !COLOR_ORANGE!78 alterações concluidas com sucesso.!COLOR_WHITE!
+echo !COLOR_ORANGE!83 operações concluidas com êxito.!COLOR_WHITE!
 echo.
 
-echo.╔════════════════════════════════════════════════════╗
-echo ║          !COLOR_GREEN!Otimizações na regedit concluidas.!COLOR_WHITE!        ║
-echo.╚════════════════════════════════════════════════════╝
+echo.╔═══════════════════════════════════════════════════════╗
+echo ║           !COLOR_GREEN!Otimizações de registro concluidas.!COLOR_WHITE!         ║
+echo.╚═══════════════════════════════════════════════════════╝
 
 echo.
 echo ════════════════════════════════════════════════════════════════
@@ -1085,7 +1088,7 @@ netsh winsock reset >nul 2>&1
 for /d /r "%userprofile%\AppData" %%a in (*Cache_Data*) do (
     if exist "%%a" rmdir /s /q "%%a"
 ) >nul 2>&1
-echo !COLOR_GREEN!Cache limpo.!COLOR_WHITE! (!COLOR_ORANGE!Dê F5 em sites que não carregarem seu visual corretamente.!COLOR_WHITE!)
+echo !COLOR_GREEN!Cache limpo.!COLOR_WHITE! (!COLOR_ORANGE!Dê F5 em sites que não carregarem corretamente.!COLOR_WHITE!)
 
 rd /s /q C:\$Recycle.Bin >nul 2>&1
 echo !COLOR_GREEN!Lixeira esvaziada.!COLOR_WHITE!
@@ -1267,7 +1270,7 @@ echo.
 set /p valor=""
 echo.
 
-if /i "%valor%"=="" goto nochoice 
+if /i "%valor%"=="" goto nochoice3
 
 if /i "%valor%"=="P" (
     reg add "HKLM\SYSTEM\ControlSet001\Control" /v "SvcHostSplitThresholdInKB" /t REG_DWORD /d 0x0380000 /f >nul 2>&1
@@ -1428,7 +1431,7 @@ if /i "%valor%"=="11" (
 if /i "%valor%"=="V" goto msginicial
 
 cls
-goto prmsg
+goto prmsg3
 
 pause
 exit
@@ -1438,14 +1441,12 @@ set service=%1
 
 sc qc %service% >nul 2>&1
 if %errorlevel% neq 0 (
-    ::echo O Serviço %service% não foi encontrado.
     echo !COLOR_RED!Não foi encontrado.!COLOR_WHITE!
     goto :eof
 )
 
 sc qc %service% | findstr /i "start    demand" >nul
 if %errorlevel% neq 0 (
-    ::echo O Serviço %service% já está desativado.
     echo !COLOR_ORANGE!Já está desativado.!COLOR_WHITE!
     goto :eof
 )
@@ -1456,7 +1457,6 @@ sc config %service% start= disabled >nul 2>&1
 
 sc qc %service% | findstr /i "start    disabled" >nul
 if %errorlevel% equ 0 (
-    ::echo O Serviço %service% foi desativado com sucesso.
     echo !COLOR_GREEN!Foi desativado com sucesso.!COLOR_WHITE!
     goto :eof
 )
@@ -1473,6 +1473,31 @@ timeout /t 3 /nobreak >nul 2>&1
 cls
 goto msginicial
 
+:prmsg2
+chcp 65001 >nul
+echo ════════════════════════════════════════════════════════════════!COLOR_WHITE!
+echo.
+echo !COLOR_RED!ERRO 001:!COLOR_WHITE!
+echo Valor inválido...
+echo.
+echo ════════════════════════════════════════════════════════════════
+timeout /t 3 /nobreak >nul 2>&1
+cls
+goto pr2
+
+:prmsg3
+chcp 65001 >nul
+cls
+echo ════════════════════════════════════════════════════════════════!COLOR_WHITE!
+echo.
+echo !COLOR_RED!ERRO 001:!COLOR_WHITE!
+echo Valor inválido...
+echo.
+echo ════════════════════════════════════════════════════════════════
+timeout /t 3 /nobreak >nul 2>&1
+cls
+goto parte6
+
 :nochoice
 chcp 65001 >nul
 echo ════════════════════════════════════════════════════════════════!COLOR_WHITE!
@@ -1484,6 +1509,31 @@ echo ═════════════════════════
 timeout /t 3 /nobreak >nul 2>&1
 cls
 goto pr2
+
+:nochoice2
+chcp 65001 >nul
+echo ════════════════════════════════════════════════════════════════!COLOR_WHITE!
+echo.
+echo !COLOR_RED!ERRO 002:!COLOR_WHITE!
+echo É necessário fazer uma escolha...
+echo.
+echo ════════════════════════════════════════════════════════════════!COLOR_WHITE!
+timeout /t 3 /nobreak >nul 2>&1
+cls
+goto msginicial
+
+:nochoice3
+chcp 65001 >nul
+cls
+echo ════════════════════════════════════════════════════════════════!COLOR_WHITE!
+echo.
+echo !COLOR_RED!ERRO 002:!COLOR_WHITE!
+echo É necessário fazer uma escolha...
+echo.
+echo ════════════════════════════════════════════════════════════════!COLOR_WHITE!
+timeout /t 3 /nobreak >nul 2>&1
+cls
+goto parte6
 
 :Colors
 set "COLOR_GREEN=[32m"
