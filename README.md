@@ -22,7 +22,7 @@
     <tr>
       <td><strong>⚙️ Otimizações Regedit</strong></td>
       <td>
-        Separada em 6 categorias: <code>otimização geral do sistema</code>, <code>otimizações essenciais</code>, <code>otimização de Latência e GPU</code>, <code>timizações de Rede</code>, <code>onfigurações do Windows</code> e <code>remoção de telemetria</code>, com mais de **300** comandos.<br>
+        Separada em 6 categorias: <strong>otimização geral do sistema</strong>, <strong>otimizações essenciais</strong>, <strong>otimização de Latência e GPU</strong>, <strong>otimizações de Rede</strong>, <strong>configurações do Windows</strong> e <strong>remoção de telemetria</strong>, com mais de <code>300</code> comandos.<br>
       </td>
     </tr>
     <tr>
