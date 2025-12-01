@@ -40,7 +40,7 @@ echo.!COLOR_GREEN!                                                              
 echo.!COLOR_GREEN!                                                                           ██║███╗██║██║██║╚██╗██║   ██║   ██║██╔═══╝    ██║   ██║██║╚██╔╝██║██║ ███╔╝  ██╔══╝  ██╔══██╗
 echo.!COLOR_GREEN!                                                                           ╚███╔███╔╝██║██║ ╚████║   ╚██████╔╝██║        ██║   ██║██║ ╚═╝ ██║██║███████╗███████╗██║  ██║
 echo.!COLOR_GREEN!                                                                            ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝    ╚═════╝ ╚═╝        ╚═╝   ╚═╝╚═╝     ╚═╝╚═╝╚══════╝╚══════╝╚═╝  ╚═╝
-echo.                                                                                                                                                                       !COLOR_ORANGE!v4.5.5!COLOR_WHITE!
+echo.                                                                                                                                                                        !COLOR_ORANGE!v4.6!COLOR_WHITE!
 echo !COLOR_RED!════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════!COLOR_WHITE!
 echo.
 echo                                                                                          !COLOR_ORANGE![1]!COLOR_WHITE! Ir para otimizações          !COLOR_ORANGE![2]!COLOR_WHITE! Criar ponto de restauração   
@@ -83,7 +83,7 @@ echo.!COLOR_GREEN!                                                              
 echo.!COLOR_GREEN!                                                                           ╚███╔███╔╝██║██║ ╚████║   ╚██████╔╝██║        ██║   ██║██║ ╚═╝ ██║██║███████╗███████╗██║  ██║
 echo.!COLOR_GREEN!                                                                            ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝    ╚═════╝ ╚═╝        ╚═╝   ╚═╝╚═╝     ╚═╝╚═╝╚══════╝╚══════╝╚═╝  ╚═╝
 
-echo.                                                                                                                                                                       !COLOR_ORANGE!v4.5.5!COLOR_WHITE!
+echo.                                                                                                                                                                        !COLOR_ORANGE!v4.6!COLOR_WHITE!
 echo !COLOR_RED!════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════!COLOR_WHITE!
 echo.
 echo.
@@ -1040,11 +1040,11 @@ echo • !COLOR_GREEN!Widgets removidos.!COLOR_WHITE!
 defrag /C /L >nul 2>&1
 echo • !COLOR_GREEN!Unidades otimizadas.!COLOR_WHITE!
 
-echo   - !COLOR_ORANGE!Conclua a limpeza do seu disco.!COLOR_WHITE!
+echo • !COLOR_ORANGE!Conclua a limpeza do seu disco.!COLOR_WHITE!
 net session >nul 2>&1
 
 cleanmgr
-echo • !COLOR_GREEN!Limpeza de disco concluída.!COLOR_WHITE!
+echo   - !COLOR_GREEN!Limpeza de disco concluída.!COLOR_WHITE!
 
 echo.!COLOR_WHITE!
 
