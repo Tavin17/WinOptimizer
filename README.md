@@ -16,48 +16,43 @@
 
 
 <h3 align="center" style="margin-bottom: 5px;"><strong>🧩 Abas de Otimização</strong></h3>
-<table align="center" style="border-collapse: collapse; width: 90%;">
-  <thead>
-    <tr style="background-color: #1a1a1a;">
-      <th style="padding: 12px; text-align: center; width: 25%;">🧩 Aba</th>
-      <th style="padding: 12px; text-align: center; width: 75%;">💬 Descrição</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr style="border-bottom: 1px solid #333;">
-      <td style="padding: 15px; vertical-align: top;"><strong>⚙️ Otimizações Regedit</strong></td>
-      <td style="padding: 15px; vertical-align: top;">
+<table align="center">
+    <th>🧩 Aba</th>
+    <th>💬 Descrição</th>
+    <tr>
+      <td><strong>⚙️ Otimizações Regedit</strong></td>
+      <td>
         Separada em 6 categorias: <strong>otimização geral do sistema</strong>, <strong>otimizações essenciais</strong>, <strong>otimização de Latência e GPU</strong>, <strong>otimizações de Rede</strong>, <strong>configurações do Windows</strong> e <strong>remoção de telemetria</strong>, com mais de <code>300</code> comandos.<br>
       </td>
     </tr>
-    <tr style="border-bottom: 1px solid #333;">
-      <td style="padding: 15px; vertical-align: top;"><strong>🔧 Desativação de Serviços</strong></td>
-      <td style="padding: 15px; vertical-align: top;">
+    <tr>
+      <td><strong>🔧 Desativação de Serviços</strong></td>
+      <td>
         Desativa mais de <code>80 serviços desnecessários</code> que consomem recursos em segundo plano, como <strong>SysMain</strong>, 
         <strong>Serviços Microsoft Edge</strong>, <strong>Hyper-V</strong> e etc.
       </td>
     </tr>
-    <tr style="border-bottom: 1px solid #333;">
-      <td style="padding: 15px; vertical-align: top;"><strong>⌨️ Comandos CMD</strong></td>
-      <td style="padding: 15px; vertical-align: top;">
+    <tr>
+      <td><strong>⌨️ Comandos CMD</strong></td>
+      <td>
         Executa <code>+10 comandos</code> de otimização que diminuem o Input Lag, deixando o sistema mais estável.<br>
       </td>
     </tr>
-    <tr style="border-bottom: 1px solid #333;">
-      <td style="padding: 15px; vertical-align: top;"><strong>🧹 Limpeza de Arquivos Temporários</strong></td>
-      <td style="padding: 15px; vertical-align: top;">
+    <tr>
+      <td><strong>🧹 Limpeza de Arquivos Temporários</strong></td>
+      <td>
         Remove caches, logs e arquivos temporários acumulados, liberando espaço em disco e tornando o sistema mais leve e estável.
       </td>
     </tr>
-    <tr style="border-bottom: 1px solid #333;">
-      <td style="padding: 15px; vertical-align: top;"><strong>📆 Tarefas Agendadas</strong></td>
-      <td style="padding: 15px; vertical-align: top;">
+    <tr>
+      <td><strong>📆 Tarefas Agendadas</strong></td>
+      <td>
         Desativa tarefas automáticas que executam processos desnecessários em segundo plano, reduzindo o uso de CPU e disco.
       </td>
     </tr>
     <tr>
-      <td style="padding: 15px; vertical-align: top;"><strong>💾 Otimização de Memória</strong></td>
-      <td style="padding: 15px; vertical-align: top;">
+      <td><strong>💾 Otimização de Memória</strong></td>
+      <td>
         Ajusta o valor <code>SvcHostSplitThresholdInKB</code> para otimizar o uso da RAM e reduzir a fragmentação de processos <code>svchost.exe</code>.
       </td>
     </tr>
