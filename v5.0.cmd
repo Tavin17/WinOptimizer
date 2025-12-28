@@ -8,6 +8,7 @@
 ::                           |_|   
 
 @echo off
+if not "%1" == "max" start /MAX cmd /c %0 max & exit/b >nul 2>&1 
 chcp 65001 >nul
 setlocal enabledelayedexpansion
 title WinOptimizer
@@ -20,12 +21,6 @@ if %errorlevel% neq 0 (
     exit
 )
 
-echo.
-echo.
-echo Para uma melhor visualização, coloque em !COLOR_GREEN!tela cheia!COLOR_WHITE! e altere o zoom usando !COLOR_GREEN!CTRL+Scroll!COLOR_WHITE!.
-timeout /t 5 /nobreak >nul 2>&1
-cls
-
 :pr2
 chcp 65001 >nul
 
@@ -34,13 +29,14 @@ echo.
 echo.
 echo.
 
-echo.!COLOR_GREEN!                                                                           ██╗    ██╗██╗███╗   ██╗    ██████╗ ██████╗ ████████╗██╗███╗   ███╗██╗███████╗███████╗██████╗ 
-echo.!COLOR_GREEN!                                                                           ██║    ██║██║████╗  ██║   ██╔═══██╗██╔══██╗╚══██╔══╝██║████╗ ████║██║╚══███╔╝██╔════╝██╔══██╗
-echo.!COLOR_GREEN!                                                                           ██║ █╗ ██║██║██╔██╗ ██║   ██║   ██║██████╔╝   ██║   ██║██╔████╔██║██║  ███╔╝ █████╗  ██████╔╝
-echo.!COLOR_GREEN!                                                                           ██║███╗██║██║██║╚██╗██║   ██║   ██║██╔═══╝    ██║   ██║██║╚██╔╝██║██║ ███╔╝  ██╔══╝  ██╔══██╗
-echo.!COLOR_GREEN!                                                                           ╚███╔███╔╝██║██║ ╚████║   ╚██████╔╝██║        ██║   ██║██║ ╚═╝ ██║██║███████╗███████╗██║  ██║
-echo.!COLOR_GREEN!                                                                            ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝    ╚═════╝ ╚═╝        ╚═╝   ╚═╝╚═╝     ╚═╝╚═╝╚══════╝╚══════╝╚═╝  ╚═╝
-echo.                                                                                                                                                                        !COLOR_ORANGE!v4.6!COLOR_WHITE!
+echo.!COLOR_GREEN!                                                                             ██╗    ██╗██╗███╗   ██╗    ██████╗ ██████╗ ████████╗██╗███╗   ███╗██╗███████╗███████╗██████╗ 
+echo.!COLOR_GREEN!                                                                             ██║    ██║██║████╗  ██║   ██╔═══██╗██╔══██╗╚══██╔══╝██║████╗ ████║██║╚══███╔╝██╔════╝██╔══██╗
+echo.!COLOR_GREEN!                                                                             ██║ █╗ ██║██║██╔██╗ ██║   ██║   ██║██████╔╝   ██║   ██║██╔████╔██║██║  ███╔╝ █████╗  ██████╔╝
+echo.!COLOR_GREEN!                                                                             ██║███╗██║██║██║╚██╗██║   ██║   ██║██╔═══╝    ██║   ██║██║╚██╔╝██║██║ ███╔╝  ██╔══╝  ██╔══██╗
+echo.!COLOR_GREEN!                                                                             ╚███╔███╔╝██║██║ ╚████║   ╚██████╔╝██║        ██║   ██║██║ ╚═╝ ██║██║███████╗███████╗██║  ██║
+echo.!COLOR_GREEN!                                                                              ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝    ╚═════╝ ╚═╝        ╚═╝   ╚═╝╚═╝     ╚═╝╚═╝╚══════╝╚══════╝╚═╝  ╚═╝
+
+echo.                                                                                                                                                                        !COLOR_ORANGE!v5.0!COLOR_WHITE!
 echo !COLOR_RED!════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════!COLOR_WHITE!
 echo.
 echo                                                                                          !COLOR_ORANGE![1]!COLOR_WHITE! Ir para otimizações          !COLOR_ORANGE![2]!COLOR_WHITE! Criar ponto de restauração   
@@ -76,14 +72,14 @@ echo.
 echo.
 
 
-echo.!COLOR_GREEN!                                                                           ██╗    ██╗██╗███╗   ██╗    ██████╗ ██████╗ ████████╗██╗███╗   ███╗██╗███████╗███████╗██████╗ 
-echo.!COLOR_GREEN!                                                                           ██║    ██║██║████╗  ██║   ██╔═══██╗██╔══██╗╚══██╔══╝██║████╗ ████║██║╚══███╔╝██╔════╝██╔══██╗
-echo.!COLOR_GREEN!                                                                           ██║ █╗ ██║██║██╔██╗ ██║   ██║   ██║██████╔╝   ██║   ██║██╔████╔██║██║  ███╔╝ █████╗  ██████╔╝
-echo.!COLOR_GREEN!                                                                           ██║███╗██║██║██║╚██╗██║   ██║   ██║██╔═══╝    ██║   ██║██║╚██╔╝██║██║ ███╔╝  ██╔══╝  ██╔══██╗
-echo.!COLOR_GREEN!                                                                           ╚███╔███╔╝██║██║ ╚████║   ╚██████╔╝██║        ██║   ██║██║ ╚═╝ ██║██║███████╗███████╗██║  ██║
-echo.!COLOR_GREEN!                                                                            ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝    ╚═════╝ ╚═╝        ╚═╝   ╚═╝╚═╝     ╚═╝╚═╝╚══════╝╚══════╝╚═╝  ╚═╝
+echo.!COLOR_GREEN!                                                                             ██╗    ██╗██╗███╗   ██╗    ██████╗ ██████╗ ████████╗██╗███╗   ███╗██╗███████╗███████╗██████╗ 
+echo.!COLOR_GREEN!                                                                             ██║    ██║██║████╗  ██║   ██╔═══██╗██╔══██╗╚══██╔══╝██║████╗ ████║██║╚══███╔╝██╔════╝██╔══██╗
+echo.!COLOR_GREEN!                                                                             ██║ █╗ ██║██║██╔██╗ ██║   ██║   ██║██████╔╝   ██║   ██║██╔████╔██║██║  ███╔╝ █████╗  ██████╔╝
+echo.!COLOR_GREEN!                                                                             ██║███╗██║██║██║╚██╗██║   ██║   ██║██╔═══╝    ██║   ██║██║╚██╔╝██║██║ ███╔╝  ██╔══╝  ██╔══██╗
+echo.!COLOR_GREEN!                                                                             ╚███╔███╔╝██║██║ ╚████║   ╚██████╔╝██║        ██║   ██║██║ ╚═╝ ██║██║███████╗███████╗██║  ██║
+echo.!COLOR_GREEN!                                                                              ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝    ╚═════╝ ╚═╝        ╚═╝   ╚═╝╚═╝     ╚═╝╚═╝╚══════╝╚══════╝╚═╝  ╚═╝
 
-echo.                                                                                                                                                                        !COLOR_ORANGE!v4.6!COLOR_WHITE!
+echo.                                                                                                                                                                        !COLOR_ORANGE!v5.0!COLOR_WHITE!
 echo !COLOR_RED!════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════!COLOR_WHITE!
 echo.
 echo.
@@ -107,12 +103,12 @@ set /p continuar2=""
 cls
 
 if "%continuar2%"=="" goto nochoice2
-if /i "%continuar2%"=="1" goto parte1
-if /i "%continuar2%"=="2" goto parte2
-if /i "%continuar2%"=="3" goto parte3
-if /i "%continuar2%"=="4" goto parte4
-if /i "%continuar2%"=="5" goto parte5
-if /i "%continuar2%"=="6" goto parte6
+if /i "%continuar2%"=="1" goto regedit
+if /i "%continuar2%"=="2" goto servicos
+if /i "%continuar2%"=="3" goto comandos
+if /i "%continuar2%"=="4" goto aqvtmp
+if /i "%continuar2%"=="5" goto tarefas
+if /i "%continuar2%"=="6" goto memoria
 
 if /i "%continuar2%"=="R" rstrui.exe && goto msginicial
 if /i "%continuar2%"=="G" start https://github.com/Tavin17/WinOptimizer && goto msginicial
@@ -120,15 +116,13 @@ if /i "%continuar2%"=="L" exit
 
 goto prmsg
 
-:parte1
+:regedit
 
 echo ════════════════════════════════════════════════════════════════
 echo.
 echo              ═══════════════════════════════════
 echo                  !COLOR_GREEN!Otimização geral do sistema!COLOR_WHITE!
 echo              ═══════════════════════════════════
-
-echo.
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "FeatureSettings" /t REG_DWORD /d 1 /f >nul 2>&1 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "FeatureSettingsOverride" /t REG_DWORD /d 3 /f >nul 2>&1 
@@ -144,7 +138,7 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\DriverSearching" /v "Sea
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\Maintenance" /v "MaintenanceDisabled" /t REG_DWORD /d 1 /f >nul 2>&1
 reg add "HKLM\SYSTEM\ControlSet001\Services\Ndu" /v "Start" /t REG_DWORD /d 4 /f >nul 2>&1
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\Schedule" /v "Start" /t REG_DWORD /d 2 /f >nul 2>&1 rem Agendador de Tarefas
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Schedule" /v "Start" /t REG_DWORD /d 2 /f >nul 2>&1 rem Agendador de Tarefas (automático)
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\EnhancedStorageDevices" /v "TCGSecurityActivationDisabled" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Device Installer" /v "DisableCoInstallers" /t REG_DWORD /d 1 /f >nul 2>&1
 
@@ -166,69 +160,62 @@ reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\BackgroundAccessApplicat
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\SearchSettings" /v "SafeSearchMode" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\SearchSettings" /v "IsMSACloudSearchEnabled" /t REG_DWORD /d 0 /f >nul 2>&1
 
-reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\SearchSettings" /v "IsDeviceSearchHistoryEnabled" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\SearchSettings" /v "IsAADCloudSearchEnabled" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Start" /v "ShowRecentList" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Search" /v "EnableDynamicContentInWSB" /t REG_DWORD /d 0 /f >nul 2>&1
-
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "ContentDeliveryAllowed" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "FeatureManagementEnabled" /t REG_DWORD /d 0 /f >nul 2>&1
+
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "OemPreInstalledAppsEnabled" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "PreInstalledAppsEnabled" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "PreInstalledAppsEverEnabled" /t REG_DWORD /d 0 /f >nul 2>&1
-
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "RotatingLockScreenEnabled" /t REG_DWORD /d 0 /f >nul 2>&1 
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "RotatingLockScreenOverlayEnabled" /t REG_DWORD /d 0 /f >nul 2>&1
+
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SilentInstalledAppsEnabled" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SlideshowEnabled" /t REG_DWORD /d 0 /f >nul 2>&1 
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SoftLandingEnabled" /t REG_DWORD /d 0 /f >nul 2>&1 
-
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SubscribedContent-310093Enabled" /t REG_DWORD /d 0 /f >nul 2>&1 
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SubscribedContent-338387Enabled" /t REG_DWORD /d 0 /f >nul 2>&1
+
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SubscribedContent-338388Enabled" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SubscribedContent-338389Enabled" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SubscribedContent-338393Enabled" /t REG_DWORD /d 0 /f >nul 2>&1 
-
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SubscribedContent-353694Enabled" /t REG_DWORD /d 0 /f >nul 2>&1 
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SubscribedContent-353696Enabled" /t REG_DWORD /d 0 /f >nul 2>&1 
+
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SubscribedContent-353698Enabled" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SystemPaneSuggestionsEnabled" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "AllowOnlineTips" /t REG_DWORD /d 0 /f >nul 2>&1
-
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "LinkResolveIgnoreLinkInfo" /t REG_DWORD /d 1 /f >nul 2>&1
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "NoInternetOpenWith" /t REG_DWORD /d 1 /f >nul 2>&1
+
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "NoLowDiskSpaceChecks" /t REG_DWORD /d 1 /f >nul 2>&1
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "NoResolveSearch" /t REG_DWORD /d 1 /f >nul 2>&1
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v "NoResolveTrack" /t REG_DWORD /d 1 /f >nul 2>&1
-
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" /v "ExcludeWUDriversInQualityUpdate" /t REG_DWORD /d 1 /f >nul 2>&1 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Segment Heap" /v "Enabled" /t REG_DWORD /d 1 /f >nul 2>&1
+
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Segment Heap" /v "OverrideServerSKU" /t REG_DWORD /d 1 /f >nul 2>&1
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager" /v "ScopeType" /t REG_SZ /d Client /f >nul 2>&1
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Serialize" /v "StartupDelayInMSec" /t REG_DWORD /d 1 /f >nul 2>&1
-
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Serialize" /v "WaitForIdleState" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" /v "NoAutoUpdate" /t REG_DWORD /d 1 /f >nul 2>&1
+
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "HideFileExt "/t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v "Hidden"/t REG_DWORD /d 1 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Reliability" /v "IoPriority" /t REG_DWORD /d 3 /f >nul 2>&1
 
-
-echo • !COLOR_RED!Aguarde...
 DISM /Online /Disable-Feature /FeatureName:"Recall" /Remove >nul 2>&1
 dism /online /remove-package /package-name:Microsoft.Windows.Copilot >nul 2>&1
 echo.
-echo   !COLOR_WHITE!- !COLOR_ORANGE!Otimizações gerais do sistema !COLOR_GREEN!aplicadas com sucesso.!COLOR_WHITE!
+echo !COLOR_WHITE!- !COLOR_ORANGE!Otimizações gerais do sistema !COLOR_GREEN!aplicadas com sucesso.!COLOR_WHITE!
 echo.
 
 echo              ═══════════════════════════════════
-echo                     !COLOR_GREEN!Otimizações Essenciais!COLOR_WHITE!
+echo                     !COLOR_GREEN!Otimização para Games!COLOR_WHITE!
 echo              ═══════════════════════════════════
 echo.
-
-echo • !COLOR_RED!Aguarde...
-echo.
-timeout /t 5 /nobreak >nul 2>&1
 
 reg add "HKLM\SOFTWARE\Microsoft\PolicyManager\default\ApplicationManagement\AllowGameDVR" /v "value" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\GameDVR" /v "AllowGameDVR" /t REG_DWORD /d 0 /f >nul 2>&1
@@ -261,17 +248,13 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Quota System" /v 
 reg add "HKLM\SOFTWARE\Microsoft\DirectX" /v "DisableHWOverlay" /t REG_DWORD /d 1 /f >nul 2>&1
 
 
-echo   !COLOR_WHITE!- !COLOR_ORANGE!Otimizações essenciais!COLOR_GREEN! aplicadas com sucesso.!COLOR_WHITE!
+echo !COLOR_WHITE!- !COLOR_ORANGE!Otimizações para Games!COLOR_GREEN! aplicadas com sucesso.!COLOR_WHITE!
 echo.
 
 echo              ═══════════════════════════════════
 echo                 !COLOR_GREEN!Otimizações de Latência e GPU!COLOR_WHITE!
 echo              ═══════════════════════════════════
 echo.
-
-echo • !COLOR_RED!Aguarde...
-echo.
-timeout /t 5 /nobreak >nul 2>&1
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile" /v "NetworkThrottlingIndex" /t REG_DWORD /d 4294967295 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile" /v "SystemResponsiveness" /t REG_DWORD /d 0 /f >nul 2>&1
@@ -288,7 +271,7 @@ reg add "HKCU\Control Panel\Desktop" /v "ForegroundLockTimeout" /t REG_DWORD /d 
 reg add "HKCU\Control Panel\Desktop" /v "WaitToKillAppTimeout" /t REG_SZ /d 1000 /f >nul 2>&1
 reg add "HKCU\Control Panel\Desktop" /v "WaitToKillServiceTimeout" /t REG_DWORD /d 1000 /f >nul 2>&1
 reg add "HKLM\SYSTEM\ControlSet001\Control" /v "WaitToKillServiceTimeout" /t REG_SZ /d 1000 /f >nul 2>&1
-reg add "HKCU\Control Panel\Desktop" /v "HungAppTimeout" /t REG_SZ /d 10t00 /f >nul 2>&1
+reg add "HKCU\Control Panel\Desktop" /v "HungAppTimeout" /t REG_SZ /d 1000 /f >nul 2>&1
 reg add "HKCU\Control Panel\Accessibility\MouseKeys" /v "flags" /t REG_SZ /d 0 /f >nul 2>&1
 
 reg add "HKCU\Control Panel\Accessibility\StickyKeys" /v "flags" /t REG_SZ /d 0 /f >nul 2>&1
@@ -298,33 +281,20 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\mouclass" /v "MouseDataQueueSize
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\kbdclass\Parameters" /v "KeyboardDataQueueSize" /t REG_DWORD /d 40 /f >nul 2>&1
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\PriorityControl" /v "Win32PrioritySeparation" /t REG_DWORD /d 38 /f >nul 2>&1
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\PriorityControl" /v "IRQ8Priority" /t REG_DWORD /d 1 /f >nul 2>&1
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\PriorityControl" /v "IRQ16Priority" /t REG_DWORD /d 2 /f >nul 2>&1
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v "GPU_SCHEDULER_MODE" /t REG_SZ /d 47 /f>nul 2>&1
-
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "TdrLevel" /t REG_DWORD /d 0 /f >nul 2>&1
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "TdrDelay" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler" /v "EnablePreemption" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "SerializeTimerExpiration" /t REG_DWORD /d 0 /f >nul 2>&1
-for /f %%a in ('WMIC path Win32_USBHub GET DeviceID^| findstr /L "VID_"') do (
-	reg add "HKLM\SYSTEM\CurrentControlSet\Enum\%%a\Device Parameters" /v "EnhancedPowerManagementEnabled" /t REG_DWORD /d 0 /f >nul 2>&1
-	reg add "HKLM\SYSTEM\CurrentControlSet\Enum\%%a\Device Parameters" /v "AllowIdleIrpInD3" /t REG_DWORD /d 0 /f >nul 2>&1
-	reg add "HKLM\SYSTEM\CurrentControlSet\Enum\%%a\Device Parameters" /v "SelectiveSuspendOn" /t REG_DWORD /d 0 /f >nul 2>&1
-	reg add "HKLM\SYSTEM\CurrentControlSet\Enum\%%a\Device Parameters" /v "DeviceSelectiveSuspended" /t REG_DWORD /d 0 /f >nul 2>&1
-	reg add "HKLM\SYSTEM\CurrentControlSet\Enum\%%a\Device Parameters" /v "SelectiveSuspendEnabled" /t REG_DWORD /d 0 /f >nul 2>&1
-    reg add "HKLM\SYSTEM\CurrentControlSet\Enum\%%a\Device Parameters" /v "IdleInWorkingState" /t REG_DWORD /d 0 /f >nul 2>&1
-)
-
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power"/v "PowerRequestOverrideEnabled" /t REG_DWORD /d 0 /f >nul 2>&1
+
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers" /v "HwSchMode" /t REG_DWORD /d 2 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile" /v "EnableMMCSS" /t REG_DWORD /d 1 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile" /v "AlwaysUseDirectFlip" /t REG_DWORD /d 1 /f >nul 2>&1
 reg add "HKCU\SOFTWARE\Microsoft\DirectX\UserGpuPreferences" /v "DirectXUserGlobalSettings" /t REG_SZ /d VRROptimizeEnable=0;SwapEffectUpgradeEnable=1; /f >nul 2>&1
-
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power" /v "CsEnabled" /t REG_DWORD /d 0 /f >nul 2>&1
+
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "GlobalTimerResolutionRequests" /t REG_DWORD /d 1 /f >nul 2>&1
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel" /v "IgnoreTimerResolutionRequests" /t REG_DWORD /d 0 /f >nul 2>&1
-echo   !COLOR_WHITE!- !COLOR_ORANGE!Otimizações de latência e GPU!COLOR_GREEN! aplicadas com sucesso.!COLOR_WHITE!
+echo !COLOR_WHITE!- !COLOR_ORANGE!Otimizações de latência e GPU!COLOR_GREEN! aplicadas com sucesso.!COLOR_WHITE!
 echo.
 
 echo              ═══════════════════════════════════
@@ -332,15 +302,11 @@ echo                      !COLOR_GREEN!Otimizações de Rede!COLOR_WHITE!
 echo              ═══════════════════════════════════
 echo.
 
-echo • !COLOR_RED!Aguarde...
-echo.
-timeout /t 2 /nobreak >nul 2>&1
 netsh int ip set global taskoffload=enabled >nul 2>&1 
 netsh int tcp set supplemental internet congestionprovider=ctcp >nul 2>&1 
 netsh int tcp set global ecncapability=enabled >nul 2>&1 
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\DeliveryOptimization\Config" /v "DownloadMode" /t REG_DWORD /d 0 /f >nul 2>&1
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\DeliveryOptimization\Config" /v "DODownloadMode" /t REG_DWORD /d 1 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DeliveryOptimization" /v "DownloadMode" /d 0 /t REG_DWORD /f >nul 2>&1
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "MaxUserPort" /t REG_DWORD /d 65534 /f >nul 2>&1
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v "TcpTimedWaitDelay" /t REG_DWORD /d 30 /f >nul 2>&1
@@ -354,11 +320,12 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\ServiceProvider" /v "DnsPr
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\ServiceProvider" /v "LocalPriority" /t REG_DWORD /d 4 /f >nul 2>&1
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\ServiceProvider" /v "HostsPriority" /t REG_DWORD /d 5 /f >nul 2>&1
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\ServiceProvider" /v "NetbtPriority" /t REG_DWORD /d 7 /f >nul 2>&1
-echo   !COLOR_WHITE!- !COLOR_ORANGE!Otimizações de rede!COLOR_GREEN! aplicadas com sucesso.!COLOR_WHITE!
+ipconfig /flushdns >nul 2>&1
+echo !COLOR_WHITE!- !COLOR_ORANGE!Otimizações de rede!COLOR_GREEN! aplicadas com sucesso.!COLOR_WHITE!
 echo.
 
 echo              ═══════════════════════════════════
-echo                    !COLOR_GREEN!Configurações do Windows!COLOR_WHITE!
+echo                    !COLOR_GREEN!Privacidade e Permissões!COLOR_WHITE!
 echo              ═══════════════════════════════════
 echo.
 
@@ -451,26 +418,8 @@ echo • !COLOR_ORANGE!Aplicativos em segundo plano!COLOR_GREEN! desativado com 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\appDiagnostics" /v "Value" /t REG_SZ /d Deny /f >nul 2>&1
 echo • !COLOR_ORANGE!Diagnóstico de aplicativos!COLOR_GREEN! desativado com sucesso.!COLOR_WHITE!
 
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\documentsLibrary" /v "Value" /t REG_SZ /d Deny /f >nul 2>&1
-echo • !COLOR_ORANGE!Documentos!COLOR_GREEN! desativado com sucesso.!COLOR_WHITE!
-
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\picturesLibrary" /v "Value" /t REG_SZ /d Deny /f >nul 2>&1
-echo • !COLOR_ORANGE!Imagens!COLOR_GREEN! desativado com sucesso.!COLOR_WHITE!
-
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\videosLibrary" /v "Value" /t REG_SZ /d Deny /f >nul 2>&1
-echo • !COLOR_ORANGE!Vídeos!COLOR_GREEN! desativado com sucesso.!COLOR_WHITE!
-
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\broadFileSystemAccess" /v "Value" /t REG_SZ /d Deny /f >nul 2>&1
-echo • !COLOR_ORANGE!Sistema de arquivos!COLOR_GREEN! desativado com sucesso.!COLOR_WHITE!
-
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\phoneCall" /v "Value" /t REG_SZ /d Deny /f >nul 2>&1
 echo • !COLOR_ORANGE!Chamadas telefônicas!COLOR_GREEN! desativado com sucesso.!COLOR_WHITE!
-
-reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\downloadsFolder" /v "Value" /t REG_SZ /d Deny /f >nul 2>&1
-echo • !COLOR_ORANGE!Downloads!COLOR_GREEN! desativado com sucesso.!COLOR_WHITE!
-
-reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\musicLibrary" /v "Value"/t REG_SZ /d Deny /f >nul 2>&1
-echo • !COLOR_ORANGE!Biblioteca de músicas!COLOR_GREEN! desativado com sucesso.!COLOR_WHITE!
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\graphicsCaptureProgrammatic" /v "Value" /t REG_SZ /d Deny /f >nul 2>&1
 echo • !COLOR_ORANGE!Capturas de tela e gravações de tela!COLOR_GREEN! desativado com sucesso.!COLOR_WHITE!
@@ -486,10 +435,6 @@ echo              ════════════════════�
 echo                           !COLOR_GREEN!Telemetria!COLOR_WHITE!
 echo              ═══════════════════════════════════
 echo.
-
-echo • !COLOR_RED!Aguarde...
-echo.
-timeout /t 10 /nobreak >nul 2>&1
 
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "EnableActivityFeed" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v "PublishUserActivities" /t REG_DWORD /d 0 /f >nul 2>&1
@@ -522,60 +467,55 @@ reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\SettingSync" /v "DisableSettin
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\AdvertisingInfo" /v "DisabledByGroupPolicy" /t REG_DWORD /d 1 /f >nul 2>&1
 
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\OneDrive" /v "DisableFileSyncNGSC" /t REG_DWORD /d 1 /f >nul 2>&1
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\safer\codeidentifiers" /v "authenticodeenabled" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Reliability" /v "TimeStampInterval" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search" /v "BingSearchEnabled" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Personalization" /v "NoLockScreenCamera" /t REG_DWORD /d 1 /f >nul 2>&1
-
 reg add "HKLM\Software\Microsoft\SQMClient\Windows" /v "CEIPEnable" /d 0 /t REG_DWORD /f >nul 2>&1
+
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\WMI\AutoLogger\AutoLogger-Diagtrack-Listener" /v "Start" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\WMI\AutoLogger\SQMLogger" /v "Start" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKCU\SOFTWARE\Policies\Microsoft\Windows\EdgeUI" /v "DisableMFUTracking"/t REG_DWORD /d 1 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\EdgeUI" /v "DisableMFUTracking" /t REG_DWORD /d 1 /f >nul 2>&1
-
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Search" /v "AllowCortana" /t REG_DWORD /d 0 /f >nul 2>&1
+
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\SearchSettings" /v "IsDeviceSearchHistoryEnabled" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\CloudContent" /v "DisableSoftLanding" /d 1 /t REG_DWORD /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\CloudContent" /v "DisableWindowsConsumerFeatures" /t REG_DWORD /d 1 /f >nul 2>&1
-
 reg add "HKCU\SOFTWARE\Policies\Microsoft\Windows\CloudContent" /v "DisableTailoredExperiencesWithDiagnosticData" /t REG_DWORD /d 1 /f >nul 2>&1
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\AdvertisingInfo" /v "Enabled" /t REG_DWORD /d 0 /f >nul 2>&1
+
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\SmartActionPlatform\SmartClipboard" /v Disabled /t REG_DWORD /d 1 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\TextInput" /v "AllowLinguisticDataCollection" /t REG_DWORD /D 0 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Policies\Microsoft\InputPersonalization" /v "AllowInputPersonalization" /t REG_DWORD /d 0 /f >nul 2>&1
-
 reg add "HKCU\SOFTWARE\Microsoft\Input\Settings" /v "InsightsEnabled" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKCU\SOFTWARE\Policies\Microsoft\Windows\WindowsAI" /v "DisableAIDataAnalysis" /t REG_DWORD /d 1 /f >nul 2>&1
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsAI" /v "DisableAIDataAnalysis" /t REG_DWORD /d 1 /f >nul 2>&1
+
 reg add "HKLM\SOFTWARE\Policies\Microsoft\EdgeUpdate" /v "CreateDesktopShortcutDefault" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Edge" /v "PersonalizationReportingEnabled" /t REG_DWORD /d 0 /f >nul 2>&1
-
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Edge" /v "ShowRecommendationsEnabled" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Edge" /v "HideFirstRunExperience" /t REG_DWORD /d 1 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Edge" /v "UserFeedbackAllowed" /t REG_DWORD /d 0 /f >nul 2>&1
+
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Edge" /v "ConfigureDoNotTrack" /t REG_DWORD /d 1 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Edge" /v "AlternateErrorPagesEnable" /t REG_DWORD /d 0 /f >nul 2>&1
-
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Edge" /v "EdgeCollectionsEnabled" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Edge" /v "EdgeShoppingAssistantEnabled" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Edge" /v "MicrosoftEdgeInsiderPromotionEnabled" /t REG_DWORD /d 0 /f >nul 2>&1
+
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Edge" /v "ShowMicrosoftRewards" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Edge" /v "WebWidgetAllowed" /t REG_DWORD /d 0 /f >nul 2>&1
-
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Edge" /v "DiagnosticData" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Edge" /v "EdgeAssetDeliveryServiceEnabled" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Edge" /v "CryptoWalletEnabled" /t REG_DWORD /d 0 /f >nul 2>&1
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Edge" /v "WalletDonationEnabled" /t REG_DWORD /d 0 /f >nul 2>&1
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsAI" /v "DisableAIDataAnalysis" /t REG_DWORD /d 1 /f >nul 2>&1
 
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Edge" /v "WalletDonationEnabled" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\HandwritingErrorReports" /v "PreventHandwritingErrorReports" /t REG_DWORD /d 1 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Policies\Assist" /v "NoImplicitFeedback" /t REG_DWORD /d 1 /f >nul 2>&1
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\FlightSettings" /v "UserPreferredRedirectStage" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKCU\SOFTWARE\Microsoft\Clipboard" /v "EnableClipboardHistory" /t REG_DWORD /d 0 /f >nul 2>&1
-reg add "HKLM\SYSTEM\CurrentControlSet\Services\NDIS\Parameters" /v "TrackNblOwner" /t REG_DWORD /d 0 /f >nul 2>&1
 
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\NDIS\Parameters" /v "TrackNblOwner" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Psched" /v "NonBestEffortLimit" /t REG_DWORD /d 0 /f >nul 2>&1
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\OneDrive" /v "DisableFileSyncNGSC" /t REG_DWORD /d 1 /f >nul 2>&1
 reg add "HKLM\System\CurrentControlSet\Control\Diagnostics\Performance" /v "DisablediagnosticTracing" /t REG_DWORD /d 1 /f >nul 2>&1
 reg add "HKLM\Software\Policies\Microsoft\Windows\WDI\{9c5a40da-b965-4fc3-8781-88dd50a6299d}" /v "ScenarioExecutionEnabled" /t REG_DWORD /d 0 /f>nul 2>&1
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Error Reporting" /v "DoReport" /t REG_DWORD /d 0 /f >nul 2>&1
@@ -590,7 +530,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\EnergyEstimation\TaggedEner
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\EnergyEstimation\TaggedEnergy" /v "TelemetryMaxApplication" /t REG_DWORD /d 0 /f >nul 2>&1
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Power\EnergyEstimation\TaggedEnergy" /v "TelemetryMaxTagPerApplication" /t REG_DWORD /d 0 /f >nul 2>&1
 
-echo   !COLOR_WHITE!- !COLOR_ORANGE!83 mudanças!COLOR_GREEN! concluidas com êxito.!COLOR_WHITE!
+echo !COLOR_WHITE!- !COLOR_ORANGE!76 mudanças!COLOR_GREEN! concluidas com êxito.!COLOR_WHITE!
 echo.
 
 echo.╔═══════════════════════════════════════════════════════╗
@@ -606,12 +546,39 @@ pause >nul 2>&1
 goto msginicial
 
 
-:parte2
+:servicos
 
 echo ════════════════════════════════════════════════════════════════
 echo.
+echo              ═══════════════════════════════════
+echo                   !COLOR_GREEN!Gerenciamento de Serviços!COLOR_WHITE!
+echo              ═══════════════════════════════════
+echo.
+echo !COLOR_ORANGE![AVISO]!COLOR_WHITE! Serviços de Impressoras e Virtualização (Hyper-V) serão !COLOR_RED!desativados!COLOR_WHITE! caso encontrados, se você usa emuladores ou impressoras, ambos serão afetados, deseja desativar mesmo assim?
 
+echo.
+echo.
+echo.
 
+echo               !COLOR_GREEN![1]!COLOR_WHITE! Todos os serviços                 !COLOR_GREEN![3]!COLOR_WHITE! Todos, exceto Hyper-V
+echo.
+echo               !COLOR_GREEN![2]!COLOR_WHITE! Todos, exceto Impressoras         !COLOR_RED![V]!COLOR_WHITE! Voltar
+
+set /p serv=""
+echo.
+
+if /i "%serv%"=="1" goto todos_serviços
+if /i "%serv%"=="2" goto exc_impressora
+if /i "%serv%"=="3" goto exc_hyperv
+if /i "%serv%"=="V" goto msginicial
+
+if "%serv%"=="" cls & goto nochoice2
+cls & goto prmsg
+
+:todos_serviços
+bcdedit /set hypervisorlaunchtype off >nul 2>&1
+echo ════════════════════════════════════════════════════════════════
+echo.
 echo (Arquivos Offline)
 call :stop_and_disable CscService
 echo.
@@ -772,7 +739,6 @@ echo (Microsoft Edge Update Service [edgeupdatem])
 call :stop_and_disable edgeupdatem
 echo.
 
-
 echo (Monitor do Servidor de Quadro da Câmera do Windows)
 call :stop_and_disable FrameServerMonitor
 echo.
@@ -881,10 +847,6 @@ echo.
 echo (Serviço de Monitoramento de Sensor)
 call :stop_and_disable SensrSvc
 echo.
-
-::echo (Serviço de Plataforma de Dispositivos Conectados) Removido (temporariamente?) por desativar a aba de Display nas configurações do Windows 11.
-::call :stop_and_disable CDPSvc
-::echo.
 
 echo (Serviço de Política de Diagnóstico)
 call :stop_and_disable DPS
@@ -1000,9 +962,7 @@ echo.
 
 echo (WSAIFabricSvc)
 call :stop_and_disable WSAIFabricSvc
-echo.
-
-echo.!COLOR_WHITE!
+echo. !COLOR_WHITE!
 
 echo.╔═══════════════════════════════════════════════════════════════════╗
 echo ║         !COLOR_GREEN!Desativação de serviços desnecessários concluída.!COLOR_WHITE!         ║
@@ -1016,7 +976,812 @@ echo Pressione !COLOR_GREEN!qualquer tecla!COLOR_WHITE! para continuar
 pause >nul 2>&1
 goto msginicial
 
-:parte3
+REM ------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+:exc_impressora
+bcdedit /set hypervisorlaunchtype off >nul 2>&1
+echo ════════════════════════════════════════════════════════════════
+echo.
+echo (Arquivos Offline)
+call :stop_and_disable CscService
+echo.
+
+echo (Assistente de aquisição de imagens do Windows (WIA))
+call :stop_and_disable StiSvc
+echo.
+
+echo (Atualizador de Fuso Horário Automático)
+call :stop_and_disable tzautoupdate
+echo.
+
+echo (Autenticação Natural)
+call :stop_and_disable NaturalAuthentication
+echo.
+
+echo (Auxiliar de IP)
+call :stop_and_disable iphlpsvc
+echo.
+
+echo (Auxiliar NetBIOS TCP/IP)
+call :stop_and_disable lmhosts
+echo.
+
+echo (Cartão inteligente)
+call :stop_and_disable SCardSvr
+echo.
+
+echo (Cliente de rastreamento de link distribuído)
+call :stop_and_disable TrkWks
+echo.
+
+echo (Coletor de Eventos do Windows)
+call :stop_and_disable Wecsvc
+echo.
+
+echo (Configuração da Área de Trabalho Remota)
+call :stop_and_disable SessionEnv
+echo.
+
+echo (Controles dos Pais)
+call :stop_and_disable WpcMonSvc
+echo.
+
+echo (Coordenador de transações distribuídas)
+call :stop_and_disable MSDTC
+echo.
+
+echo (Diagnostic Execution Service)
+call :stop_and_disable diagsvc
+echo.
+
+echo (Estação de Trabalho)
+call :stop_and_disable LanmanWorkstation
+echo.
+
+echo (Evento de Aquisição de Imagens Estáticas)
+call :stop_and_disable WiaRpc
+echo.
+
+echo (DialogBlockingService)
+call :stop_and_disable DialogBlockingService
+echo.
+
+echo (Exibir Serviço de Política)
+call :stop_and_disable DispBrokerDesktopSvc
+echo.
+
+echo (Experiências do Usuário Conectado e Telemetria)
+call :stop_and_disable DiagTrack
+echo.
+
+echo (Extensões e Notificações da Impressora)
+call :start_and_enable PrintNotify
+echo.
+
+echo (Fax)
+call :stop_and_disable Fax
+echo.
+
+echo (Filtro de Teclado da Microsoft)
+call :stop_and_disable MsKeyboardFilter
+echo.
+
+echo (Gerenciador de conexão de acesso remoto)
+call :stop_and_disable RasMan
+echo.
+
+echo (Gerenciador de conexão de acesso remoto automático)
+call :stop_and_disable RasAuto
+echo.
+
+echo (Gerenciador de Mapas Baixados)
+call :stop_and_disable MapsBroker
+echo.
+
+echo (Gerenciador de NFC/SE e Pagamentos)
+call :stop_and_disable SEMgrSvc
+echo.
+
+echo (Host do Serviço de Diagnóstico)
+call :stop_and_disable WdiServiceHost
+echo.
+
+echo (Host do Sistema de Diagnósticos)
+call :stop_and_disable WdiSystemHost
+echo.
+
+echo (ICS (Compartilhamento de Conexão com a Internet))
+call :stop_and_disable SharedAccess
+echo.
+
+echo (Instalação Automática de Dispositivos Conectados à Rede)
+call :stop_and_disable NcdAutoSetup
+echo.
+
+echo (Integridade e Experiências Otimizadas do Windows)
+call :stop_and_disable whesvc
+echo.
+
+echo (Interface de Serviço de Convidado do Hyper-V)
+call :stop_and_disable vmicguestinterface
+echo.
+
+echo (Logon de rede)
+call :stop_and_disable Netlogon
+echo.
+
+echo (Logon secundário)
+call :stop_and_disable seclogon
+echo.
+
+echo (Logs e alertas de desempenho)
+call :stop_and_disable pla
+echo.
+
+echo (Mapeador da Descoberta de Topologia da Camada de Link)
+call :stop_and_disable lltdsvc
+echo.
+
+echo (McpManagementService)
+call :stop_and_disable McpManagementService
+echo.
+
+echo (Microsoft App-V Client)
+call :stop_and_disable AppVClient
+echo.
+
+echo (Microsoft Edge Elevation Service)
+call :stop_and_disable MicrosoftEdgeElevationService
+echo.
+
+echo (Microsoft Edge Update Service [edgeupdate])
+call :stop_and_disable edgeupdate
+echo.
+
+echo (Microsoft Edge Update Service [edgeupdatem])
+call :stop_and_disable edgeupdatem
+echo.
+
+echo (Monitor do Servidor de Quadro da Câmera do Windows)
+call :stop_and_disable FrameServerMonitor
+echo.
+
+echo (OpenSSH Authentication Agent)
+call :stop_and_disable ssh-agent
+echo.
+
+echo (Otimização de Entrega)
+call :stop_and_disable DoSvc
+echo.
+
+echo (Pastas de Trabalho)
+call :stop_and_disable workfolderssvc
+echo.
+
+echo (Política de Remoção de Cartão Inteligente)
+call :stop_and_disable SCPolicySvc
+echo.
+
+echo (Propagação de Certificado)
+call :stop_and_disable CertPropSvc
+echo.
+
+echo (Publicação de Recursos de Descoberta de Função)
+call :stop_and_disable FDResPub
+echo.
+
+echo (Registro Remoto)
+call :stop_and_disable RemoteRegistry
+echo.
+
+echo (Roteamento e Acesso Remoto)
+call :stop_and_disable RemoteAccess
+echo.
+
+echo (Serviço Auxiliar de Compatibilidade de Programas)
+call :stop_and_disable PcaSvc
+echo.
+
+echo (Serviço AVCTP)
+call :stop_and_disable BthAvctpSvc
+echo.
+
+echo (Serviço de Biometria do Windows)
+call :stop_and_disable WbioSrvc
+echo.
+
+echo (Serviço de Cache de Fontes do Windows)
+call :stop_and_disable FontCache
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\FontCache3.0.0.0" /v "Start" /t REG_DWORD /d 4 /f >nul 2>&1
+echo.
+
+echo (Serviço de Compartilhamento de Dados)
+call :stop_and_disable DsSvc
+echo.
+
+echo (Serviço de Compartilhamento de Porta Net.Tcp)
+call :stop_and_disable NetTcpPortSharing
+echo.
+
+echo (Serviço de Compartilhamento de Rede do Windows Media Player)
+call :stop_and_disable WMPNetworkSvc
+echo.
+
+echo (Serviço de Configuração de Impressora)
+call :start_and_enable PrintDeviceConfigurationService
+echo.
+
+echo (Serviço de Coletor Padrão do Hub de Diagnóstico)
+call :stop_and_disable Diagnosticshub.standardcollector.service
+echo.
+
+echo (Serviço de Criptografia de Unidade de Disco Bitlocker)
+call :stop_and_disable BDESVC
+echo.
+
+echo (Serviço de Dados de Sensor)
+call :stop_and_disable SensorDataService
+echo.
+
+echo (Serviço de Demonstração de Revenda)
+call :stop_and_disable RetailDemo
+echo.
+
+echo (Serviço de Desligamento de Convidado do Hyper-V)
+call :stop_and_disable vmicshutdown
+echo.
+
+echo (Serviço de Enumeração de Dispositivo de Cartão Inteligente)
+call :stop_and_disable ScDeviceEnum
+echo.
+
+echo (Serviço de Geocalização)
+call :stop_and_disable lfsvc
+echo.
+
+echo (Serviço de Hotspot Móvel do Windows)
+call :stop_and_disable icssvc
+echo. 
+
+echo (Serviço de Monitoramento de Desempenho Gráfico)
+call :stop_and_disable GraphicsPerfSvc
+echo.
+
+echo (Serviço de Monitoramento de Sensor)
+call :stop_and_disable SensrSvc
+echo.
+
+echo (Serviço de Política de Diagnóstico)
+call :stop_and_disable DPS
+echo.
+
+echo (Serviço de Pulsação do Hyper-V)
+call :stop_and_disable vmicheartbeat
+echo.
+
+echo (Serviço de Realidade Compartilhada)
+call :stop_and_disable SharedRealitySvc
+echo.
+
+echo (Serviço de Relatórios de Erro do Windows)
+call :stop_and_disable WerSvc
+echo.
+
+echo (Serviço de Roteamento de mensagens de envio por Push WAP do Gerenciamento de Dispositivos)
+call :stop_and_disable dmwappushservice
+echo.
+
+echo (Serviço de Sensor)
+call :stop_and_disable SensorService
+echo.
+
+echo (Serviço de Simulação de Percepção do Windows)
+call :stop_and_disable perceptionsimulation
+echo.
+
+echo (Serviço de Sincronização de Data/Hora do Hyper-V)
+call :stop_and_disable vmictimesync
+echo.
+
+echo (Serviço de Teclado Virtual e Painel de Manuscrito)
+call :stop_and_disable TabletInputService
+echo.
+
+echo (Serviço de Telefonia)
+call :stop_and_disable PhoneSvc
+echo.
+
+echo (Serviço de Troca de Dados do Hyper-V)
+call :stop_and_disable vmickvpexchange
+echo.
+
+echo (Serviço de User Experience Virtualization)
+call :stop_and_disable UevAgentService
+echo.
+
+echo (Serviço de Virtualização de Área de Trabalho Remota do Hyper-V)
+call :stop_and_disable vmicrdv
+echo.
+
+echo (Serviço Direto do Hyper-V PowerShell)
+call :stop_and_disable vmicvmsession
+echo.
+
+echo (Serviço de Participante do Programa Windows Insider)
+call :stop_and_disable wisvc
+echo.
+
+echo (Serviço do Sistema de Notificações por Push do Windows)
+call :stop_and_disable WpnService
+echo.
+
+echo (Serviço Enumerador de Dispositivos Portáteis)
+call :stop_and_disable WPDBusEnum
+echo.
+
+echo (Serviço Gateway de Camada de Aplicativo)
+call :stop_and_disable ALG
+echo.
+
+echo (Serviços de Área de Trabalho Remota)
+call :stop_and_disable TermService
+echo.
+
+echo (Servidor de Quadros de Câmera do Windows)
+call :stop_and_disable FrameServer
+echo.
+
+echo (Shared PC account Manager)
+call :stop_and_disable shpamsvc
+echo.
+
+echo (Solicitante de Cópia de Sombra de Volume do Hyper-V)
+call :stop_and_disable vmicvss
+echo.
+
+echo (Spooler de Impressão)
+call :start_and_enable Spooler
+echo.
+
+echo (Sysmain)
+call :stop_and_disable SysMain
+echo.
+
+echo (Telefonia)
+call :stop_and_disable TapiSrv
+echo.
+
+echo (WalletService)
+call :stop_and_disable WalletService
+echo.
+
+echo (Windows Search)
+call :stop_and_disable WSearch
+echo.
+
+echo (Windows Update)
+call :stop_and_disable wuauserv
+echo.
+
+echo (WSAIFabricSvc)
+call :stop_and_disable WSAIFabricSvc
+echo. !COLOR_WHITE!
+
+echo.╔═══════════════════════════════════════════════════════════════════╗
+echo ║         !COLOR_GREEN!Desativação de serviços desnecessários concluída.!COLOR_WHITE!         ║
+echo.╚═══════════════════════════════════════════════════════════════════╝
+
+echo.
+echo ════════════════════════════════════════════════════════════════
+echo.
+
+echo Pressione !COLOR_GREEN!qualquer tecla!COLOR_WHITE! para continuar
+pause >nul 2>&1
+goto msginicial
+
+REM ------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+:exc_hyperv
+echo ════════════════════════════════════════════════════════════════
+echo.
+echo (Arquivos Offline)
+call :stop_and_disable CscService
+echo.
+
+echo (Assistente de aquisição de imagens do Windows (WIA))
+call :stop_and_disable StiSvc
+echo.
+
+echo (Atualizador de Fuso Horário Automático)
+call :stop_and_disable tzautoupdate
+echo.
+
+echo (Autenticação Natural)
+call :stop_and_disable NaturalAuthentication
+echo.
+
+echo (Auxiliar de IP)
+call :stop_and_disable iphlpsvc
+echo.
+
+echo (Auxiliar NetBIOS TCP/IP)
+call :stop_and_disable lmhosts
+echo.
+
+echo (Cartão inteligente)
+call :stop_and_disable SCardSvr
+echo.
+
+echo (Cliente de rastreamento de link distribuído)
+call :stop_and_disable TrkWks
+echo.
+
+echo (Coletor de Eventos do Windows)
+call :stop_and_disable Wecsvc
+echo.
+
+echo (Configuração da Área de Trabalho Remota)
+call :stop_and_disable SessionEnv
+echo.
+
+echo (Controles dos Pais)
+call :stop_and_disable WpcMonSvc
+echo.
+
+echo (Coordenador de transações distribuídas)
+call :stop_and_disable MSDTC
+echo.
+
+echo (Diagnostic Execution Service)
+call :stop_and_disable diagsvc
+echo.
+
+echo (Estação de Trabalho)
+call :stop_and_disable LanmanWorkstation
+echo.
+
+echo (Evento de Aquisição de Imagens Estáticas)
+call :stop_and_disable WiaRpc
+echo.
+
+echo (DialogBlockingService)
+call :stop_and_disable DialogBlockingService
+echo.
+
+echo (Exibir Serviço de Política)
+call :stop_and_disable DispBrokerDesktopSvc
+echo.
+
+echo (Experiências do Usuário Conectado e Telemetria)
+call :stop_and_disable DiagTrack
+echo.
+
+echo (Extensões e Notificações da Impressora)
+call :stop_and_disable PrintNotify
+echo.
+
+echo (Fax)
+call :stop_and_disable Fax
+echo.
+
+echo (Filtro de Teclado da Microsoft)
+call :stop_and_disable MsKeyboardFilter
+echo.
+
+echo (Gerenciador de conexão de acesso remoto)
+call :stop_and_disable RasMan
+echo.
+
+echo (Gerenciador de conexão de acesso remoto automático)
+call :stop_and_disable RasAuto
+echo.
+
+echo (Gerenciador de Mapas Baixados)
+call :stop_and_disable MapsBroker
+echo.
+
+echo (Gerenciador de NFC/SE e Pagamentos)
+call :stop_and_disable SEMgrSvc
+echo.
+
+echo (Host do Serviço de Diagnóstico)
+call :stop_and_disable WdiServiceHost
+echo.
+
+echo (Host do Sistema de Diagnósticos)
+call :stop_and_disable WdiSystemHost
+echo.
+
+echo (ICS (Compartilhamento de Conexão com a Internet))
+call :stop_and_disable SharedAccess
+echo.
+
+echo (Instalação Automática de Dispositivos Conectados à Rede)
+call :stop_and_disable NcdAutoSetup
+echo.
+
+echo (Integridade e Experiências Otimizadas do Windows)
+call :stop_and_disable whesvc
+echo.
+
+echo (Interface de Serviço de Convidado do Hyper-V)
+call :start_and_enable vmicguestinterface
+echo.
+
+echo (Logon de rede)
+call :stop_and_disable Netlogon
+echo.
+
+echo (Logon secundário)
+call :stop_and_disable seclogon
+echo.
+
+echo (Logs e alertas de desempenho)
+call :stop_and_disable pla
+echo.
+
+echo (Mapeador da Descoberta de Topologia da Camada de Link)
+call :stop_and_disable lltdsvc
+echo.
+
+echo (McpManagementService)
+call :stop_and_disable McpManagementService
+echo.
+
+echo (Microsoft App-V Client)
+call :start_and_enable AppVClient
+echo.
+
+echo (Microsoft Edge Elevation Service)
+call :stop_and_disable MicrosoftEdgeElevationService
+echo.
+
+echo (Microsoft Edge Update Service [edgeupdate])
+call :stop_and_disable edgeupdate
+echo.
+
+echo (Microsoft Edge Update Service [edgeupdatem])
+call :stop_and_disable edgeupdatem
+echo.
+
+echo (Monitor do Servidor de Quadro da Câmera do Windows)
+call :stop_and_disable FrameServerMonitor
+echo.
+
+echo (OpenSSH Authentication Agent)
+call :stop_and_disable ssh-agent
+echo.
+
+echo (Otimização de Entrega)
+call :stop_and_disable DoSvc
+echo.
+
+echo (Pastas de Trabalho)
+call :stop_and_disable workfolderssvc
+echo.
+
+echo (Política de Remoção de Cartão Inteligente)
+call :stop_and_disable SCPolicySvc
+echo.
+
+echo (Propagação de Certificado)
+call :stop_and_disable CertPropSvc
+echo.
+
+echo (Publicação de Recursos de Descoberta de Função)
+call :stop_and_disable FDResPub
+echo.
+
+echo (Registro Remoto)
+call :stop_and_disable RemoteRegistry
+echo.
+
+echo (Roteamento e Acesso Remoto)
+call :stop_and_disable RemoteAccess
+echo.
+
+echo (Serviço Auxiliar de Compatibilidade de Programas)
+call :stop_and_disable PcaSvc
+echo.
+
+echo (Serviço AVCTP)
+call :stop_and_disable BthAvctpSvc
+echo.
+
+echo (Serviço de Biometria do Windows)
+call :stop_and_disable WbioSrvc
+echo.
+
+echo (Serviço de Cache de Fontes do Windows)
+call :stop_and_disable FontCache
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\FontCache3.0.0.0" /v "Start" /t REG_DWORD /d 4 /f >nul 2>&1
+echo.
+
+echo (Serviço de Compartilhamento de Dados)
+call :stop_and_disable DsSvc
+echo.
+
+echo (Serviço de Compartilhamento de Porta Net.Tcp)
+call :stop_and_disable NetTcpPortSharing
+echo.
+
+echo (Serviço de Compartilhamento de Rede do Windows Media Player)
+call :stop_and_disable WMPNetworkSvc
+echo.
+
+echo (Serviço de Configuração de Impressora)
+call :stop_and_disable PrintDeviceConfigurationService
+echo.
+
+echo (Serviço de Coletor Padrão do Hub de Diagnóstico)
+call :stop_and_disable Diagnosticshub.standardcollector.service
+echo.
+
+echo (Serviço de Criptografia de Unidade de Disco Bitlocker)
+call :stop_and_disable BDESVC
+echo.
+
+echo (Serviço de Dados de Sensor)
+call :stop_and_disable SensorDataService
+echo.
+
+echo (Serviço de Demonstração de Revenda)
+call :stop_and_disable RetailDemo
+echo.
+
+echo (Serviço de Desligamento de Convidado do Hyper-V)
+call :start_and_enable vmicshutdown
+echo.
+
+echo (Serviço de Enumeração de Dispositivo de Cartão Inteligente)
+call :stop_and_disable ScDeviceEnum
+echo.
+
+echo (Serviço de Geocalização)
+call :stop_and_disable lfsvc
+echo.
+
+echo (Serviço de Hotspot Móvel do Windows)
+call :stop_and_disable icssvc
+echo. 
+
+echo (Serviço de Monitoramento de Desempenho Gráfico)
+call :stop_and_disable GraphicsPerfSvc
+echo.
+
+echo (Serviço de Monitoramento de Sensor)
+call :stop_and_disable SensrSvc
+echo.
+
+echo (Serviço de Política de Diagnóstico)
+call :stop_and_disable DPS
+echo.
+
+echo (Serviço de Pulsação do Hyper-V)
+call :start_and_enable vmicheartbeat
+echo.
+
+echo (Serviço de Realidade Compartilhada)
+call :stop_and_disable SharedRealitySvc
+echo.
+
+echo (Serviço de Relatórios de Erro do Windows)
+call :stop_and_disable WerSvc
+echo.
+
+echo (Serviço de Roteamento de mensagens de envio por Push WAP do Gerenciamento de Dispositivos)
+call :stop_and_disable dmwappushservice
+echo.
+
+echo (Serviço de Sensor)
+call :stop_and_disable SensorService
+echo.
+
+echo (Serviço de Simulação de Percepção do Windows)
+call :start_and_enable perceptionsimulation
+echo.
+
+echo (Serviço de Sincronização de Data/Hora do Hyper-V)
+call :start_and_enable vmictimesync
+echo.
+
+echo (Serviço de Teclado Virtual e Painel de Manuscrito)
+call :stop_and_disable TabletInputService
+echo.
+
+echo (Serviço de Telefonia)
+call :stop_and_disable PhoneSvc
+echo.
+
+echo (Serviço de Troca de Dados do Hyper-V)
+call :start_and_enable vmickvpexchange
+echo.
+
+echo (Serviço de User Experience Virtualization)
+call :start_and_enable UevAgentService
+echo.
+
+echo (Serviço de Virtualização de Área de Trabalho Remota do Hyper-V)
+call :start_and_enable vmicrdv
+echo.
+
+echo (Serviço Direto do Hyper-V PowerShell)
+call :start_and_enable vmicvmsession
+echo.
+
+echo (Serviço de Participante do Programa Windows Insider)
+call :stop_and_disable wisvc
+echo.
+
+echo (Serviço do Sistema de Notificações por Push do Windows)
+call :stop_and_disable WpnService
+echo.
+
+echo (Serviço Enumerador de Dispositivos Portáteis)
+call :stop_and_disable WPDBusEnum
+echo.
+
+echo (Serviço Gateway de Camada de Aplicativo)
+call :start_and_enable ALG
+echo.
+
+echo (Serviços de Área de Trabalho Remota)
+call :start_and_enable TermService
+echo.
+
+echo (Servidor de Quadros de Câmera do Windows)
+call :stop_and_disable FrameServer
+echo.
+
+echo (Shared PC account Manager)
+call :stop_and_disable shpamsvc
+echo.
+
+echo (Solicitante de Cópia de Sombra de Volume do Hyper-V)
+call :start_and_enable vmicvss
+echo.
+
+echo (Spooler de Impressão)
+call :stop_and_disable Spooler
+echo.
+
+echo (Sysmain)
+call :stop_and_disable SysMain
+echo.
+
+echo (Telefonia)
+call :stop_and_disable TapiSrv
+echo.
+
+echo (WalletService)
+call :stop_and_disable WalletService
+echo.
+
+echo (Windows Search)
+call :stop_and_disable WSearch
+echo.
+
+echo (Windows Update)
+call :stop_and_disable wuauserv
+echo.
+
+echo (WSAIFabricSvc)
+call :stop_and_disable WSAIFabricSvc
+echo. !COLOR_WHITE!
+
+echo.╔═══════════════════════════════════════════════════════════════════╗
+echo ║         !COLOR_GREEN!Desativação de serviços desnecessários concluída.!COLOR_WHITE!         ║
+echo.╚═══════════════════════════════════════════════════════════════════╝
+
+echo.
+echo ════════════════════════════════════════════════════════════════
+echo.
+
+echo Pressione !COLOR_GREEN!qualquer tecla!COLOR_WHITE! para continuar
+pause >nul 2>&1
+goto msginicial
+
+:comandos
 
 echo ════════════════════════════════════════════════════════════════
 echo.
@@ -1031,7 +1796,6 @@ bcdedit /set useplatformtick yes >nul 2>&1
 bcdedit /set disabledynamictick yes >nul 2>&1
 bcdedit /deletevalue useplatformclock >nul 2>&1
 bcdedit /set tscsyncpolicy Enhanced >nul 2>&1
-bcdedit /set hypervisorlaunchtype off >nul 2>&1
 echo • !COLOR_GREEN!Comandos bcdedit aplicados.!COLOR_WHITE!
 
 winget uninstall "windows web experience pack" --accept-source-agreements >nul 2>&1
@@ -1040,11 +1804,7 @@ echo • !COLOR_GREEN!Widgets removidos.!COLOR_WHITE!
 defrag /C /L >nul 2>&1
 echo • !COLOR_GREEN!Unidades otimizadas.!COLOR_WHITE!
 
-echo • !COLOR_ORANGE!Conclua a limpeza do seu disco.!COLOR_WHITE!
-net session >nul 2>&1
-
-cleanmgr
-echo   - !COLOR_GREEN!Limpeza de disco concluída.!COLOR_WHITE!
+start "" cleanmgr
 
 echo.!COLOR_WHITE!
 
@@ -1060,7 +1820,7 @@ echo Pressione !COLOR_GREEN!qualquer tecla!COLOR_WHITE! para continuar
 pause >nul 2>&1
 goto msginicial
 
-:parte4
+:aqvtmp
 
 echo ════════════════════════════════════════════════════════════════
 echo.
@@ -1112,7 +1872,7 @@ echo Pressione !COLOR_GREEN!qualquer tecla!COLOR_WHITE! para continuar
 pause >nul 2>&1
 goto msginicial
 
-:parte5
+:tarefas
 echo ════════════════════════════════════════════════════════════════
 echo.
 
@@ -1282,11 +2042,11 @@ echo Pressione !COLOR_GREEN!qualquer tecla!COLOR_WHITE! para continuar
 pause >nul 2>&1
 goto msginicial
 
-:parte6
+:memoria
 echo ════════════════════════════════════════════════════════════════
 echo.
 
-echo !COLOR_GREEN!Escolha a opção baseada na quantidade de RAM em que você possui. Selecione !COLOR_ORANGE!P!COLOR_GREEN! caso for nenhuma das opções.!COLOR_WHITE!
+echo Escolha a opção baseada na quantidade de RAM em que você possui. Selecione !COLOR_ORANGE!P!COLOR_WHITE! caso seja nenhuma das opções.!COLOR_WHITE!
 
 echo.
 echo.
@@ -1501,6 +2261,30 @@ sc config %service% start= disabled >nul 2>&1
 sc qc %service% | findstr /i "start    disabled" >nul
 if %errorlevel% equ 0 (
     echo !COLOR_GREEN!Foi desativado com sucesso.!COLOR_WHITE!
+    goto :eof
+)
+
+:start_and_enable
+set service=%1
+
+sc qc %service% >nul 2>&1
+if %errorlevel% neq 0 (
+    echo !COLOR_RED!Não foi encontrado.!COLOR_WHITE!
+    goto :eof
+)
+
+sc qc %service% | findstr /i "start    disabled" >nul
+if %errorlevel% neq 0 (
+    echo !COLOR_ORANGE!Já está habilitado.!COLOR_WHITE!
+    goto :eof
+)
+
+sc config %service% start= auto >nul 2>&1
+sc start %service% >nul 2>&1
+
+sc qc %service% | findstr /i "start    auto" >nul
+if %errorlevel% equ 0 (
+    echo !COLOR_GREEN!Foi iniciado e definido como automático com sucesso.!COLOR_WHITE!
     goto :eof
 )
 
