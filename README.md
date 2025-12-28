@@ -22,7 +22,7 @@
     <tr>
       <td><strong>⚙️ Otimizações Regedit</strong></td>
       <td>
-        Separada em 6 categorias: <strong>otimização geral do sistema</strong>, <strong>otimizações essenciais</strong>, <strong>otimização de Latência e GPU</strong>, <strong>otimizações de Rede</strong>, <strong>configurações do Windows</strong> e <strong>remoção de telemetria</strong>, com mais de <code>300</code> comandos.<br>
+        Separada em 6 categorias: <strong>Otimização Geral</strong>, <strong>Otimização para Games</strong>, <strong>otimização de Latência e GPU</strong>, <strong>Otimizações de Rede</strong> e <strong>Privacidade e Telemetria</strong>, totalizando <code>+350</code> comandos!<br>
       </td>
     </tr>
     <tr>
@@ -64,7 +64,7 @@
 <hr>
 <ul>
   <li>Vá para <strong><a href="https://github.com/Tavin17/WinOptimizer/releases">Releases</a></strong> e faça o download da versão mais recente.</li>
-  <li>Para complementar e fazer uma otimização completa, você também pode usar:
+  <li>Para complementar e fazer uma otimização mais profunda, você também pode usar:
     <ul>
       <li><strong><a href="https://github.com/ChrisTitusTech/winutil">Chris Titus Tech's Windows Utility</a></strong></li>
       <li><strong><a href="https://github.com/memstechtips/Winhance">Winhance</a></strong></li>
