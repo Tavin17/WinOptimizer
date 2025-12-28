@@ -1798,7 +1798,7 @@ bcdedit /deletevalue useplatformclock >nul 2>&1
 bcdedit /set tscsyncpolicy Enhanced >nul 2>&1
 echo • !COLOR_GREEN!Comandos bcdedit aplicados.!COLOR_WHITE!
 
-winget uninstall "windows web experience pack" --accept-source-agreements >nul 2>&1
+winget uninstall "windows web experience pack" --accept-source-agreements
 echo • !COLOR_GREEN!Widgets removidos.!COLOR_WHITE!
 
 defrag /C /L >nul 2>&1
@@ -1821,7 +1821,6 @@ pause >nul 2>&1
 goto msginicial
 
 :aqvtmp
-
 echo ════════════════════════════════════════════════════════════════
 echo.
 
