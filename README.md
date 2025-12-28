@@ -22,7 +22,7 @@
     <tr>
       <td><strong>⚙️ Otimizações Regedit</strong></td>
       <td>
-        Separada em 6 categorias: <strong>Otimização Geral</strong>, <strong>Otimização para Games</strong>, <strong>otimização de Latência e GPU</strong>, <strong>Otimizações de Rede</strong> e <strong>Privacidade e Telemetria</strong>, totalizando <code>+350</code> comandos!<br>
+        Separada em 6 categorias: <strong>Otimização Geral</strong>, <strong>Otimização para Games</strong>, <strong>Otimização de Latência e GPU</strong>, <strong>Otimizações de Rede</strong>, <strong>Privacidade e Telemetria</strong> e mais <strong>Telemetria</strong>, totalizando <code>+350</code> comandos!<br>
       </td>
     </tr>
     <tr>
@@ -53,7 +53,7 @@
     <tr>
       <td><strong>💾 Otimização de Memória</strong></td>
       <td>
-        Ajusta o valor <code>SvcHostSplitThresholdInKB</code> para otimizar o uso da RAM e reduzir a fragmentação de processos <code>svchost.exe</code>.
+        Ajusta o valor do <code>SvcHostSplitThresholdInKB</code>, baseado na quantidade de RAM do usuário, para otimizar o uso de memória e reduzir a fragmentação de processos <code>svchost.exe</code>.
       </td>
     </tr>
   </tbody>
