@@ -76,18 +76,6 @@
 <div style="background-color:rgb(199, 159, 0); padding: 10px; border-radius: 5px;">
   <strong>⚠️ É extremamente recomendado que você crie um ponto de restauração antes de executar qualquer tipo de script. Execute esse arquivo por sua conta e risco. Funções e/ou aplicativos que talvez sejam necessárias para você podem ser desativadas ou não funcionarem corretamente. Caso tenha problemas ou não goste do resultado, utilize um <code>Ponto de Restauração</code>.</strong>
 </div>
-<h3 align="center" style="margin-bottom: 5px;"><strong>🤝 Contribuições</strong></h3>
-<hr>
-<ol>
-<strong>Caso queira ajudar no projeto adicionando, ajustando ou deixando o código mais eficiente, siga os passos a seguir:</strong>
-  <ul>
-    <li>Faça um clone / fork do branch principal;</li>
-    <li>Crie um novo branch no seu fork;</li>
-    <li>Faça suas alterações;</li>
-    <li>Faça um commit das suas mudanças depois faça um push delas.</li>
-    <li>Solicite um Pull Request <a href="https://github.com/Tavin17/WinOptimizer/pulls">aqui</a>!</li>
-  </ul>
-</ol>
 
 <h3 align="center" style="margin-bottom: 5px;"><strong>📕 Licença</strong></h3>
 <hr>
